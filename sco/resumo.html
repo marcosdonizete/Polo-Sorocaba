@@ -34,7 +34,111 @@
 <body>
     <h1>Revisão</h1>
     <h2>Semana 1</h2>
-    <p>Teste de <mark>inserção</mark> de código <strong>HTML5</strong> e <strong>CSS3</strong> diretamente na página</p>
+    <h4>O computador</h4>
+    <ul>
+        <li>composto de hardware e software</li>
+        <li>estrutura hierárquica &rarr; sistemas e subsistemas com interrelacionamentos</li>
+        <li>memória &rarr; dividida em principal (RAM) e auxiliar (SS/HD/Flash)</li>
+        <li>CPU &rarr; Unidade Central de Processamento</li>
+            <ul type="square">
+                <li>controla a operação do computador</li>
+                <li>processa os dados de entrad</li>
+                <li>dividida em UC, ULA e registradores</li>
+                    <ul type="circle">
+                        <li>UC &rarr; controla toda a operação da CPU</li>
+                        <li>ULA &rarr; processa dados</li>
+                        <li>Registradores &rarr; rmazena em cache interno para a CPU. Mais rápido que buscar dados na memória principal e secundária</li>
+                    </ul>                    
+            </ul>
+        <li>Unidade de entrada &rarr; teclados, leitores de código de barras etc</li>
+        <li>Unidade de saída &rarr; monitor, porta de impressão etc</li>
+        <li>Interconexões do sistema &rarr; faz a comunicação entre UC, ULA, memórias, E/S,  ULA e registradores</li>
+    </ul>
+    <h4>Funções básicas do computador</h4>
+    <ul>
+        <li>Processamento de dados &rarr; manipular os dados</li>
+        <li>Armazenamento de dado &rarr; para processar rapidamente (RAM) e a longo prazo (SS/HD/Flash)</li>
+        <li>E/S &rarr; entrada e saída de dados com o mundo externo</li>
+        <li>Controle &rarr; coordena todas as funções. Gerencia recursos</li>
+    </ul>
+    <h4>Classificação dos computadores</h4>
+    <ul>
+        <li>Operação &rarr; analógico e digital</li>
+        <li>Utilização &rarr; científico e comercial</li>
+        <li>Construção &rarr; 1ª geração Válvulas</li>
+            <ul type="square">
+                <li>mecânicos &rarr; 1ª Geração</li>
+                    <ul type="circle">
+                        <li>Pascal &rarr; (1623-1662)</li>
+                        <li>Leibniz &rarr; (1646-1716) ad/sub/mult/div</li>
+                        <li>Babbage &rarr; (1792-1871) com memória, E/S (cartão perfurado) e cálculos</li>
+                        <li>Turing &rarr; (1912-1954) criou o Colossus. 1ª geração à válvula</li>
+                        <li>ENIAC &rarr; (1943-1946) com 18k válvulas e 30 toneladas</li>
+                        <li>IBM &rarr; (1954) criou o 701 e dominou por uma década</li>                        
+                    </ul>
+                <li>transistorizados &rarr; 2ª geração (milissegundos)</li>
+                    <ul>
+                        <li>1948 &rarr; criação do transistor. TX-0 foi o primeiro computador</li>
+                        <li>1960</li>
+                            <ul type="circle">
+                                <li>DEC lançou a PDP-1, similar ao TX-0</li>
+                                <li>Nasce a indústria de minicomputadores</li>
+                                <li>DEC lança a PDP-8 com barramento único</li>
+                                <li>IBM lança computadores transistorizados (7090 e 7094)</li>
+                            </ul>
+                        <li>1964</li>
+                            <ul type="circle">
+                                <li>CDC lança o 6600 mais barato, mais rápido e com paralelismo de processament</li>
+                                <li>Algol60 &rarr; primórdio da criação da linguagem C e Java. Início da importância do software</li>
+                            </ul>
+                    </ul>
+                <li>Circuitos Integrados &rarr; 3ª geração (nanossegundos)</li>
+                    <ul type="disc">
+                        <li>1958 &rarr; CI de silício, dezenas de transistores por chip, computador menor, mais rápido e barato</li>
+                        <li>1964 &rarr; IBM lança a System/360 (baseado em CI), multiprograma na memória e melhor processamento. DEC lança o PDP-11 e evolui nos minicomputadores (usado em universidades)</li>                      
+                    </ul>
+                <li>4ª Geração &rarr; Atual (milhões de transistores por chip)</li>
+                    <ul type="disc">
+                        <li>1980</li>
+                            <ul type="circle">
+                                <li>criação da tecnologia VLSI (Integração em altíssima escala</li>
+                                <li>computadores ainda menores e mais rápido</li>
+                                <li>preços menores (se começa a pensar em um computador por pessoa)</li>
+                                <li>era do computador pessoal</li>
+                                <li>Apple e IBM lançam computadores pessoai</li>
+                                <li>Microsoft cria o Windows</li>
+                                <li>A arquitetura RISC começa a substituir a CISC</li>
+                            </ul>
+                    </ul>
+            </ul>        
+    </ul>
+    <h4>Modelos de computadores</h4>
+    <ul>
+        <li>Modelo de Turin</li>
+            <ul>
+                <li>desevolvido pelo matemático Alan Turing em 1937</li>
+                <li>primeira descrição de um computador moderno</li>
+                <li>recebe os dados de entrada e o programa (ficam armazenados) para dar função ao hardware</li>
+                <li>deu origem ao computador com programa armazenad</li>
+            </ul>
+        <li>Modelo de Von Neumann</li>
+            <ul>
+                <li>base de quase todos os computadores modernos</li>
+                <li>posterior ao modelo de Turin</li>
+                <li>é funcional mas limita a velocidade processamento</li>
+                <li>composto por 4 partes básica</li>
+                <li>memória &rarr; armazena dados e programas</li>
+                <li>ULA &rarr; realiza operações lógicas e matemáticas. Tem internamente um Acumulador com 40 bits de tamanho de palavras</li>
+                <li>E/S &rarr; recebe dados e emite saídas após processamento</li>
+                <li>UC &rarr; faz o controle da memória, ULA, UC e E/S</li>
+            </ul>
+        <li>Outros modelo (modelos não Von Neumann)</li>
+            <ul>
+                <li>Paralel &rarr; distribuição em unidades de processamento que atuam em paralelo (redes neurais, algoritmos genéticos, computação quântica, de fluxo de dados e computadores paralelos)</li>
+            </ul>
+    </ul>
+
+    
     <hr>
 
     
