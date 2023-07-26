@@ -19,6 +19,9 @@
             color: white;
             text-align: center;
         }
+        h4 {
+            font-weight: bold;
+        }
         p {
             text-align: justify;
             color: black;
@@ -38,24 +41,49 @@
 <body>
     <h1>Revisão</h1>
     <h2>Semana 1</h2>
-    <p>Tipos de Variáveis</p>
+    <h4>Estatística Descritiva</h4>
     <ul>
-        <li>Numéricas ou Quantitativas</li>
+        <li>Organizar, classificar e tabelar os dados segundo algum critério de maneira a facilitar sua interpretação.</li>
+        <li>Resumir, sintetizar os dados (em geral, volumosos).</li>
+        <li>Apresentar os dados através de figuras com rigor metodológico.</li>
+    </ul>
+    <h4>Dados</h4>
+    <p>Informações provenientes de observações, medições ou respostas.</p>
+    <h4>População</h4>
+    <p>Coleção de todos os resultados, repostas ou medições que são de interesse.</p>
+    <h4>Amostra</h4>
+    <p>Um subconjunto ou parte de uma população que deve representar da melhor maneira possível a população à qual ela pertence. O que é população e o que é amostra pode varia conforme o objeto da pesquisa.</p>
+    <p>Tipos de amostras</p>
+    <ul>
+        <li>Amostra aleatória simples (AAS) &rarr; amostras de mesmo tamanho possuem mesma probabilidade de serem selecionadas ao acaso. Chamada de AAS com reposição</li>
+        <li>Amostra aleatória estratificada &rarr; quando a população possui estratos (faixa etária ou renda) a amostra representa esses estratos proporcionalmente. É uma filtragem na população. Exemplo: pirâmide etária.</li>
+    </ul>
+    <h4>Variáveis estatísticas &rarr; são os registradores (nomes) usados para armazenar dados de tipo bem definido.</h4>
+    <h4>Tipos de Variáveis</h4>
+    <ul>
+        <li>Numéricas ou Quantitativas &rarr; usadas para armazenar dados numéricos. Ex.: massa, volume, tempo, anos de instrução, idade, salário etc. Podem ser de dois tipos:</li>
         <ul>
-            <li>Discretas: resultantes de contagens (em geral valores inteiros) finitas e mensuráveis como número de irmãos, de defeitos etc.</li>
-            <li>Contínuas: assumem valores em intervalos de números reais como peso, altura etc</li>
+            <li>Discretas &rarr; resultantes de contagens (em geral valores inteiros) finitas e mensuráveis como número de irmãos, de defeitos etc. Um conjunto discreto e finito de valores (não precisam ser inteiros). Ex.: idade (em anos), pessoas em uma fila, altura em centímetros</li>
+            <li>Contínuas &rarr; assumem valores em intervalos de números reais como peso, altura etc. Dados que podem assumir valores em um intervalo real. Ex.: preços, duração de uma música, índice pluviométrico.</li>
         </ul>
-        <p>Obs.: A classificação depende de certas particularidades. Idade medidas em número de anos pode ser classificada como como discreta, porém, se classificada por números de dias então ela será contínua (2,85 anos).</p>
-        <p>Deve-se utilizar o bom senso na hora de de decidir que procedimento adotar para caracterizar uma variável</p>
-        <li>Não Numéricas ou Qualitativas</li>
+        <p>Observações &rarr; A classificação depende de certas particularidades. Idade medidas em número de anos pode ser classificada como como discreta, porém, se classificada por números de dias então ela será contínua (2,85 anos). Deve-se utilizar o bom senso na hora de de decidir que procedimento adotar para caracterizar uma variável</p>        
+        <li>Não Numéricas ou Qualitativas (categórica) &rarr; usadas para armazenar dados que consistem de atributos, rótulos ou entradas não numéricas. Ex.: estado civil, preferência de consumo, grau de instrução, cor dos olhos. Podem ser de dois tipos:</li>
         <ul type="disc">
-            <li>Qualitativas ordinais: tem uma ordenação natural indicando intensidades crescentes de realização</li>
-            <li>Qualitativas ordinais: quando não é possível estabelecer uma ordem natural entre seus valores. Exemplo: M/F, tamanho (P/M/G) etc.</li>
+            <li>Qualitativas ordinais &rarr; tem uma ordenação natural indicando intensidades crescentes de realização. registram dados que podem ser ordenados de alguma forma. Ex.: grau de instrução (fundamental, médio, superior), classe social (A, B, C,...), tamanho (P, M, G)</li>
+            <li>Qualitativas nominais &rarr; quando não é possível estabelecer uma ordem natural entre seus valores. Classificam os dados em diferentes categorias. Ex.: estado civil, região de procedência, sim/não.Exemplo: M/F, tamanho (P/M/G) etc.</li>
         </ul>
     </ul>
-    <p>Frequência Absoluta: listar e quantificar os valores possíveis de uma variável separadamente do conjunto bruto de dados.</p>
-    <p>Frequência Relativa: definida por f<sub>i</sub>= n<sub>i</sub>/n. Determina o percentual de ocorrência dos valores de uma determinada variável</p>
-    <p>Exemplo</p>
+    <h4>Níveis de mensuração de variáveis</h4>
+    <ul>
+        <li>Escala nominal &rarr; dados categóricos, não se pode realizar cálculos matemáticos com eles.</li>
+        <li>Escala ordinal &rarr; os dados podem ser ordenados mas diferenças entre valores não tem sentido matemático. Ex.: quanto é G - M?</li>
+        <li>Escala intervalar &rarr; os dados podem ser ordenados e diferenças entre valores têm sentido matemático. Geralmente são números. Ex.: <code>30&deg;C - 20&deg;C = 10&deg;C</code>.</li>
+        <li>Escala da razão &rarr; os dados podem ser ordenados, as diferenças entre valores têm sentido e escala possui um "zero natural". Os dados podem ser expressos com múltiplos uns dos outros. Ex.: família com 0 filhos.</li>
+    </ul>
+    <h4>Frequência Absoluta (n)</h4>
+        <p>Lista e quantifica os valores possíveis de uma variável separadamente do conjunto bruto de dados.</p>
+    <h4>Frequência Relativa (f<sub>i</sub>= n<sub>i</sub>/n)</h4>
+        <p>Determina o percentual de ocorrência dos valores de uma determinada variável. Exemplo</p>
     <table>
         <tr>
             <th>Gênero</th>
@@ -82,7 +110,12 @@
             <td>1</td>
         </tr>
     </table>
-
+    <h4>Gráficos</h4>
+    <ul>
+        <li>Setor (pizza) &rarr; se adapta muito bem às variáveis qualitativas.</li>
+        <li>Barras &rarr; se adapta melhor às variáveis discretas ou qualitativas.</li>
+        <li>Histograma (retângulos contíguos) &rarr; onde a altura de cada retângulo é denominada densidade e é definida pelo quociente da área pela amplitude da faixa lateral. Alguns autores utilizam a frequência absoluta ou a porcentagem na construção do histograma. O histograma também pode ser utilizado no cálculo da mediana que o valor que divide o conjunto de dados ordenados em dois subgrupos de mesmo tamanho (das observações ordenadas, 50% estão abaixo e 50% estão acima das medianas) definido por m<sub>obs</sub>.</li>
+    </ul>
     <hr>
 
     
