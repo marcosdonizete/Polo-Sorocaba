@@ -116,6 +116,52 @@
         <li>Barras &rarr; se adapta melhor às variáveis discretas ou qualitativas.</li>
         <li>Histograma (retângulos contíguos) &rarr; onde a altura de cada retângulo é denominada densidade e é definida pelo quociente da área pela amplitude da faixa lateral. Alguns autores utilizam a frequência absoluta ou a porcentagem na construção do histograma. O histograma também pode ser utilizado no cálculo da mediana que o valor que divide o conjunto de dados ordenados em dois subgrupos de mesmo tamanho (das observações ordenadas, 50% estão abaixo e 50% estão acima das medianas) definido por m<sub>obs</sub>.</li>
     </ul>
+    <h4>Organização e apresentação de dados</h4>
+    <ul>
+        <li>informação &ne; dados</li>
+        <li>Organizar os dados de forma que seja possível exibir algumas características. Ex.: quantis</li>
+        <li>Agrupar e contar valores semelhantes em classes</li>
+        <li>Apresentar dos dados através de gráficos que ilustrem suas características</li>
+    </ul>
+    <h4>Distribuição de frequências</h4>
+    <ul>
+        <li>permite organizar os dados, extrair medidas e informações dos dados</li>
+        <li>É a partir da tabela de frequências que se constrói o histograma.</li>
+        <li>distribuição empírica de probabilidades, histograma.</li>
+        <li>Para construir uma distribuição de frequências</li>
+            <ul>
+                <li>decidir em quantas classes agrupar os dados</li>
+                    <ul>
+                        <li>poucas classes agrupam os dados demais</li>
+                        <li>muitas classes agrupam os dados de menos</li>
+                        <li>o típico é uma tabela ter de 4 a 20 intervalos de classe</li>
+                        <li>para um número pequeno (n &le; 200) a regra de Sturge sugere &rarr; <code>K = [1 + log<sub>2</sub>n] = [1 +3,322log<sub>10</sub>n]</code></li>
+                <li>encontrar uma amplitude de classes conveniente</li>
+                        <ul>
+                            <li>calcular a amplitude dos intervalos de classe (K) por &rarr; <code>&Delta; = (max(x) - min(x)) / K</code> </li>
+                            <li>convém usar um valor de delta inteiro caso dê quebrado</li>
+                        </ul>
+                <li>determinar os limites inferior e superior das classes (cobrindo toda a amplitude)</li>
+                        <ul>
+                            <li>começar a partir de um valor conveniente inicial &le; min(x)</li>
+                            <li>a partir dele se recobrimos a amplitude dos dados com sucessivos intervalos de classe de largura delta.</li>
+                            <li>pode ser necessário usar mais intervalos de classe (K) para cobrir todos os dados até o final</li>
+                            <li>eve-se indicar se os intervalos são abertos à esquerda ou a direita |-- ou --|</li>
+                <li>contar quantos dados incidem em cada classe</li>
+                <li>construir a tabela de frequências sem esquecer algum elemento (incidências, frequências relativas, densidades de frequências, linhas de totais)</li>
+                        </ul>
+                    </ul>
+            </ul>
+    </ul>
+    <h4>Histograma</h4>
+    <ul>
+        <li>É uma representação gráfica da tabela de frequência dos dados</li>
+        <li>Não é um gráfico de barras das incidencias n<sub>i</sub></li>
+        <li>Cada barra tem a largura de seu respectivo intervalo de classes deltai (no eixo-x)</li>
+        <li>Cada barra tem a altura da densidade de frequências di de seu respectivo intervalo de classes (no eixo-y)</li>
+        <li>Representa uma versão empírica (baseada nos dados amostrais) da distribuição de probabilidades da grandeza medida</li>
+        <li>O histograma corresponde a uma aproximação da distribuição de probabilidade da grandeza medida, por isso sua área (probabilidade) total vale <code>&sum;f<sub>i</sub>&Delta;<sub>i</sub> = 1</code></li>
+    </ul>
     <hr>
 
     
