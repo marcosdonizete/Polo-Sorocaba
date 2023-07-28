@@ -27,12 +27,16 @@
             color: black;
         }
         mark {
-            background-color: green;
-            color: white;           
+            background-color: yellow;
+            color: black;   
+            font-weight: bold;        
         }
         table, th, td {
             border: 1px solid black;
             text-align: center;
+        }
+        code {
+            font-family: 'Times New Roman', Times, serif;
         }
     </style>
     <title>Teste</title>
@@ -80,9 +84,9 @@
         <li>Escala intervalar &rarr; os dados podem ser ordenados e diferenças entre valores têm sentido matemático. Geralmente são números. Ex.: <code>30&deg;C - 20&deg;C = 10&deg;C</code>.</li>
         <li>Escala da razão &rarr; os dados podem ser ordenados, as diferenças entre valores têm sentido e escala possui um "zero natural". Os dados podem ser expressos com múltiplos uns dos outros. Ex.: família com 0 filhos.</li>
     </ul>
-    <h4>Frequência Absoluta (n)</h4>
+    <h4>Frequência Absoluta (<mark>n</mark>)</h4>
         <p>Lista e quantifica os valores possíveis de uma variável separadamente do conjunto bruto de dados.</p>
-    <h4>Frequência Relativa (f<sub>i</sub>= n<sub>i</sub>/n)</h4>
+    <h4>Frequência Relativa (<mark>f<sub>i</sub>= n<sub>i</sub>/n</mark>)</h4>
         <p>Determina o percentual de ocorrência dos valores de uma determinada variável. Exemplo</p>
     <table>
         <tr>
@@ -116,6 +120,8 @@
         <li>Barras &rarr; se adapta melhor às variáveis discretas ou qualitativas.</li>
         <li>Histograma (retângulos contíguos) &rarr; onde a altura de cada retângulo é denominada densidade e é definida pelo quociente da área pela amplitude da faixa lateral. Alguns autores utilizam a frequência absoluta ou a porcentagem na construção do histograma. O histograma também pode ser utilizado no cálculo da mediana que o valor que divide o conjunto de dados ordenados em dois subgrupos de mesmo tamanho (das observações ordenadas, 50% estão abaixo e 50% estão acima das medianas) definido por m<sub>obs</sub>.</li>
     </ul>
+    <hr>
+    <h2>Semana 2</h2>
     <h4>Organização e apresentação de dados</h4>
     <ul>
         <li>informação &ne; dados</li>
@@ -135,10 +141,10 @@
                         <li>poucas classes agrupam os dados demais</li>
                         <li>muitas classes agrupam os dados de menos</li>
                         <li>o típico é uma tabela ter de 4 a 20 intervalos de classe</li>
-                        <li>para um número pequeno (n &le; 200) a regra de Sturge sugere &rarr; <code>K = [1 + log<sub>2</sub>n] = [1 +3,322log<sub>10</sub>n]</code></li>
+                        <li>para um número pequeno (<mark>n &le; 200</mark>) a regra de Sturge sugere &rarr; <mark><code>K = [1 + log<sub>2</sub>n] = [1 +3,322log<sub>10</sub>n]</code></mark></li>
                 <li>encontrar uma amplitude de classes conveniente</li>
                         <ul>
-                            <li>calcular a amplitude dos intervalos de classe (K) por &rarr; <code>&Delta; = (max(x) - min(x)) / K</code> </li>
+                            <li>calcular a amplitude dos intervalos de classe (K) por &rarr; <mark><code>&Delta; = (max(x) - min(x)) / K</code></mark> </li>
                             <li>convém usar um valor de delta inteiro caso dê quebrado</li>
                         </ul>
                 <li>determinar os limites inferior e superior das classes (cobrindo toda a amplitude)</li>
@@ -160,9 +166,44 @@
         <li>Cada barra tem a largura de seu respectivo intervalo de classes deltai (no eixo-x)</li>
         <li>Cada barra tem a altura da densidade de frequências di de seu respectivo intervalo de classes (no eixo-y)</li>
         <li>Representa uma versão empírica (baseada nos dados amostrais) da distribuição de probabilidades da grandeza medida</li>
-        <li>O histograma corresponde a uma aproximação da distribuição de probabilidade da grandeza medida, por isso sua área (probabilidade) total vale <code>&sum;f<sub>i</sub>&Delta;<sub>i</sub> = 1</code></li>
+        <li>O histograma corresponde a uma aproximação da distribuição de probabilidade da grandeza medida, por isso sua área (probabilidade) total vale <mark><code>&sum;f<sub>i</sub>&Delta;<sub>i</sub> = 1</code></mark></li>
     </ul>
     <hr>
+    <h2>Semana 3</h2>
+    <h4>Revisão de conteúdos básicos</h4>
+    <ul>
+        <li>Dígitos significativos</li>
+            <ul>
+                <li>o número de dígitos significativos indica o erro máximo associado ao valor declarado</li>
+                <li>os limites numéricos dentro do qual se encontra o valor verdadeiro</li>
+                <li>e o nível de precisão associado ao valor. Exemplo: se x = 7 cm então o verdadeiro valor de x está compreendido em 6,5 e 7,5 cm. Se x = 7,0 cm então o verdadeiro valor de x está compreendido em 6,95 e 7,05 cm</li>
+            </ul>
+        <li>Regra de arredondamento</li>
+            <ul>
+                <li>o arredondamento não deve ser feito antes do final do cálculo. Deve ser feito ao final se o dígito seguinte ao dígito para o qual vamos 	arrendondar vale 0, 1, 2, 3 ou 4, truncamos o valor a partir daquele dígito. Exemplo: 3,14 &rarr; 3,1 (arredonda para baixo)</li>
+                <li>se for 6, 7, 8 ou 9 arredondamos para cima. Exemplo: 2,718 &rarr; 2,72</li>
+                <li>se o dígito for 5, o protocolo mais usado é arredondar para o par mais próximo. Exemplo: 3,1415 &rarr; 3,1412 / 0,5765 &rarr; 0,576 / 23,5 &rarr; 24. Sempre vai virar o par mais próximo</li>
+                <li>dentro dos computadores os números são sempre truncados</li>
+            </ul>
+        <li>Progressôes e somas</li>
+            <ul>
+                <li>Progressão aritmética</li>
+                    <ul>
+                        <li><code>a<sub>n</sub> = a<sub>0</sub> + nr</code></li>
+                        <li>Soma = <code>(n + 1)(a<sub>1</sub> + a<sub>n</sub>)) / 2</code></li>
+                    </ul>
+                <li>Progressão geométrica</li>
+                    <ul>
+                        <li><mark><code>a<sub>n</sub> = a<sub>n-1</sub>.q<sup>n</sup></code></mark></li>
+                        <li><mark>Soma = <code>a<sub>0</sub>(q<sup>n+1</sup> - 1 / q - 1)</code></mark></li>
+                        <li>quando a razão da PG vale <code>|q| &lt; 1</code>, a soma infinita vale <mark><code>a<sub>0</sub>/(1 - q)</code></mark></li>
+                    </ul>
+                <li>Identidades que ocorrem com frequência</li>
+                    <ul>
+                        <li>Soma de inteiros k de 1 até <mark><code>n = (n(n + 1)) / 2</code></mark></li>
+                    </ul>
+            </ul>
+    </ul>
 
     
 </body>
