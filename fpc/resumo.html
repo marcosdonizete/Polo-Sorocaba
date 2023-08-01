@@ -133,8 +133,56 @@
         <li>Interpretação pura: programas são interpretados por outros. Oposto da compilação (mais lento que compilar)</li>
         <li>Híbridos: primeiro compila depois interpreta (muito lento)</li>
     </ul>
-
     <hr>
+    <h2>Semana 2</h2>
+    <h4>Introdução ao Google Colab</h4>
+    <ul>
+        <li>Aspectos na escolha da linguagem de programação</li>
+            <ul>
+                <li>tempo de execução</li>
+                <li>paradigma explorado</li>
+                <li>reúso do trabalho</li>
+                <li>flexibilidade</li>
+            </ul>
+        <li>Python</li>
+            <ul>
+                <li>alto nível</li>
+                <li>interpretada</li>
+                <li>scriptada</li>
+                <li>imperativa</li>
+                <li>orientada a objetos</li>
+                <li>funcional</li>
+                <li>tipagem dinâmica</li>
+                <li>forte</li>
+                <li>alto nível</li>
+                <li>multiparadigma</li>
+                <li>projetada para aumentar a produtividade do programador</li>
+                <li>incorporada aos sistemas Unix-based e Linux</li>
+                <li>agregou aspectos de diversas linguagens</li>
+            </ul>
+        <li>Colab</li>
+            <ul>
+                <li>interface rápida</li>
+                <li>facilita a colaboração</li>
+                <li>não necessita ser configurado</li>
+                <li>acesso gratuito à GPUs</li>
+                <li>bibliotecas pré-instaladas</li>
+            </ul>
+        <li>Códigos</li>
+        <code>
+            <blockquote>
+                import pandas as pd <br>
+                uri = "https://raw.githubusercontent.com/fivethirtyeight/data/master/alcohol-consumption/drinks.csv" <br>
+                bebidas = pd.read_csv(uri, error_bad_lines=False, encoding='latin-1') <br>
+                bebidas.head()
+                <br>
+                bebidas.columns = ["pais", "cervejas", "destilados", "vinhos", "total"] <br>
+                bebidas.head() <br>
+                bebidas.["cervejas"].median() <br>
+                bebidas.["cervejas"].mean()
+            </blockquote>
+        </code>
+    </ul>
 
     
 </body>
