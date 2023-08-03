@@ -38,7 +38,7 @@
         code {
             font-family: 'Times New Roman', Times, serif;
             font-weight: bold;
-        }
+        }        
     </style>
     <title>Teste</title>
 
@@ -205,6 +205,82 @@
                     </ul>
             </ul>
     </ul>
+    <hr>
+    <h2>Semama 4</h2>
+    <h4>Medidas de posição e de dispersão</h4>
+        <ul>
+            <li>formas de extrair informação dos dados</li>
+            <li>Medidas-resumo &rarr; resumo de um conjunto de dados em um pequeno número de valores representativos</li>
+            <li>são de dois tipos</li>
+                <ul>
+                    <li>posição ou tendência central &rarr; representa os dados na RETA numérica (observação típica do conjunto de dados)</li>
+                    <ul>
+                        <li>as principais são</li>
+                            <ul>
+                                <li>Média (<img src="https://latex.codecogs.com/svg.image?\bar{x}" title="\bar{x}" />)</li>
+                                    <ul>
+                                        <li>representa o centro de gravidade (ponto que os dadosse equilibram ao redor)</li>
+                                        <li>pode ser simples ou ponderada (cada valor tem um peso)</li>
+                                        <li>expressa por <img src="https://latex.codecogs.com/svg.image?\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_{i}=\frac{1}{n}\left(x_{1}&plus;x_{2}...x_{n}\right)" title="\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_{i}=\frac{1}{n}\left(x_{1}+x_{2}...x_{n}\right)" /></li>
+                                    </ul>
+                                <li>Mediana (quantil)</li>
+                                    <ul>
+                                        <li>é a posição dos dados ordenados (estatística de	ordem)</li>
+                                        <li>é o ponto que divide os dados em duas metades metade está abaixo do valor da mediana e metade está acima)</li>
+                                        <li>se a amostra for ímpar, a mediana coincidirá com um dos dados que estiver na amostra <img src="https://latex.codecogs.com/svg.image?med(x)=x_{\left(\frac{n&plus;1}{2}\right)}" title="med(x)=x_{\left(\frac{n+1}{2}\right)}" /></li>
+                                        <li>se a amostra for par, a mediana não será um dos valores. Ela é dada pela média dos dados que estão no meio da amostra e valerá <img src="https://latex.codecogs.com/svg.image?med(x)=\frac{1}{2}\left(x_{\left(\frac{n}{2}\right)}&plus;x_{\left(\frac{n}{2}&plus;1\right)}\right)" title="med(x)=\frac{1}{2}\left(x_{\left(\frac{n}{2}\right)}+x_{\left(\frac{n}{2}+1\right)}\right)" /></li>
+                                        <li>representa o valor mais frequente observado nos dados
+                                            não é muito útil como medida de posição mas auxilia na análise da distribuição</li>
+                                    </ul>
+                                <li>Moda</li>
+                                    <ul>
+                                        <li>é o valor que é ocorre mais frequentemente</li>
+                                        <li>não existe fórmula para moda</li>
+                                        <li>não é muito útil como medida de posição pois a precisão da medição dos dados faz com que a moda não exista</li>
+                                        <li>a moda está mais perto de uma extremidade do que do centro da amostra</li>
+                                        <li>ajuda a analisar a cara da distribuição</li>
+                                        <li>pode haver mais de uma moda para um mesmo conjunto de dados (multimodal)</li>
+                                        <li>ajuda a descobrir se a distribuição dos dados</li>
+                                            <ul>
+                                                <li>assimétrica à esquerda &rarr; a <code><mark>média < mediana < moda</mark></code> <img src="https://latex.codecogs.com/svg.image?\bar{x}<med(x)<mod(x)" title="\bar{x}<med(x)<mod(x)" /></li>
+                                                <li>assimétrica à direita &rarr; <code><mark>média > mediana > moda</mark></code> <img src="https://latex.codecogs.com/svg.image?\bar{x}>med(x)>mod(x)" title="\bar{x}>med(x)>mod(x)" /></li>
+                                            </ul>
+                        
+                                    </ul>
+                            </ul>
+                    </ul>
+                    <li>dispersão &rarr; representa os valores espalhados (variabilidade dos dados). Formam uma núvem de dados</li>
+                        <ul>
+                            <li>alguns tipos</li>
+                                <ul>
+                                    <li>amplitude total</li>
+                                        <ul>
+                                            <li>intervalo máximo de valores observados na amostra</li>
+                                            <li>é o domínio dos dados (max - min)</li>
+                                            <li>domínio empírico (observado)</li>
+                                            <li>dado por <img src="https://latex.codecogs.com/svg.image?R=max(x)-min(x)=x_{\left(n\right)}-x_{1}" title="R=max(x)-min(x)=x_{\left(n\right)}-x_{1}" /></li>
+                                            <li>vantagem &rarr; fácil de calcular</li>
+                                            <li>desvantagem &rarr; usa somente valores do conjunto de dados (desperdício de informação)</li>
+                                        </ul>
+                                    <li>desvio padrão (<img src="https://latex.codecogs.com/svg.image?\sigma&space;" title="\sigma " />)</li>
+                                        <ul>
+                                            <li>principal medida de dispersão</li>
+                                            <li>possui sólida fundamentação matemática</li>
+                                            <li>raiz quadrada da variância</li>
+                                            <li>usa todos os valores disponíveis</li>
+                                            <li>existem duas versões</li>
+                                                <ul>
+                                                    <li>populacional (tudo) (<img src="https://latex.codecogs.com/svg.image?\sigma&space;" title="\sigma " />) &rarr; dado pela raiz quadrada da variância <img src="https://latex.codecogs.com/svg.image?Var(x)=\sigma^{2}=\frac{1}{n}\sum_{i=1}^{n}\left(x_{i}-\mu\right)^{2}" title="Var(x)=\sigma^{2}=\frac{1}{n}\sum_{i=1}^{n}\left(x_{i}-\mu\right)^{2}" /></li>
+                                                    <li>amostral s(uma parte) &rarr; dado pela raiz quadrada de <img src="https://latex.codecogs.com/svg.image?s^{2}=\frac{1}{n-1}\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{2}" title="s^{2}=\frac{1}{n-1}\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{2}" /></li>
+                                                </ul>
+                                        </ul>
+                                </ul>
+                        </ul>
+                </ul>
+        </ul>
+        <hr>
+        <h2>Semama 5</h2>
+
 
     
 </body>
