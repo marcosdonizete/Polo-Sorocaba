@@ -24,8 +24,13 @@
             color: black;
         }
         mark {
-            background-color: green;
-            color: white;           
+            background-color: yellow;
+            color: black;   
+            font-weight: bold;           
+        }
+        code {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
         }
     </style>
     <title>Teste</title>
@@ -138,6 +143,290 @@
             </ul>
     </ul>    
     <hr>
-        
+    <h2>Semana 2</h2>   
+    <h4>Unidade Central de Processamento (<mark>CPU</mark>)</h4>
+        <ul>
+            <li>cérebro do computador</li>
+            <li>executa programas em sequeência, armazenados na RAM. Chamado de ciclo da máquina</li>
+            <li>controla componentes e subsistemas</li>
+            <li>composta por UC, ULA e Registradores (cache interno). Tem também um barramento principal</li>            
+        </ul>
+    <h4>Unidade de Controle (<mark>UC</mark>)</h4>
+        <ul>
+            <li>controla o funcionamento de cada subsistema interligado ao barramento</li>
+            <li>busca instruções na memória principal</li>
+            <li>determina o tipo dessa instrução</li>
+        </ul>
+    <h4>Unidade Lógica e Aritmética (<mark>ULA</mark>)</h4>
+        <ul>
+            <li>recebe dados da UC e de registradores</li>
+            <li>faz operações matemáticas e lógicas das instruções recebidas</li>
+            <li>faz operações de deslocamento lógico (desloca binários para esquerda ou direita)</li>
+            <li>faz operações de deslocamento aritmético (dividir ou multiplicar números inteiros por 2)</li>
+            <li>escreve bits de saída</li>
+            <li>escreve dados em outros registradores</li>
+        </ul>
+    <h4>Registradores</h4>
+        <ul>
+            <li>memórias de grande velocidade</li>
+            <li>serve de armazenamento temporário e muito rápido</li>
+            <li>ficam dentro do processador</li>
+            <li>existem diferentes tipos de registradores</li>
+                <ul>
+                    <li>contador de programa &rarr; é considerado o registrador mais importante (indica a próxima instrução a ser executada. ponteiro)</li>
+                    <li>de instrução &rarr; armazena a instrução que está sendo executada</li>
+                    <li>de dados &rarr; manter os dados da entrada e os resultados finais</li>
+                </ul>
+        </ul>
+    <h4>Barramento</h4>
+        <ul>
+            <li>por onde trafegam dados de entrada e saída com a memória</li>
+                <ul>
+                    <li>sinais de controle</li>
+                    <li>dados</li>
+                    <li>endereços</li>
+                </ul>
+            <li>existem vários barramentos em um sistema</li>
+            <li>há 3 tipos de barramento entre CPU e memória</li>
+                <ul>
+                    <li>de dados</li>
+                        <ul>
+                            <li>diversas linhas de conexão</li>
+                            <li>1 bit por vez</li>
+                            <li>o # de linhas de conexão depende do tamanho da palavra (16/32/64 bits)</li>
+                        </ul>
+                    <li>de endereço</li>
+                        <ul>
+                            <li>acessa a palavra na memória principal</li>
+                            <li>o # de linhas depende do endereçamento máximo da memória</li>                            
+                        </ul>
+                    <li>de controle</li>
+                        <ul>
+                            <li>faz a comunicação CPU/Memória</li>
+                            <li>o # de linhas depende da quantidade de comandos de controle</li>
+                        </ul>
+                </ul>
+        </ul>
+    <h4>Ciclo de máquina</h4>
+        <ul>
+            <li>Início &rarr; há instruções?</li>
+                <ul>
+                    <li>sim &rarr; Busca &rarr; Decodificação &rarr; Execução</li>
+                    <li>não &rarr; Fim</li>
+                </ul>
+            <li>Busca &rarr; quando o sistema copia a próxima instrução no registrador contador de programas</li>
+            <li>Decodificação &rarr; ocorre quando a UC decodifica a instrução e quando ela está no RU (resulta em código binário)</li>
+            <li>Execução &rarr; ocorre a execução da tarefa por um componente da CPU (pela ULA p.ex.)</li>
+        </ul>
+    <h4>Entrada e Saída (<mark>E/S</mark>)</h4>
+        <ul>
+            <li>comunicam dados ou informações do computador e estão conectados a ele (recebem dados e mostram dados)</li>
+            <li>cada dispositivo possui 2 partes</li>
+                <ul>
+                    <li>controlador &rarr; o meio por onde é feita a conexão do dispositivo. Está contido em uma placa</li>
+                    <li>controlador de disco &rarr; controla o dispositivo de armazenamento</li>
+                </ul>
+            <li>arquitetura E/S com os seguintes componentes</li>
+                <ul>
+                    <li>blocos de memória</li>
+                    <li>módulos de controle no sistema principal e periféricos</li>
+                    <li>barramento de E/S (comunicar interna e externamente)</li>
+                    <li>interface com dispositivos externos</li>
+                    <li>ligação entre o sistema principal e os periféricos</li>
+                </ul>    
+        </ul>
+        <h4>Transmissão de dados</h4>
+        <ul>
+            <li>pode ser:</li>
+                <ul>
+                    <li>paralela &rarr; um byte por vez (distância &le; 1 metro)</li>
+                    <li>serial &rarr; um bit por vez e transmitidos por um único condutor</li>
+                </ul>
+        </ul>
+        <h4>Outras arquiteturas</h4>
+            <ul>
+                <li>Complex Instruction Set Computer (<mark>CISC</mark>)</li>
+                    <ul>
+                        <li>muitas instruções simples e/ou complexas com tamanhos variáveis</li>
+                        <li>instruções do tipo registrador-memória</li>
+                        <li>programação mais simples</li>
+                        <li>circuitos mais complexos (UC)</li>
+                        <li>programação em dois níveis &rarr; porque a CPU não executa instruções complexas (chamado microprogramação)</li>
+                            <ul>
+                                <li>1º &rarr; transforma uma instrução complexa em simples</li>
+                                <li>2º &rarr; executa essa instrução simples na CPU</li>
+                                <li>necessita de micro memórias</li>
+                            </ul>
+                        <li>compilador mais simples</li>
+                        <li>acesso a memória por qualquer instrução</li>
+                        <li>hardware mais complexo e com frequência mais baixa</li>
+                        <li>ex.: Intel x86</li>
+                    </ul>
+                <li>Reduced Instruction Set Computers (<mark>RISC</mark>)</li>
+                    <ul>
+                        <li>trabalha com instruções reduzidas e tamanho fixo</li>
+                        <li>executadas diretamente pelo circuito processador</li>
+                        <li>instruções do tipo registrador-registrador</li>
+                        <li>tem cerca de 50 instruções</li>
+                        <li>fazem o mínimo possível de operações simples</li>
+                        <li>simulam operações complexas</li>
+                        <li>a programação é mais difícil e demorada</li>
+                        <li>projetada para utilização de pipeline</li>
+                        <li>hardware mais simples com frequência mais alta</li>
+                    </ul>
+            </ul>
+        <h4>Memórias</h4>
+            <ul>
+                <li>Armazena programas e dados</li>
+                <li>Tem capacidade de armazenamento</li>
+                    <ul>
+                        <li>maior capacidade = menor custo por bit</li>
+                        <li>maior capacidade = tempo de acesso mais lento</li>
+                    </ul>
+                <li>Tem tempo e custo de acesso</li>
+                    <ul>
+                        <li>acesso mais rápido = maior custo por bit</li>
+                    </ul>
+                <li>Tem durabilidade</li>
+                <li>Tem consumo de energia</li>
+                <li>Hierarquia de memória</li>
+                    <ul>
+                        <li>na placa (<mark>onboard</mark>)&rarr; RAM, cache, registradores</li>
+                        <li>fora da placa (<mark>offboard</mark>) &rarr; CD, DVD, disco magnéticos</li>
+                        <li>offline &rarr; fita magnética</li>
+                    </ul>
+                <li>Endereçamento</li>
+                    <ul>
+                        <li>composto por células que armazenam palavras</li>
+                        <li>cada célula tem um endereço hexadecimal (inteiros &gt; 0) que vai de <code>2<sup>n</sup> - 1</code> bits de endereço</li>
+                        <li>espaço de endereçamento é o total de endereços de memória</li>
+                    </ul>
+                <li>Tipos de memória</li>
+                    <ul>
+                        <li>Memória de acesso aleatório (<mark>RAM</mark>)</li>
+                            <ul>
+                                <li>pode ser lida e escrita durante o processamento</li>
+                                <li>pode ser de dois tipos</li>
+                                    <ul>
+                                        <li>estática (<mark>SRAM</mark>) &rarr; muito rápida e volátil. Apaga-se no desligamento do sistema. Ex.: cache</li>
+                                        <li>dinâmica (<mark>DRAM</mark>) &rarr; muito lenta. Cada célula tem um transistor e um capacitor (1 se carregado ou 0 para não)</li>
+                                    </ul>
+                            <li>Memória somente de leitura (<mark>ROM</mark>)</li>
+                                    <ul>
+                                        <li>não pode ser apagada</li>
+                                        <li>dados inseridos durante a fabricaçã</li>
+                                        <li>podem ser de 3 tipos</li>
+                                            <ul>
+                                                <li><mark>PROM</mark> &rarr; ROM programável. pode ser programada <mark>UMA</mark> vez em campo</li>
+                                                <li><mark>EPROM</mark> -> ROM programável e apagável. pode ser programada e apaga em campo</li>
+                                                <li><mark>EEPROM</mark> -> ROM eletricamente programável e apagável. igual a EPROM e também pode ser removida do computador</li>
+                                            </ul>
+                                    </ul>
+                            <li>Cache</li>
+                                    <ul>
+                                        <li>pequena capacidade e mais rápida que a RAM</li>
+                                        <li>mais lenta que os registradores</li>
+                                        <li>guarda as palavras mais acessadas com frequência</li>
+                                        <li>possui 2 objetivos</li>
+                                            <ul>
+                                                <li>se aproximar da velocidade dos registradores</li>
+                                                <li>aumentar a capacidade de armazenamento dos registradores a um menor custo</li>
+                                            </ul>
+                                        <li>transfere dados em palavra com os registradores</li>
+                                        <li>transfere dados em bloco com a RAM</li>
+                                        <li>possui níveis de velocidade &rarr; L1 &gt; L2 &gt; L3</li>
+                                        <li>a busca do processador se inicia nesta ordem: L1 &rarr;L2 &rarr; L3 &rarr; RAM</li>
+                                    </ul>
+                            </ul>
+                    </ul>
+            </ul>
+        <h4>Sistemas de armazenamento</h4>
+            <ul>
+                <li>Disco magnético &rarr; prato de alumínio com revestimento magnetizável</li>
+                trilha &rarr; sequência de bits lidos ou escritos
+                <li>setores &rarr; tem tamanho fixo (512 bytes)</li>
+                <li>podem ser</li>
+                    <ul>
+                        <li>rígidos &rarr; atingem até 15k rpm</li>
+                        <li>flexíveis &rarr; atingem até 360 rpm</li>
+                    </ul>
+                <li>Disco óptico &rarr; criados para armazenar programas de TV</li>
+                    <ul>
+                        <li>grande capacidade</li>
+                        <li>baixo cust</li>
+                        <li>tipos principais</li>
+                            <ul>
+                                <li>Compact Disc (<mark>CD</mark>)</li>
+                                    <ul>
+                                        <li>memória ROM</li>
+                                        <li>gravados somente uma vez por laser</li>
+                                    </ul>
+                                <li>Digital Video disc (<mark>DVD</mark>)</li>
+                                    <ul>
+                                        <li>tem planos iluminados por diodo de laser</li>
+                                        <li>lidos por fotodetector</li>
+                                        <li>tem depressoes menores</li>
+                                        <li>espiral mais estreita</li>
+                                        <li>laser vermelho que aumenta sua capacidade em 7 vezes</li>
+                                    </ul>
+                                <li>arranjo redundante de discos independentes (<mark>RAID</mark>)</li>
+                                    <ul>
+                                        <li>possui níveis de RAID</li>
+                                            <ul>
+                                                <li>0 &rarr; disco virtual simulado pelo RAID</li>
+                                                <li>1 &rarr; RAID verdadeiro que duplica todos os discos (4 primários e 4 backups)</li>
+                                                <li>2 &rarr; atua por palavra ou até por byte</li>
+                                                <li>3 &rarr; versão simplificada do RAID 2 (só escreve um bit de paridade no disco)</li>
+                                                <li>4 &rarr; trabalha com tiras e não requer drives sincronizados. Se assemelha ao RAID 0</li>
+                                                <li>5 &rarr; aperfeiçoamento do RAID 4. Faz balanceamento de carga e grava discos em paralelo</li>
+                                            </ul>                                    
+                                    </ul>
+                            </ul>
+                    </ul>
+                <li>Futuro do armazenamento</li>
+                    <ul>
+                        <li>aumento da densidade de dados por:</li>
+                            <ul>
+                                <li>materiais biológicos &rarr; armazena dados de diferentes maneiras</li>
+                                <li>microeletromecânicos (<mark>MEMS</mark>) &rarr; ultrapassa o limite do armazenamento magnétic</li>
+                                <li>holograma &rarr; imagem tridimensional gerada por manipulação de feixes de laser</li>
+                            </ul>
+                    </ul>
+            </ul>
+        <h4>Periféricos de E/S</h4>
+            <ul>
+                <li>Terminais</li>
+                    <ul>
+                        <li>não possuem memória secundária</li>
+                        <li>só possuiam teclado e monitor</li>
+                        <li>ligados ao processador central por linha serial ou telefônica</li>
+                        <li>caíram em desuso devido ao barateamento dos computadores pessoais</li>
+                    </ul>
+                <li>Teclado &rarr; mecânicos</li>
+                <li>Mouse &rarr; dispositivo apontador</li>
+                    <ul>
+                        <li>mecânico &rarr; com esfera rotacional</li>
+                        <li>ótico &rarr; usa led e fotodetector</li>
+                        <li>ótico-mecânico &rarr; mistura dos dois anteriores</li>
+                        <li>usam conexão USB</li>
+                    </ul>
+                <li>Telas touch screens</li>
+                    <ul>
+                        <li>sensíveis ao toque</li>
+                        <li>podem ser transparentes como tela de um tablet</li>
+                        <li>podem ser opacas como a tela de um notebook</li>
+                        <li>dividem-se em</li>
+                            <ul>
+                                <li>infravermelho &rarr; emissores na borda direita ou superior detectam a posição do toque</li>
+                                <li>resistivo &rarr; duas camadas de fios na tela detectam o toque</li>
+                                <li>capacitivo &rarr; permitem vários toques simultâneos</li>
+                            </ul>           
+                    </ul>
+            </ul>
+        <h4>Câmeras digitais &rarr; funciona com luz onde o filme é substituido por um sensor CCD que se polariza por exposição à luz</h4>
+        <h4>Placas de rede e cabos &rarr; promovem a comunicação cabeada e com alta largura de banda</h4>
+    <hr>
+    <h2>Semana 3</h2>
+    <hr>
 </body>
 </html>
