@@ -427,6 +427,268 @@
         <h4>Placas de rede e cabos &rarr; promovem a comunicação cabeada e com alta largura de banda</h4>
     <hr>
     <h2>Semana 3</h2>
+    <h4>Sistema operacional</h4>
+    <ul>
+        <li>gerencia recursos do computador (CPU, E/S, memória)</li>
+        <li>controla execução de processos (programas em execução) com auxílio de:</li>
+            <ul>
+                <li>registradores</li>
+                <li>circuitos</li>
+            </ul>
+        <li>fornece uma interface mais simples para o usuário (abstração sem linha de comando)</li>
+        <li>atua como uma camada entre o hardware e o usuário do sistema</li>  
+    </ul>
+    <h4>Gerenciamento de recursos</h4>
+    <ul>
+        <li>o SO direciona o processador e memória no uso dos recursos do sistema para:</li>
+            <ul>
+                <li>escalonar processos (escolher qual será processado)</li>
+                    <ul>
+                        <li>escalonador (scheduler) &rarr; seleciona (via algoritmo e hardware) os processos mais viáveis para execução</li>
+                            <ul>
+                                <li>escalonador de 2 níveis &rarr; o processo que tem menos tempo é colocado primeiro na RAM. Os demais ficam alocados na memória secundária</li>
+                                <li>estados dos processos</li>
+                                    <ul>
+                                        <li>novo &rarr; quando é criado pelo usuário</li>
+                                        <li>pronto &rarr; para ser executado</li>
+                                        <li>executando &rarr; sendo processado pela CPU</li>
+                                        <li>esperando &rarr; suspenso/aguardando dados ou informações de outro processos</li>
+                                        <li>saída &rarr; terminado e destruído pelo SO</li>
+                                    </ul>
+                                <li>tipos de escalonamento</li>
+                                    <ul>
+                                        <li>curto prazo &rarr; qual processo será executado</li>
+                                        <li>médio prazo &rarr; qual processo parcial será executado. Já está na RAM e coloca no Swap</li>
+                                        <li>longo prazo &rarr; adicionar processo ao conjunto de processos a ser executado</li>
+                                        <li>E/S &rarr; qual solicitação de E/S pendente será tratada</li>
+                                    </ul>
+                                <li>técnicas de escalonamento &rarr; justiça, póliticas estabelecidas e equilíbrio (tudo operando)</li>
+                                    <ul>
+                                        <li>FIFO &rarr; primeiro que entra, primeiro que sai</li>
+                                        <li>SJF (shortest job first) &rarr; mais curto primeiro</li>
+                                        <li>RR (round robin) &rarr;</li>
+                                        <li>múltiplas filas &rarr;</li>
+                                        <li>loteria &rarr; distribui tokens randômicos. O sorteado será processado.</li>
+                                        <li>fair-share &rarr; escalona considerando quem criou o processo (fração por usuário)</li>
+                                    </ul>
+                                <li>processos e threads &rarr; quebra dos processos</li>
+                                    <ul>
+                                        <li>cada thread pode ser executada em paralelo</li>
+                                        <li>implementa a ideia de concorrência interna (ex. processador de texto)</li>
+                                        <li>agiliza a programação e uso da CPU</li>
+                                        <li>reduz ociosidade da CPU</li>
+                                        <li>os threads também são escalonáveis</li>
+                                        <li>não podem ser escalonados para serem executados em multiprocessadores</li>
+                                    </ul>
+                            </ul>
+                        <li>compartilhar tempo &rarr; O SO determina quais processos devem ser executados pelo processador</li>
+                            <ul>
+                                <li>evita a ociosidade do processador</li>
+                                <li>afeta o desempenho do sistema e satisfação do usuário</li>
+                            </ul>
+                    </ul>
+            </ul>
+    </ul>
+    <h4>Gerenciamento de memória</h4>
+        <ul>
+            <li>feito pelo SO</li>
+            <li>é um conjunto de memórias: registradores, cache, RAM, secundárias, fita magnética. <code>&lt; capacidade = &lt; tempo acesso</code></li>
+            <li>utiliza técnicas para tornar a memória mais eficiente</li>
+            <li>monoprogramação &rarr; único processo executando no sistema por vez. Usada em antigos mainframes, antigos computadores e nos dispositivos handhelds, como tablets e smartphones</li>
+            <li>multiprogramação &rarr; mais de um processo executando no sistema por vez</li>
+                <ul>
+                    <li>causa fragmentação</li>
+                    <li>particiona a RAM para manter os processos das seguintes maneiras:</li>
+                        <ul>
+                            <li>fixo &rarr; alocação estática. Geralmente iniciadas no boot da máquina</li>
+                            <li>variável &rarr; alocação dinâmica em diferentes partições sob demanda</li>
+                        </ul>
+                    <li>cada partição tem 2 registradores &rarr;> base e limite (para os processos não invadirem espaço de outro)</li>
+                </ul>
+            <li>memória virtual &rarr; técnica para acessar memória secundária quase equivalente à RAM. Seus princípios são:</li>
+                <ul>
+                    <li>localidade &rarr; espacial e temporal (a informação mais utilizada fica na RAM e o restante na secundária)</li>
+                    <li>mapeamento &rarr; traduzir endereços em <mark>MM</mark>U (memory management unit)</li>
+                        <ul>
+                            <li><mark>é um dispositivo de hardware</mark></li>
+                            <li>tradução do endereçamento lógico para físico</li>
+                            <li>conhece as delimitações de endereçamento para o SO e o espaço vago</li>
+                        </ul>
+                    <li>funcionamento automático &rarr; abstrai para que o programador não precise se preocupar com isso</li>
+                    <li>expansão dos níveis como uma memória cache &rarr; funciona como uma cache entre RAM e secundária</li>
+                    <li>não é toda utilizada pela memória fisica</li>
+                    <li>a capacidade é definida pelos limites de endereçamento (não pode invadir espaço delimitado para o SO)</li>
+                    <li>vantagens da VM:</li>
+                        <ul>
+                            <li>pode ser maior que a RAM</li>
+                            <li>permite que vários programas rodem simultaneamente</li>
+                            <li>permite que cada programa tenha seu próprio espaço de endereçamento virtual</li>
+                            <li>permite compartilhar memória física ou periféricos entre diferentes processos</li>
+                            <li>traduz faixa de endereços virtuais de vários processos para uma mesma faixa de endereços físicos (continuidade de memória) o que acelera o acesso e evita problemas de segurança</li>
+                        </ul>
+                    <li>técnicas de MV</li>
+                        <ul>
+                            <li>paginação</li>
+                                <ul>
+                                    <li>quebra o tamanho do processo em páginas de tamanho fixo (&cong;4kb)</li>
+                                    <li>o endereçamento virutal é dividido em páginas virtuais</li>
+                                    <li>mistura os tipos de dados na mesma página</li>
+                                    <li>funciona como os blocos na memória cache</li>
+                                    <li>quanto menores forem as páginas maiores serão as quantidades de endereços e maior custo de mapeamento das páginas (causando overhead no sistema, vulgo HD 100%)</li>
+                                </ul>
+                            <li>segmentação</li>
+                                <ul>
+                                    <li>utiliza a quebra das páginas em blocos de tamanhos variados</li>
+                                    <li>divide os blocos por tipos (texto, dados etc) para cada segmento</li>
+                                </ul>
+                        </ul>
+                    <li>conceitos de paginação</li>
+                        <ul>
+                            <li>página é uma unidade de tamanho fixo na memória secundária</li>
+                            <li>na memória secundária é página. Na RAM é frame</li>
+                            <li>tabela de página é o mapeamento página-frame correspondente (tabela mesmo)</li>
+                            <li>cada processo tem sua tabela</li>
+                        </ul>
+                    <li>endereçamento de página</li>
+                        <ul>
+                            <li>bit de validade &rarr; indica se a página está carregada na memória física</li>
+                            <li>bit de proteção &rarr; indica se será feito leitura ou escrita</li>
+                            <li>bit de modificação &rarr; se a página foi modificada ou não</li>
+                            <li>bit de referência &rarr; se a página está sendo referenciada</li>
+                            <li>bit de cache &rarr; indica se a memória cache deve ser habilitada</li>
+                            <li>20 bits &rarr; # da página virtual na tabela de páginas</li>
+                            <li>12 bits &rarr;> deslocamento de bits menos significativos</li>
+                            <li>endereço físico composto por concatenção de:</li>
+                                <ul>
+                                    <li># da página física</li>
+                                    <li>deslocamento</li>
+                                </ul>                              
+                        </ul>
+                    <li>busca de endereço virtual</li>
+                        <ul>
+                            <li>sequencial &rarr;> busca o endereço sequencialmente (pior caso se for o último)</li>
+                            <li>binária &rarr; quebra ao meio sequencialmente (melhor que o sequencial)</li>
+                            <li>ambas são lentas</li>
+                                <ul>
+                                    <li>causa overhead da memória</li>
+                                    <li>ideal é o endereço virtual na tabela de páginas ser um índice</li>
+                                    <li>a tabela de paginação se torna um arquivo grande</li>                         
+                                </ul>
+                            <li>paginação por demanda &rarr; as páginas são carregadas quando são referenciadas</li>
+                        </ul>
+                    <li>fragmentação interna</li>
+                        <ul>
+                            <li>quando sobram espaços internos na memória</li>
+                            <li>páginas menores geram menos fragmentação porém mais buscas na tabela</li>
+                            <li>páginas maiores geram o inverso</li>
+                        </ul>
+                    <li>segmentação</li>
+                        <ul>
+                            <li>permite lidar com blocos de tamanho variável e segmentos (não força o tamanho e adapta-se ao segmento)</li>
+                            <li>segmentos de tamanhos desiguais não sobrecarregam a memória mas são mais complexos de implementar</li>
+                        </ul>
+                    <li>armazenamento da tabela de páginas</li>
+                        <ul>
+                            <li>no array de registradores da CPU</li>
+                            <li>na memória cache (na MMU)</li>
+                            <li>na RAM &rarr; uma tabela para a informação e outra para a memória). Causa overhead</li>
+                        </ul>
+                    <li><mark>TLB</mark> (Translation lookaside buffer)</li>
+                        <ul>
+                            <li>um cache em hardware que armazena as tabelas mais usadas num período de tempo</li>
+                            <li>é um dicionário que recebe bits de entrada e fornece bits de saída (caso esteja armazenado nele)</li>
+                                <ul>
+                                    <li>bits de entrada</li>
+                                        <ul>
+                                            <li># página virtual</li>
+                                            <li>identificador do processo</li>
+                                        </ul>
+                                    <li>bits de saída</li>
+                                        <ul>
+                                            <li>corresponde ao número de página virtual de cada processo composto por:</li>
+                                                <ul>
+                                                    <li># página física</li>
+                                                    <li>bits de controle</li>
+                                                </ul>
+                                        </ul>
+                                </ul>
+                                <li>primeiro se busca na TLB e depois na tabela de páginas</li>
+                        </ul>
+                    
+                </ul>
+            <li>busca da memória ideal: grande&rarr;rápida&rarr;não volátil&rarr;barata (utopia que não existe)</li>
+            <li>integração da memória</li>
+                <ul>
+                    <li>a abstração da memória é integrada e automática</li>
+                    <li>cache e VM cooperam para implementar a abstração</li>
+                    <li>o caminho mais rápido é se:</li>
+                        <ul>
+                            <li>o mapeamento estiver na TLB; e</li>
+                            <li>a página estiver na RAM; e</li>
+                            <li>o bloco estiver na cache</li>
+                        </ul>
+                </ul>
+        </ul>
+    <li>Glossário do livro:</li>
+        <h4>Papéis do Sistema Operacional (SO)</h4>
+        <ul>
+            <li>Softwares aplicativos &rarr; Programas que nos ajudam a resolver problemas do mundo real</li>
+            <li>Softwares de sistemas &rarr; Programas que gerenciam um sistema computacional e interagem com hardware</li>
+            <li>Sistema operacional &rarr; Software de sistema que gerencia recursos computacionais e fornece uma interface para interação com o sistema</li>
+            <li>Multiprogramação &rarr; A técnica de manter múltiplos programas em memória principal ao mesmo tempo, competindo pela CPU</li>
+            <li>Gerenciamento de memória &rarr; O ato de manter registro de como e onde programas são carregados em memória principal</li>
+            <li>Processo &rarr; A representação dinâmica de um programa durante execução</li>
+            <li>Gerenciamento de processo &rarr; O ato de manter registro de informação para processos ativos</li>
+            <li>Escalonamento de CPU &rarr; O ato de determinar qual processo em memória terá acesso à CPU, de modo que ele possa executar</li>
+            <li>Tempo compartilhado &rarr; Um sistema no qual tempo de CPU é compartilhado entre múltiplos usuários interativos ao mesmo tempo</li>
+            <li>Máquina virtual &rarr; A ilusão criada por um sistema de tempo compartilhado de que cada usuário possui uma máquina dedicada</li>
+            <li>Grande porte &rarr; Um computador de grande porte, multiusuário, comumente associado aos primeiros sistemas de tempo compartilhado</li>
+            <li>Terminal burro &rarr; m monitor e um teclado que permitiam ao usuário acessar o computador de grande porte nos primeiros sistemas de tempo compartilhado</li>
+            <li>Sistema de tempo real &rarr; Um sistema no qual tempo de resposta é crucial, dada a natureza do domínio de aplicação</li>
+            <li>Tempo de resposta &rarr;O tempo decorrido entre receber um estímulo e produzir uma resposta</li>
+        </ul>
+        <h4>Gerenciamento de memória</h4>
+            <ul>
+                <li>Endereço lógico &rarr; Uma referência a um valor armazenado, relativa ao programa que faz a referência</li>
+                <li>Endereço físico &rarr; Um endereço real no dispositivo de memória principal</li>
+                <li>Ligação de endereço &rarr; O mapeamento de um endereço lógico em um endereço físico</li>
+                <li>Gerenciamento de memória contígua única &rarr; A abordagem de gerenciamento de memória na qual um programa é carregado em uma área contígua de memória</li>
+                    <ul>
+                        <li>A vantagem da abordagem de gerenciamento de memória contígua única é que ela é simples de implementar e gerenciar</li>
+                        <li>No entanto, é quase certo que ela desperdice tanto espaço de memória como tempo de CPU</li>
+                        <li>É pouco provável que um programa aplicativo necessite de todo o espaço de memória não usado pelo sistema operacional e tempo de CPU é desperdiçado quando o programa tem que esperar por algum recurso</li>
+                    </ul>
+                <li>Gerenciamento de Memória Particionada</li>
+                    <ul>
+                        <li>Técnica de partição dinâmica &rarr; A técnica de gerenciamento de memória na qual a memória é dividida em partições conforme for necessário acomodar programas</li>
+                        <li>Registrador base &rarr; Um registrador que mantém o endereço de início da partição corrente</li>
+                        <li>Registrador de limites &rarr; Um registrador que mantém o tamanho da partição corrente</li>
+                        <li>Compactação &rarr; Com partições dinâmicas, as tarefas podem ser rearranjadas na memória, de modo a criar uma única grande partição livre</li>
+                    </ul>
+                <li>Gerenciamento de Memória Paginada</li>
+                    <ul>
+                        <li>Técnica de memória paginada Uma técnica de gerenciamento de memória na qual processos são divididos em páginas de tamanho fixo e armazenados em quadros de memória quando carregados</li>
+                        <li><mark>Frame</mark> (Quadro) &rarr; Uma parte de tamanho fixo de memória principal que guarda uma página de processo</li>
+                        <li>Página &rarr; Uma parte de tamanho fixo de um processo que é armazenada em um quadro de memória</li>
+                        <li>Tabela de mapeamento de páginas (<mark>TMP</mark>) &rarr; A tabela usada pelo sistema operacional para manter registro de relacionamentos página/quadro</li>
+                        <li>Paginação sob demanda &rarr; Uma extensão ao gerenciamento de memória paginada na qual páginas são trazidas para memória apenas quando são referenciadas (sob demanda</li>
+                        <li>Troca de página &rarr; Trazer uma página da memória secundária, possivelmente fazendo com que outra seja removida</li>
+                        <li>Memória virtual &rarr; A ilusão de que não há restrição de tamanho de programa, já que um processo inteiro não precisa estar em memória ao mesmo tempo</li>
+                        <li>Hiperpaginação &rarr; Processamento ineficiente causado por trocas constantes de páginas</li>
+                    </ul>
+            </ul>
+        <h4>Gerenciamento de Processos</h4>
+            <ul>
+                <li>Estados de processo &rarr; Os estágios conceituais pelos quais um processo passa à medida que ele é gerenciado pelo sistema operacional</li>
+                <li>Bloco de controle de processo (<mark>BCP</mark>) &rarr; A estrutura de dados usada pelo sistema operacional para gerenciar informação sobre um processo</li>
+                <li>Chaveamento de contexto &rarr; A troca de informação de registrador que ocorre quando um processo é removido da CPU e outro entra em seu lugar</li>
+                <li>Escalonamento de CPU</li>
+                    <ul>
+                        <li>Escalonamento não preemptivo &rarr; Escalonamento de CPU que ocorre quando o processo correntemente em execução cede a CPU voluntariamente</li>
+                        <li>Escalonamento preemptivo &rarr; Escalonamento de CPU que ocorre quando o sistema operacional decide favorecer outro processo, interrompendo o processo atualmente em execução</li>
+                        <li>Tempo de retorno &rarr; A métrica de escalonamento de CPU que mede o tempo decorrido entre a chegada do processo ao estado pronto e sua conclusão final</li>
+                    </ul>
+            </ul>
     <hr>
 </body>
 </html>
