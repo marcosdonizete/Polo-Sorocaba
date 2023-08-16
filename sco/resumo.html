@@ -508,7 +508,7 @@
             <li>memória virtual &rarr; técnica para acessar memória secundária quase equivalente à RAM. Seus princípios são:</li>
                 <ul>
                     <li>localidade &rarr; espacial e temporal (a informação mais utilizada fica na RAM e o restante na secundária)</li>
-                    <li>mapeamento &rarr; traduzir endereços em <mark>MM</mark>U (memory management unit)</li>
+                    <li>mapeamento &rarr; traduzir endereços em <mark>MMU</mark> (memory management unit)</li>
                         <ul>
                             <li><mark>é um dispositivo de hardware</mark></li>
                             <li>tradução do endereçamento lógico para físico</li>
@@ -691,5 +691,257 @@
             </ul>
     <hr>
     <h2>Semana 4</h2>
+    <h4>Arquitetura paralela e avançadas</h4>
+            <ul>
+                <li>estruturua hierárquica multicore</li>
+                    <ul>
+                        <li>cada processador possui mais de um core</li>
+                        <li>cada core possui memória cache e ULA</li>
+                    </ul>
+                <li>ciclo de instrução</li>
+                    <ul>
+                        <li>o processador executa instruções (em LM) em determinado clock</li>
+                        <li>o ciclo é a sequência de ações para realizar cada instrução em LM</li>
+                        <li>as instruções são carregadas na RAM pelo SO</li>
+                        <li>se repete indefinidamente até que:</li>
+                            <ul>
+                                <li>o sistema seja desligado; ou</li>
+                                <li>ocorra algum erro; ou</li>
+                                <li>encontre instrução de parada</li>
+                            </ul>
+                        <li>a CPU executa as instruções definidas pelo programa em execução</li>
+                        <code>
+                            start <br>
+                                                        busca de instrução;<br>
+                                                        decodificação da instrução;<br>
+                                                        cálculo de endereço de operando;<br>
+                                                        busca de operando;<br>
+                                                        execução da instrução;<br>
+                                                        cálculo de endereço do resultado;<br>
+                                                        verificação de interrupção;<br>
+                                                        se interrupção, então tratamento de interrupção;<br>
+                                                        cálculo de endereço da próxima instrução;<br>
+                                                        volta para busca de instrução;<br>
+                                                    end
+                        </code>
+                    </ul>
+                <li>funções básicas da CPU</li>
+                    <ul>
+                        <li>processamento &rarr; processar (executar operações)</li>
+                        <li>controlar</li>
+                            <ul>
+                                <li>busca, interpretação e controle da execução das instruções</li>
+                                <li>demais componentes do sistema (memória, E/S etc)</li>
+                            </ul>
+                    </ul>
+                <li>processo serial</li>
+                    <ul>
+                        <li>execução sequencial do ciclo de instrução</li>
+                        <li>é lento e pouco eficiente</li>
+                    </ul>
+                <li>paralelismo</li>
+                    <ul>
+                        <li>fazer mais de uma instrução por ciclo</li>
+                        <li>executa em menor tempo o ciclo completo</li>
+                        <li>pode ser implementado por hardware (processador) ou software (envio de instruções)</li>
+                        <li>modalidades de paralelismo</li>
+                            <ul>
+                                <li>software &rarr; mais instruções por ciclo</li>
+                                <li>hardware &rarr; mais de um processador atuando no mesmo ciclo para várias instruções</li>
+                            </ul>
+                        <li>tipos de programação de paralelismo:</li>
+                            <ul>
+                                <li>sequencial</li>
+                                <li>concorrente &rarr; escalonamento do tempo do servidor para atender vários clientes</li>
+                                <li>aralela &rarr; vários servidores atendendo vários clientes no mesmo intervalo de tempo</li>
+                            </ul>
+                        <li>arquiteturas paralelas</li>
+                            <ul>
+                                <li>classificação de Flynn (1972) &rarr; unicidade e multiplicidade do fluxo de dados e instruções</li>
+                                    <ul>
+                                        <li>SISD &rarr; instruções e dados simples</li>
+                                            <ul>
+                                                <li>fluxo único de instrução e dado</li>
+                                                <li>seriais de Von Neumann</li>
+                                                <li>são os computadores convencionais</li>
+                                                <li>instruções executadas serialmente (porém pode ser implementado o pipeline)</li>
+                                            </ul>
+                                        <li>SIMD &rarr;> instrução simples e múltiplos dados (faz tarefa repetitiva. Ex. data minning)</li>
+                                            <ul>
+                                                <li>fluxo único de instruções e fluxo múltiplo de dados</li>
+                                                <li>a mesma instrução agindo em muitos dados</li>
+                                                <li>unidade de controle única envia instruções para processadores matriciais ou paralelos</li>
+                                                <li>cada processador recebe a mesma instrução mas atua sobre dados específicos</li>
+                                                <li>usado em processadores vetoriais</li>
+                                            </ul>
+                                        <li>MISD &rarr; múltiplas instruções e dados simples (<mark>é mais raro</mark>)</li>
+                                            <ul>
+                                                <li>fluxo múltiplo de instruções e fluxo único de dados</li>
+                                                <li>vários processadores que recebem instruções distintas</li>
+                                                <li>operam sob os mesmos dados</li>
+                                                <li>usado em algoritmo de criptografia</li>
+                                            </ul>
+                                        <li>MIMD &rarr; múltiplos dados e instruções</li>
+                                            <ul>
+                                                <li>vários processadores controlados por UCs distintas</li>
+                                                <li>as instruções são diferentes para cada processado</li>
+                                                <li>operam sobre dados diferentes</li>
+                                                <li>podem ser síncronos ou assíncronos</li>
+                                                <li>multiprocessadores (memória compartilhada)</li>
+                                                <li>multicomputadores (memória distribuída)</li>
+                                                <li>a sincronização entre tarefas é feita via escrita/leitura de memória compartilhada</li>
+                                                <li>o usuário é responsável pela especificação e programação</li>
+                                                <li>permitem declarações de variáveis compartilhadas</li>
+                                                <li>permitem seções paralelas de códig</li>
+                                                <li>o compilador gera o código executável</li>
+                                                <li>threads &rarr; código de alto nível que permite acesso a localidades compartilhadas em processadores individuais</li>
+                                                <li>multiprocessador <mark>NUMA</mark> (NonUniform Memory Access) &rarr; acesso não uniforme à memória</li>
+                                                    <ul>
+                                                        <li>endereçamento único para todas as CPUs</li>
+                                                        <li>acesso à memória local mais rapido que remoto</li>
+                                                        <li>3 características que a distinguem:</li>
+                                                        <ul>
+                                                            <li>espaço de endereço visível a todas às CPUs</li>
+                                                            <li>acesso remoto à memória com instruções Load e Store</li>
+                                                            <li>sim, eu sei...cadê a terceira característica?</li>
+                                                        </ul>
+                                                    <li>multicomputadores (cluster e supercomputador) &rarr; memória distribuída</li>
+                                                        <ul>
+                                                            <li>tarefas se comunicam por troca de mensagens</li>
+                                                            <li>sincronização feita por meio dessas trocas</li>
+                                                            <li>a programação requer software especial (bibliotecas)</li>
+                                                            <li>permite portabilidade de aplicações entre plataformas</li>
+                                                            <li>usam programação com:</li>
+                                                                <ul>
+                                                                    <li>bibliotecas de rotinas &rarr; passagem de mensagens ligadas a programas sequenciais</li>
+                                                                    <li>problema dividido em tarefas que se comunicam</li>
+                                                                    <li>computadores programados por protocolos independentes de linguagem</li>
+                                                                    <li>exemplos</li>
+                                                                        <ul>
+                                                                            <li>Massive Paralel Process(<mark>MPP</mark>) &rarr; máquinas conectadas por rede de alta velocidade</li>
+                                                                                <ul>
+                                                                                    <li>boa escalabilidade</li>
+                                                                                    <li>podem ser uma grande quantidade de máquinas</li>
+                                                                                    <li>complicadas de programar</li>
+                                                                                    <li>alto custo</li>
+                                                                                    <li>tratamento de enormes transações por segundo</li>
+                                                                                    <li><mark>Intel Paragon</mark></li>
+                                                                                    <li>precisam de:</li>
+                                                                                        <ul>
+                                                                                            <li>enorme capacidade tolerância a falha</li>
+                                                                                            <li>enorme capacidade de E/S</li>
+                                                                                        </ul>
+                                                                                </ul>
+                                                                            <li>Cluster of Workstation (<mark>COW-GRID</mark>)</li>
+                                                                                <ul>
+                                                                                    <li>estações de trabalho conectadas por rede local</li>
+                                                                                    <li>baixo custo</li>
+                                                                                    <li>boa relação custo/benefício</li>
+                                                                                    <li>cluster centralizado &rarr; montado com máquinas homogêneas</li>
+                                                                                    <li>cluster descentralizado &rarr; estações de trabalho heterogêneas (com periféricos)</li>
+                                                                                    <li>conectados por 	LAN &rarr; precisa se preocupar com topologias de rede</li>
+                                                                                </ul>
+                                                                        </ul>
+                                                                </ul>
+                                                        </ul>
+                                                    <li>multiprocessadores e multicomputadores</li>
+                                                        <ul>
+                                                            <li>semelhanças:</li>
+                                                                <ul>
+                                                                    <li>são semelhantes quando se trata de interconexão</li>
+                                                                    <li>ambos trocam mensagem</li>
+                                                                    <li>MPs envia mensagens quando precisam ler ou escrever dados</li>
+                                                                    <li>no MC a troca de mensagem ocorre via comunicação e sincronização</li>
+                                                                </ul>
+                                                            <li>diferenças:</li>
+                                                                <ul>
+                                                                    <li>presença ou ausência de memória compartilhada</li>
+                                                                    <li>MP &rarr;   compartilha memória (mapeado em endereço virtual de memória)</li>
+                                                                    <li>MC &rarr; cada computador tem sua própria memória</li>
+                                                                </ul>
+                                                        </ul>
+                                                    </ul>
+                                            </ul>
+                                    </ul>
+                                <li>classificação de Duncan (1990) &rarr; cadê? só tocou no assunto</li>
+                            </ul>
+                    </ul>
+            </ul>
+    <h4>Pipeline</h4>
+            <ul>
+                <li>proporciona melhor desempenho</li>
+                <li>circuitos mais rápidos</li>
+                <li>processador com múltiplos registradores e memória cache</li>
+                <li>tipos de pipeline:</li>
+                    <ul>
+                        <li>instrução</li>
+                            <ul>
+                                <li>várias instruções realizadas simultaneamente por ciclo de clock</li>
+                                <li>em estágios diferentes</li>
+                                <li>há divisão da CPU em partes distintas (cada parte executa uma ação)</li>
+                                <li>aceita novas entradas antes de concluir as que estão sendo processadas</li>
+                            </ul>
+                    </ul>
+                <li>estágios de pipeline (para mesmo tempo para cada)</li>
+                    <code>
+                        start <br>
+			                fetch instruction (FI) &rarr; busca instrução <br>
+			                decode instruction (DI) &rarr; decodifica <br>
+			                cálculo de operandos (CO) &rarr; <br>
+			                fetch operands (FO) &rarr;> busca operandos <br>
+			                execute instruction (EI) &rarr; execução da instrução <br>
+			                write operands (WO) &rarr; escrita de operando <br>
+		                end
+                    </code>
+                    <ul>
+                        <li>se os tempos de duração de cada instrução não for igual haverá espera ou bolha</li>
+                        <li>instrução de desvio pode danificar as buscas de instruções (como na interrupção)</li>
+                        <li>quanto maior o número de estágios maior será a taxa de execução</li>
+                        <li>situações que atrapalham:</li>
+                            <ul>
+                                <li>muito esforço para movimentar dados desacelera o tempo total de execução</li>
+                                <li>a lógica de controle de passagem de estágios é mais complexa do que em estágios controlados</li>
+                            </ul>
+                        <li>entre 6 e 9 estágios é o ideal para ganho de performance no pipeline</li>
+                        <li>entre 10 e 30 instruções por estágio também é o ideal</li>
+                    </ul>
+                <li>desempenho:</li>
+                    <ul>
+                        <li>o tempo de execução de cada instrução é o mesmo sem pipeline</li>
+                        <li>latência é o tempo de execução de cada instrução</li>
+                        <li>a tarefa mais lenta limita a taxa de inserção de tarefas no pipeline</li>
+                        <li>o tempo total de várias instruções é menor</li>
+                        <li>a saída (<mark>throughput</mark>) pode aumentar. A quantidade de instruções executadas é maior</li>
+                        <li>a meta é aumentar a produtividade</li>
+                        <li>o pipeline tem que estar sempre cheio de tarefas para o melhor desempenho</li>
+                    </ul>
+                <li><mark>hazards</mark> (prejuízos/conflitos)</li>
+                    <ul>
+                        <li>bolhas &rarr; situação que afeta o desempenho do pipeline. Precisa parar e esperar outra instrução</li>
+                            <ul>
+                                <li>tipos de bolhas:</li>
+                                    <ul>
+                                        <li>recurso (estrutural) &rarr; 2 ou mais instruções utilizando o mesmo recurso</li>
+                                        <li>dados &rarr; 2 instruções querem acessar o mesmo operando ao mesmo tempo</li>
+                                        <li>desvio -> necessidade de tomar decisão com o resultado da instrução enquanto outra está sendo executada. Soluciona-se com busca antecipada do desvio deixando no buffer</li>
+                                    </ul>
+                            </ul>
+                        <li>a busca de instruções na memória é um gargalo de tempo</li>
+                        <li>evita-se esse problema buscando antecipadamente as instruções na memória</li>
+                        <li>armazena essas instruções em buffer de busca antecipada</li>
+                            <ul>
+                                <li><mark>prefetch</mark> -> busca avançada. Aproveita o ciclo para obter a próxima instrução</li>
+                                    <ul>
+                                        <li>requer mais registradores</li>
+                                        <li>o tempo de leitura aumenta</li>
+                                        <li>se não ocorrer o desvio a instrução será descartada</li>
+                                        <li><mark>NUNCA MAIS APAGUE CONTEÚDO DA PASTA PREFETCH DO WINDOWS</mark></li>
+                                    </ul>
+                            </ul>
+                        <li>busca-se primeiro neste buffer antes de ir até a memória</li>
+                    </ul>
+            </ul>
+    <hr>
+    <h2>Semana 5</h2>
 </body>
 </html>
