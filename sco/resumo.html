@@ -943,5 +943,122 @@
             </ul>
     <hr>
     <h2>Semana 5</h2>
+    <h4>Linguagem C</h4>
+            <ul>
+                <li>estrutura básica:</li>
+                    <ul>
+                        <li>bibliotecas de funções (includes e macros)</li>
+                        <li>declarações globais (funções e variáveis)</li>
+                        <li>definição das funções</li>
+                        <li>programa principal (função main)</li>
+                        <code>
+                                main() {/* begin */ <br>
+                                        /* end */}
+                        </code>
+                    </ul>
+                <li>ponteiros</li>
+                    <ul>
+                        <li>variável que contém um endereço de  memória (posição de outra variável na memória)</li>
+                        <li>diz-se que um ponteiro aponta para uma variável</li>
+                        <li>são usados para alocação dinâmica de memória</li>
+                        <li>pode aumentar a eficiência de certas rotinas</li>
+                        <li>fornecem meios para funções modificarem seus argumentos</li>
+                        <li>declarado com * antes do nome da variável. Ex.: int *p; char *p1; float *pf1;</li>
+                        <li>os operadores de ponteiro (* &) tem precedência sobre todos os operadores aritméticos</li>
+                        <li>podem apontar para qualquer posição de memória</li>
+                        <li>usa-se geralmente para 3 operações:</li>
+                            <ul>
+                                <li>atribuição &rarr; um ponteiro receber o endereço apontado por outro ponteiro, ambos apontando para o mesmo endereço</li>
+                                <li>aritmética &rarr; apenas adição e subtração. Incrementa ou decrementa o endereço. Ex.:</li>
+                                <code>
+                                    int *p, num=1, num2; <br>
+                                    p = & num; <br>
+                                    num = *p + 1; // o valor apontado por p + 1 = 2 <br>num2 = *& num; // recebe o valor do endereço apontado por num = 2
+                                </code>
+                                <li>comparação &rarr; compara-se a posição de memória. Ex.:</li>
+                                <code>
+                                    int *p1, *p2, x=10; <br>
+                                    p1 = &x; // recebe o endereço de x <br>
+                                    p2 = p1; // recebe o endereço contido em p1 (que aponta para x) <br>
+                                    if (p1 == p2)	// dará verdadeiro
+                                </code>
+                            </ul>
+                        <li>operador &</li>
+                            <ul>
+                                <li>é um operador unário (operador endereço e só modifica uma variável)</li>
+                                <li>devolve o endereço de memória do seu operando</li>
+                                <li>mais usado na inicialização do ponteiro. Ex.:</li>
+                                <code>
+                                    int *p, acm = 35; <br>
+                                    p = &acm; // p recebe o endereço de acm <br>
+                                    p = 0 = NULL (p não aponta mais para acm)
+                                </code>
+                            </ul>
+                        <li>operador *</li>
+                            <ul>
+                                <li>também é unário</li>
+                                <li>retorna o valor da variável apontada. Ex.:</li>
+                                <code>
+                                    int *p, q, acm = 35; <br>
+                                    p = &acm; <br>
+                                    q = *p; // q agora recebe o valor 35 (e não o mesmo endereço de acm)
+                                </code>
+                            </ul>
+                        <li>estruturas</li>
+                            <ul>
+                                <li>composição de tipos de dados diferentes (ou não) na mesma estrutura</li>
+                                <li>as variáveis que compõe essa estrutura são chamadas de elementos</li>
+                                <li>não cria um novo tipo de dado, só os agrupa em uma estrutura</li>
+                                <li>tem que ser inserido após os includes</li>
+                                <li>uma estrutura pode ter campos como outra estrutura. Ex.:</li>
+                                <code>
+                                    struct ponto { <br>
+                                        int x, y; <br>
+                                    }; <br>
+                                    struct retangulo { <br>
+                                        struct ponto p1, p2; <br>
+                                    }ret; <br> <br>
+                                    ret.p1.x=10;
+                                </code>
+                            </ul>
+                        <li>formato:</li>
+                            <ul>
+                                <li>typedef tipo nome;</li>
+                                <li>onde tipo &rarr; int, float, double, char etc</li>
+                                <li>nome &rarr; identificador válido em C</li>
+                            </ul>
+                    </ul>
+                <li>simulação de paginação e particionamento fixo</li>
+                    <ul>
+                        <li>paginação</li>
+                            <ul>
+                                <li>quebra de processos em páginas que são mapeadas em frames na RAM</li>
+                                <li>em processadores Intel, a MMU faz esse mapeamento</li>
+                                <li>a alocação de memória e feita por página</li>
+                                <li>o bit de validade indica se a página está carregada na RAM (1 para sim)</li>
+                                <li>são páginas virtuais com endereçamento virtual</li>
+                                <li>misturam tipos de dados</li>
+                                <li>tem tamanho fixo na memória secundária</li>
+                                <li>na RAM são chamadas de frames</li>
+                                <li>a tabela de página mapeia uma página com um frame</li>
+                                <li>cada processo tem sua tabela de páginas</li>
+                            </ul>
+                        <li>particionamento</li>
+                            <ul>
+                                <li>particionamento fixo com mesmo tamanho</li>
+                                <li>particionamento fixo com tamanho variável</li>
+                                <li>particionamento variável ou dinâmico</li>
+                                <li>hierarquia de memórias</li>
+                                    <ul>
+                                        <li>monoprogramação &rarr; único processo sendo executado no processador</li>
+                                        <li>multiprogromação &rarr; vários processos compartilhando o processador</li>
+                                    </ul>
+                            </ul>
+                    </ul>
+            </ul>
+    <hr>
+    <h2>Semana 6</h2>
+
+    <hr>
 </body>
 </html>
