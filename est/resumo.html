@@ -362,8 +362,65 @@
 
         <hr>
         <h2>Aula 6</h2>
-        <h4> </h4>
-    <h2></h2>
+        <h4>Probabilidade</h4>
+            <ul>
+                <li>é um número que associamos a um evento (algo que pode acontecer)</li>
+                <li>é um número entre 0 e 1</li>
+                <li>não existe probabilidade negativa</li>
+                <li>corresponde à nossa expectativa que o evento realmente aconteça</li>
+                <li>abordagem frequentista:</li>
+                    <ul>
+                        <li>pode ser definida como: <img src="https://latex.codecogs.com/svg.image?{\color{Red}P(A)=\frac{qtdeA}{totalObservado}}" title="{\color{Red}P(A)=\frac{qtdeA}{totalObservado}}" /></li>
+                        <li>considerações de simetria (considerando um Dado): <code>P(face = k) = 1/6 para qualquer valor de k = {1, 2, 3, 4, 5, 6}</code></li>
+                        <li>experimento aleatório</li>
+                            <ul>
+                                <li>experimento que não podemos prever. Ex: (lançar moeda, números sorteados em loteria, preço de ação)</li>
+                                <li>envolve dois elementos:</li>
+                                    <ul>
+                                        <li>espaço amostral (<mark>&Omega;</mark>) &rarr; depende do que queremos observar</li>
+                                            <ul>
+                                                <li>onjunto que conté todos os possíveis resultados do experimento aleatório. Ex.:</li>
+                                                    <ul>
+                                                        <li>lançar um dado &rarr; &Omega; = {1,2,3,4,5,6}</li>
+                                                        <li>lançar dois dados &rarr; &Omega; = {(1,1), (1,2)...(6,6)}</li>
+                                                        <li>lançar dois dados e somar as faces &rarr; &Omega; = {2,3,4...11,12}</li>
+                                                    </ul>
+                                            </ul>
+                                        <li>função probabilidade (<mark>&omega;</mark>) &rarr; associa a cada evento elementar &omega; &isin; &Omega; um número real</li>
+                                            <ul>
+                                                <li>é o átomo dentro do conjunto amostral. Ex.:</li>
+                                                    <ul>
+                                                        <li>lançar um dado &rarr; &Omega; = {1,2,3,4,5,6} e P(&omega;) = 1/6 para todo &omega; &isin; &Omega;</li>
+                                                        <li>lançar uma moeda &rarr; &Omega; = {k,c} e P(k) = P(c) = 1/2</li>
+                                                    </ul>
+                                            </ul>
+                                    </ul>
+                            </ul>
+                        <li>axiomas da teoria das probabilidades</li>
+                            <ul>
+                                <li>princípio aceito e que faz sentido</li>
+                                <li>pode-se deduzir que <code>P(A) &ge; 0</code></li>
+                                <li><mark>evento certo</mark> &rarr; quando a probabilidade de algo acontecer é: <code>P(A) = 1</code></li>
+                                <li><mark>evento impossível</mark> &rarr; probabilidade que nada aconteça ao realizar um experimento: <mark>P(&Oslash;) = 0</mark></li>
+                                <li><mark>eventos mutuamente exclusivos</mark> &rarr; ou alguma coisa acontece ou outra acontece. Não há interseção. O número não poder ser par ou ímpar ao mesmo tempo. A probabilidade de acontecer uma coisa ou outra é a soma das probabilidades</li>
+                            </ul>
+                        <li>propriedades da função probabilidade:</li>
+                            <ul>
+                                <li><code>P(&Oslash;) = 0</code></li>
+                                <li><code>0 &le; P(A) &le; 1</code> para todo A &sube; &Omega;</li>
+                                <li><img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(\bar{a})=1-P(a)}" title="{\color{Blue}P(\bar{a})=1-P(a)}" /></li>
+                                <li>Se <code>A &sube; B então P(A) &le; P(B)</code></li>
+                                <li><code>P(A&cup;B) = P(A) + P(B) - P(A&cap;B)</code> para dois eventos A e B quaisquer</li>
+                                <li>Se <code>A<sub>1</sub>, A<sub>2</sub>...,A<sub>n</sub> &sube; &Omega;</code> são mutuamente exclusivos, então <code>P(A<sub>1</sub>&cup;A<sub>2</sub>&cup;...A<sub>n</sub>) = P(A<sub>1</sub>) + P(A<sub>2</sub>)...+ P(A<sub>n</sub>)</code></li>
+                                <li><code>(A&cup;B) = P(A) + P(B) se A &cap; B = &Oslash;</code></li>
+                                <li><mark>Eventos exclusivos &ne; eventos mutuamente exclusivos</mark></li>
+                            </ul>
+                        <li>fórmula de Poincaré &rarr; uma aplicação do princípio da inclusão-exclusão à teoria das probabilidades</li>
+                            <img src="https://latex.codecogs.com/svg.image?{\color{DarkBlue}\sum_{i=1}^{n}P(A_{i})-\sum_{i\neq&space;j}^{}P(A_{i}\cap&space;A_{j})}" title="{\color{DarkBlue}\sum_{i=1}^{n}P(A_{i})-\sum_{i\neq j}^{}P(A_{i}\cap A_{j})}"/>
+                    </ul>
+            </ul>
+    <hr>
+    <h2>Aula 7</h2>
     
         
         
