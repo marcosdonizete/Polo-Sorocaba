@@ -28,6 +28,10 @@
             color: black;   
             font-weight: bold;           
         }
+        table, th, td {
+            border: 1px solid black;
+            text-align: center;
+        }
     </style>
     <title>Teste</title>
 
@@ -534,6 +538,137 @@
         </ul>
     <hr>
     <h2>Semana 6</h2>
+    <h4>Internet das coisas</h4>
+        <ul>
+            <li>década de 70 a 80 &rarr; era de conectar computadores</li>
+            <li>década de 90 a 2000 &rarr; era da conexão entre pessoas (internet)</li>
+            <li>atualmente &rarr; era da conexão de tudo (coisas e pessoas) à internet</li>
+                <ul>
+                    <li>conecta objetos físicos com sensores embarcados para coletar dados</li>
+                </ul>
+            <li>baseada em aquisição e análise de dados em tempo real e offline</li>
+            <li>aprendizado de máquina</li>
+            <li>visualização de dados</li>
+            <li>tópicos importantes para big data</li>
+            <li>definições</li>
+                <ul>
+                    <li>coisa &rarr; objeto comum em nosso ambiente</li>
+                    <li>dispositivo &rarr; sensor, atuador ou tag. Informa dados coletados</li>
+                    <li>em geral, um dispositivo pertence a uma coisa (sensor lâmbda, sensor de porta automática etc)</li>
+                </ul>
+            <li>arquitetura &rarr; dispositivos(hardware pessoais ou vestíveis), gateways(dispositivos de coleta), cloud(armazenamento e comunicação segura) e apps(provém acesso virtual e análise dos dados dos dispositivos). Principais partes:</li>
+                <ul>
+                    <li>pontos de extremidade &rarr; um mais sensores</li>
+                    <li>gateways &rarr; agregam dados de vários sensores e encaminham para o back-end</li>
+                    <li>back-end &rarr; armazena e analisa os dados coletados</li>
+                </ul>
+            <li>áreas de aplicação:</li>
+                <ul>
+                    <li>cidades inteligentes &rarr; controlar atividades públicas (iluminação)</li>
+                    <li>meio ambiente &rarr; limpeza do ar e da água</li>
+                    <li>agricultura &rarr; automatizar irrigação, fertilização do solo, evitar desperdício</li>
+                    <li>saúde &rarr; melhorar tratamentos</li>
+                    <li>alimentos &rarr; evitar desperdício</li>
+                </ul>
+            <li>IoT x aplicativos móveis e web</li>
+                <ul>
+                    <li>IoT &rarr; são parte de um sistema maior de dispositivos</li>
+                    <li>estão sempre ligados</li>
+                    <li>são sempre em maior quantidade (rebanho)</li>
+                    <li>são incorporados aos ambientes ao contrários dos aplicativos</li>
+                    <li>são heterogêneos (varia recursos de conexão e energia, há de todo tipo)</li>
+                    <li>possuem conectividade fraca (rede intermitente e não confiável)</li>
+                    <li>podem ser dinâmicos e efêmeros</li>
+                </ul>
+            <li>meios de utilização:</li>
+                <ul>
+                    <li>RFID, 5G, NFC, Bluetooth, Wi-fi ou Xbee</li>
+                    <li>fornecem identificação, estado e localização</li>
+                </ul>
+            <li>no Brasil</li>
+                <ul>
+                    <li>zerou imposto sobre produtos IoT</li>
+                    <li>tem 5G de baixa latência (tempo de ida e volta do sinal)</li>
+                    <li>Samsung SmartThing com solução multiplataforma (Wi-fi, Zigbee e Z-Wave)</li>
+                    <li>tecnologia propensa à adoção por arquiteto e designers</li>
+                </ul>
+        </ul>
+    <h4>Protocolos <mark>MQTT</mark> e <mark>REST</mark></h4>
+        <ul>
+            <li>protocolos de comunicação</li>
+            <li>evoluiram de protocolos industriais</li>
+            <li><mark>MQTT</mark> (message queue telemetry transport)</li>
+                <ul>
+                    <li>protocolo do tipo machinte-to-machine</li>
+                    <li>é um protocolo leve (na camada de transporte de mensagem)</li>
+                    <li>utiliza o modelo de publicação e assinatura</li>
+                    <li>é suportado por dois tipos básicos de entidades:</li>
+                        <ul>
+                            <li>broker de mensagem -> grande servidor que recebe todas as mensagens dos clientes</li>
+                            <li>clientes -> recebem as mensagens do broker de mensagem</li>
+                        </ul>
+                    <li>possui <mark>QoS</mark> (qualidade de serviço)</li>
+                        <ul>
+                            <li>QoS 0 -> não confirma a entrega; não armazena a mensagem para retransmissão (perdeu preibói)</li>
+                            <li>QoS 1 -> tem confirmação de entrega</li>
+                            <li>QoS 2 -> garante a entrega uma vez com confirmação de recebimento</li>
+                        </ul>
+                    <li>é utilizando em uma grande variedade de domínios e ambientes de mercado (automotivo, logística, casas inteligentes, telemetria, saúde, segurança, smarthome, gás, petróleo, ferrovias)</li>
+                    <li><mark>REST</mark> (representational state tranfer)</li>
+                        <ul>
+                            <li>trabalha com abstração da arquitetura web</li>
+                            <li>é um protocolo de comunicação mais recente</li>
+                            <li>surgiu com a ideia de simplificar o acesso aos servidores web</li>
+                            <li>se baseia no procotolo HTTP</li>
+                            <li>permite utilizar vários formatos para representação de dados (JSON, XML, RSS)</li>
+                            <li>permite utilizar recursos com identificadores globais</li>
+                            <li>permite manipular recursos com componentes da rede</li>
+                            <li>a comunicação ocorre através da internet por aparelhos que utilizam o HTTP</li>
+                        </ul>
+                    <li>REST x MQTT</li>
+                        <table>
+                            <tr>
+                                <th>REST</th>
+                                <th>MQTT</th>
+                            </tr>
+                            <tr>
+                                <td>conexão unidirecional</td>
+                                <td>conexão bilateral</td>
+                            </tr>
+                            <tr>
+                                <td>consumo alto de energia</td>
+                                <td>consome 20% menos</td>
+                            </tr>
+                            <tr>
+                                <td>sensível à falta de energia</td>
+                                <td>conexão persistente</td>
+                            </tr>
+                            <tr>
+                                <td>necessita estabelecer conexão</td>
+                                <td>transfere dados até 25 vezes mais rápido</td>
+                            </tr>
+                            <tr>
+                                <td>1k conexões simultâneas</td>
+                                <td>50k conexões simultâneas</td>
+                            </tr>
+                        </table>
+                    <li>outros protocolos</li>
+                        <ul>
+                            <li>6LoWPAN</li>
+                            <li>ZigBee</li>
+                            <li>AMQP (advanced message queuing protocol)</li>
+                            <li>CoAP (contrained application protocol)</li>
+                        </ul>
+                    <li>emuladores para IoT</li>
+                        <ul>
+                            <li>permitem simular o IoT sem o hardware</li>
+                            <li>os principais com GUI são (Cooja, OMNet++, Catalia, Sinalgo)</li>
+                            <li>são de código aberto e utilizam C, C++ e Java</li>
+                        </ul>
+                </ul>
+        </ul>
+    <hr>
+    <h2>Semana 7</h2>
     
 </body>
 </html>
