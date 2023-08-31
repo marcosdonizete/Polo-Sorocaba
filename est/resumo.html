@@ -421,6 +421,56 @@
             </ul>
     <hr>
     <h2>Aula 7</h2>
+    <h4>Probabilidade condicional e independência</h4>
+            <ul>
+                <li>é a ocorrência de dois eventos em sequência</li>
+                <li>dados dois eventos A e B com <code>P(B) &gt; 0</code>, definimos a probabilidade condicional de A, dado B por</li>
+                <img src="https://latex.codecogs.com/svg.image?{\color{DarkBlue}P(A|B)=\frac{P(A\cap&space;B)}{P(B)}}" title="{\color{DarkBlue}P(A|B)=\frac{P(A\cap B)}{P(B)}}" />
+                    <ul>
+                        <li>isso responde a seguinte pergunta: dado que B ocorreu, qual a probabilidade de A ocorrer também?</li>
+                        <li>em geral <code>P(A|B) &ge; P(A)</code></li>
+                        <li>a ocorrência do evento B traz informação que será usada para estimar a probabilidade de A de forma mais precisa</li>
+                    </ul>
+                <li><mark>eventos independentes</mark></li>
+                    <ul>
+                        <li>regra do produto &rarr; pegue a fórmula anterior e passe passe o P(B) multiplicado:</li>
+                        <img src="https://latex.codecogs.com/svg.image?{\color{Red}P(A\cap&space;B)=P(A|B)P(B)}" title="{\color{Red}P(A\cap B)=P(A|B)P(B)}" />
+                            <ul>
+                                <li>se A independe de B (como no caso de amostragem sequencial com reposição) então a fórmula é:</li>
+                                <img src="https://latex.codecogs.com/svg.image?{\color{Red}P(A\cap&space;B)=P(A)P(B)}" title="{\color{Red}P(A\cap B)=P(A)P(B)}" /> <br>
+                                ex.: em um saco há 2 bolas brancas (A) e 3 bolas pretas (A).
+                                <br>
+                                a probabilidade de tirar uma bola branca é 2/5 e preta é 3/5 <br>
+                                como cada bola retirada é devolvida ao saco, as probabilidades não se alteram e por isso dizemos que A e B são eventos independentes <br>
+                                quando a probabilidade da interseção delas for igual ao produto das probabilidades
+                            </ul>
+                    </ul>
+                <li>teorema de <mark>bayes</mark></li>
+                    <ul>
+                        <li>nos ensina como atualizar nossas estimaticas de probabilidade de um evento A conforme vamos obtendo mais informações sobre os eventos que já ocorrem</li>
+                        <img src="https://latex.codecogs.com/svg.image?{\color{DarkGreen}P(A)=\frac{P(A\cap&space;B)}{P(B)}....e&space;P(B)\frac{P(B\cap&space;A)}{P(A)}}\\{\color{DarkGreen}como...P(A\cap&space;B)=P(B\cap&space;A),temos}\\{\color{DarkGreen}P(A\cap&space;B)=P(A|B)P(B)...e...P(B\cap&space;A)=P(B|A)(P(A))...igualando,teremos}\\{\color{DarkGreen}P(A|B).P(B)=P(B|A).P(A)...equivalente}\\{\color{DarkGreen}P(A|B)=P(A).\frac{P(B|A)}{P(B)}}" title="{\color{DarkGreen}P(A)=\frac{P(A\cap B)}{P(B)}....e P(B)\frac{P(B\cap A)}{P(A)}}\\{\color{DarkGreen}como...P(A\cap B)=P(B\cap A),temos}\\{\color{DarkGreen}P(A\cap B)=P(A|B)P(B)...e...P(B\cap A)=P(B|A)(P(A))...igualando,teremos}\\{\color{DarkGreen}P(A|B).P(B)=P(B|A).P(A)...equivalente}\\{\color{DarkGreen}P(A|B)=P(A).\frac{P(B|A)}{P(B)}}" />
+                        <li>o que significa: qual a possibilidade de observar A dado que B aconteceu?</li>
+                            <ul>
+                                <li>P(A|B) = crença atualizada</li>
+                                <li>P(A) = crença inicial</li>
+                                <li>P(B|A) / P(B) = atualização</li>
+                            </ul>
+                        <li>a partir do conhecimento que eu tenho sobre algo eu atualizo minhas crenças</li>
+                    </ul>
+                <li>fórmula da probabilidade total</li>
+                    <ul>
+                        <li>muitas vezes não sabemos quanto vale P(B)</li>
+                        <li>dado pela fórmula: <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(B)=\sum_{i=1}^{n}P(B|A_{i})P(A_{i})}" title="{\color{Blue}P(B)=\sum_{i=1}^{n}P(B|A_{i})P(A_{i})}" /></li>
+                        <li>é a decomposição de P(B) em termos de conjuntos disjuntos A<sub>i</sub> que formam &Omega;</li>
+                        <li>é a forma de escrever um termo que não conhecemos em função de termos que conhecemos</li>
+                        <li>muito útil quando se quer inverter probabilidades condicionais</li>
+                        <li>pode-se pensar nos eventos <code>A<sub>1</sub>, A<sub>2</sub>,...,An</code> (uma partição de B) como um conjunto de hipóteses, sendo que somente uma delas é verdadeira</li>
+                        <li><mark>verossimilhança</mark> &rarr; o quanto de crença eu tenho no fato dado que o evento ocorreu?</li>
+                    </ul>
+                
+            </ul>
+    <hr>
+    <h2>Aula 8</h2>
     
         
         
