@@ -495,7 +495,7 @@
                                         <li>longo prazo &rarr; adicionar processo ao conjunto de processos a ser executado</li>
                                         <li>E/S &rarr; qual solicitação de E/S pendente será tratada</li>
                                     </ul>
-                                <li>técnicas de escalonamento &rarr; justiça, póliticas estabelecidas e equilíbrio (tudo operando)</li>
+                                <li>técnicas de escalonamento &rarr; justiça, políticas estabelecidas e equilíbrio (tudo operando)</li>
                                     <ul>
                                         <li>FIFO &rarr; primeiro que entra, primeiro que sai</li>
                                         <li>SJF (shortest job first) &rarr; mais curto primeiro</li>
@@ -536,12 +536,12 @@
                             <li>fixo &rarr; alocação estática. Geralmente iniciadas no boot da máquina</li>
                             <li>variável &rarr; alocação dinâmica em diferentes partições sob demanda</li>
                         </ul>
-                    <li>cada partição tem 2 registradores &rarr;> base e limite (para os processos não invadirem espaço de outro)</li>
+                    <li>cada partição tem 2 registradores &rarr; base e limite (para os processos não invadirem espaço de outro)</li>
                 </ul>
             <li>memória virtual &rarr; técnica para acessar memória secundária quase equivalente à RAM. Seus princípios são:</li>
                 <ul>
                     <li>localidade &rarr; espacial e temporal (a informação mais utilizada fica na RAM e o restante na secundária)</li>
-                    <li>mapeamento &rarr; traduzir endereços em <mark>MMU</mark> (memory management unit)</li>
+                    <li>mapeamento &rarr; traduzir endereços em <mark>MMU</mark> (memory management unit - é um hardware)</li>
                         <ul>
                             <li><mark>é um dispositivo de hardware</mark></li>
                             <li>tradução do endereçamento lógico para físico</li>
@@ -551,7 +551,7 @@
                     <li>expansão dos níveis como uma memória cache &rarr; funciona como uma cache entre RAM e secundária</li>
                     <li>não é toda utilizada pela memória fisica</li>
                     <li>a capacidade é definida pelos limites de endereçamento (não pode invadir espaço delimitado para o SO)</li>
-                    <li>vantagens da VM:</li>
+                    <li>vantagens da MV:</li>
                         <ul>
                             <li>pode ser maior que a RAM</li>
                             <li>permite que vários programas rodem simultaneamente</li>
@@ -599,7 +599,7 @@
                         </ul>
                     <li>busca de endereço virtual</li>
                         <ul>
-                            <li>sequencial &rarr;> busca o endereço sequencialmente (pior caso se for o último)</li>
+                            <li>sequencial &rarr; busca o endereço sequencialmente (pior caso se for o último)</li>
                             <li>binária &rarr; quebra ao meio sequencialmente (melhor que o sequencial)</li>
                             <li>ambas são lentas</li>
                                 <ul>
@@ -624,7 +624,7 @@
                         <ul>
                             <li>no array de registradores da CPU</li>
                             <li>na memória cache (na MMU)</li>
-                            <li>na RAM &rarr; uma tabela para a informação e outra para a memória). Causa overhead</li>
+                            <li>na RAM &rarr; uma tabela para a informação e outra para a memória. Causa overhead</li>
                         </ul>
                     <li><mark>TLB</mark> (Translation lookaside buffer)</li>
                         <ul>
@@ -653,7 +653,7 @@
             <li>integração da memória</li>
                 <ul>
                     <li>a abstração da memória é integrada e automática</li>
-                    <li>cache e VM cooperam para implementar a abstração</li>
+                    <li>cache e MV cooperam para implementar a abstração</li>
                     <li>o caminho mais rápido é se:</li>
                         <ul>
                             <li>o mapeamento estiver na TLB; e</li>
@@ -676,7 +676,7 @@
             <li>Tempo compartilhado &rarr; Um sistema no qual tempo de CPU é compartilhado entre múltiplos usuários interativos ao mesmo tempo</li>
             <li>Máquina virtual &rarr; A ilusão criada por um sistema de tempo compartilhado de que cada usuário possui uma máquina dedicada</li>
             <li>Grande porte &rarr; Um computador de grande porte, multiusuário, comumente associado aos primeiros sistemas de tempo compartilhado</li>
-            <li>Terminal burro &rarr; m monitor e um teclado que permitiam ao usuário acessar o computador de grande porte nos primeiros sistemas de tempo compartilhado</li>
+            <li>Terminal burro &rarr; monitor e um teclado que permitiam ao usuário acessar o computador de grande porte nos primeiros sistemas de tempo compartilhado</li>
             <li>Sistema de tempo real &rarr; Um sistema no qual tempo de resposta é crucial, dada a natureza do domínio de aplicação</li>
             <li>Tempo de resposta &rarr;O tempo decorrido entre receber um estímulo e produzir uma resposta</li>
         </ul>
@@ -720,6 +720,7 @@
                         <li>Escalonamento não preemptivo &rarr; Escalonamento de CPU que ocorre quando o processo correntemente em execução cede a CPU voluntariamente</li>
                         <li>Escalonamento preemptivo &rarr; Escalonamento de CPU que ocorre quando o sistema operacional decide favorecer outro processo, interrompendo o processo atualmente em execução</li>
                         <li>Tempo de retorno &rarr; A métrica de escalonamento de CPU que mede o tempo decorrido entre a chegada do processo ao estado pronto e sua conclusão final</li>
+                        <li>Page fault é a falta de página, quando a página não foi carregada na memória principal e está referenciada</li>
                     </ul>
             </ul>
     <hr>
