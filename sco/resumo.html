@@ -798,7 +798,7 @@
                             <ul>
                                 <li>sequencial</li>
                                 <li>concorrente &rarr; escalonamento do tempo do servidor para atender vários clientes</li>
-                                <li>aralela &rarr; vários servidores atendendo vários clientes no mesmo intervalo de tempo</li>
+                                <li>paralela &rarr; vários servidores atendendo vários clientes no mesmo intervalo de tempo</li>
                             </ul>
                         <li>arquiteturas paralelas</li>
                             <ul>
@@ -811,7 +811,7 @@
                                                 <li>são os computadores convencionais</li>
                                                 <li>instruções executadas serialmente (porém pode ser implementado o pipeline)</li>
                                             </ul>
-                                        <li>SIMD &rarr;> instrução simples e múltiplos dados (faz tarefa repetitiva. Ex. data minning)</li>
+                                        <li>SIMD &rarr; instrução simples e múltiplos dados (faz tarefa repetitiva. Ex. data minning)</li>
                                             <ul>
                                                 <li>fluxo único de instruções e fluxo múltiplo de dados</li>
                                                 <li>a mesma instrução agindo em muitos dados</li>
@@ -829,7 +829,7 @@
                                         <li>MIMD &rarr; múltiplos dados e instruções</li>
                                             <ul>
                                                 <li>vários processadores controlados por UCs distintas</li>
-                                                <li>as instruções são diferentes para cada processado</li>
+                                                <li>as instruções são diferentes para cada processador</li>
                                                 <li>operam sobre dados diferentes</li>
                                                 <li>podem ser síncronos ou assíncronos</li>
                                                 <li>multiprocessadores (memória compartilhada)</li>
@@ -837,7 +837,7 @@
                                                 <li>a sincronização entre tarefas é feita via escrita/leitura de memória compartilhada</li>
                                                 <li>o usuário é responsável pela especificação e programação</li>
                                                 <li>permitem declarações de variáveis compartilhadas</li>
-                                                <li>permitem seções paralelas de códig</li>
+                                                <li>permitem seções paralelas de código</li>
                                                 <li>o compilador gera o código executável</li>
                                                 <li>threads &rarr; código de alto nível que permite acesso a localidades compartilhadas em processadores individuais</li>
                                                 <li>multiprocessador <mark>NUMA</mark> (NonUniform Memory Access) &rarr; acesso não uniforme à memória</li>
@@ -895,7 +895,7 @@
                                                                 <ul>
                                                                     <li>são semelhantes quando se trata de interconexão</li>
                                                                     <li>ambos trocam mensagem</li>
-                                                                    <li>MPs envia mensagens quando precisam ler ou escrever dados</li>
+                                                                    <li>MPs enviam mensagens quando precisam ler ou escrever dados</li>
                                                                     <li>no MC a troca de mensagem ocorre via comunicação e sincronização</li>
                                                                 </ul>
                                                             <li>diferenças:</li>
@@ -927,7 +927,7 @@
                                 <li>aceita novas entradas antes de concluir as que estão sendo processadas</li>
                             </ul>
                     </ul>
-                <li>estágios de pipeline (para mesmo tempo para cada)</li>
+                <li>estágios de pipeline (mesmo tempo para cada)</li>
                     <code>
                         start <br>
 			                fetch instruction (FI) &rarr; busca instrução <br>
@@ -968,14 +968,14 @@
                                     <ul>
                                         <li>recurso (estrutural) &rarr; 2 ou mais instruções utilizando o mesmo recurso</li>
                                         <li>dados &rarr; 2 instruções querem acessar o mesmo operando ao mesmo tempo</li>
-                                        <li>desvio -> necessidade de tomar decisão com o resultado da instrução enquanto outra está sendo executada. Soluciona-se com busca antecipada do desvio deixando no buffer</li>
+                                        <li>desvio &rarr; necessidade de tomar decisão com o resultado da instrução enquanto outra está sendo executada. Soluciona-se com busca antecipada do desvio deixado no buffer</li>
                                     </ul>
                             </ul>
                         <li>a busca de instruções na memória é um gargalo de tempo</li>
                         <li>evita-se esse problema buscando antecipadamente as instruções na memória</li>
                         <li>armazena essas instruções em buffer de busca antecipada</li>
                             <ul>
-                                <li><mark>prefetch</mark> -> busca avançada. Aproveita o ciclo para obter a próxima instrução</li>
+                                <li><mark>prefetch</mark> &rarr; busca avançada. Aproveita o ciclo para obter a próxima instrução</li>
                                     <ul>
                                         <li>requer mais registradores</li>
                                         <li>o tempo de leitura aumenta</li>
