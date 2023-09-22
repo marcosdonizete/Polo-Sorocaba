@@ -523,11 +523,92 @@
             </ul>    
     <hr>
     <h2>Aula 9</h2>
+    <h4>Variáveis aleatórias e valores esperados</h4>
+    <ul>
+        <li>variável aleatória &rarr; descreve o resultade um experimento aleatório em termos de números</li>
+        <li>fornecem uma alternativa para estudar a teoria das probabilidades e estatística</li>
+        <li>é preferível falar de variáveis aleatórios do que falar de eventos</li>
+        <li>é uma função: <code>X: &Omega; &rarr; &Ropf;</code></li>
+            <ul>
+                <li>entra um conjunto na variável aleatória e sai um conjunto</li>
+            </ul>
+        <li>sempre descrita com letra maíuscula</li>
+        <li>motivações para usar variáveis aleatórias:</li>
+            <ul>
+                <li>mais fácil e rápido descrever com número do que palavras</li>
+                <li>mais fácil lidar com números do que com conjuntos</li>
+                <li>a probabilidade de qualquer evento pode ser encontrada a partir da distribuição de probabilidade da variável aleatório usando regras da teoria das probabilidades</li>
+            </ul>
+        <li>exemplos de variáveis aleatórias:</li>
+            <ul>
+                <li>número de peças defeituosas em um lote de produção &rarr; discreta</li>
+                <li>número de bugs em um programa de computador &rarr; discreta</li>
+                <li>quantidade de precipitação chuvosa em um determinado local em janeiro &rarr; contínua</li>
+                <li>tempo que um cliente aguarda em fila &rarr; contínua</li>
+            </ul>
+        <li>tipos de variáveis aleatórias:</li>
+            <ul>
+                <li>discreta &rarr; quando os resultados possíveis do experimento são números distintos separados uns dos outros. Não precisa ser número inteiro (ex.: &pi; e &radic;2)</li>
+                <li>ex.: lançamento de um dado</li>
+                    <ul>
+                        <li>associando: X = "face observada"</li>
+                        <li>lançamento de uma moeda</li>
+                        <li>associando: Y:{K,C} portanto Y(K) = 0, Y(C) = 1</li>
+                    </ul> 
+                <li>contínua &rarr; que assumem valores com casas decimais</li>               
+            </ul>
+            <li>eventos definidos por variáveis aleatórias</li>
+                <ul>
+                    <li>se X é uma variável aleatória e x é um número real dado, então podemos definir o evento (X = x) como o conjunto: <br><code>(X = x) = {&omega; &isin;; &Omega;:X(&omega;) = x} <br>
+                        (X &le; x) = {&omega; &isin;; &Omega;: X(&omega;) &le; x} <br>
+                        (X &ge; x) = {&omega; &isin; &Omega;: X(&omega;) >= x} <br>
+                        (X &gt; x) = {&omega; &isin; &Omega;: X(&omega;) > x} <br>
+                        (x<sub>1</sub> &lt; X &le; x<sub>2</sub>) = {&omega; &isin; &Omega;: x1 &lt; X(&omega;) &le; x2} <br>
+                        podemos calcular suas probabilidades como: <br>
+                        P(X = x) = &sum; &omega; &isin; P{&omega;:X(&omega;) = x}
+                    </code>
+                    </li>
+                </ul>
+            <li>distribuição de probabilidades</li>
+                <ul>
+                    <li>dizemos que determinamos a distribuição de probabilidade de X quando pudermos especificar todas as probabilidades envolvendo X</li>
+                    <li>distribuição cumulativa de probabilidades: <code>R: R &rarr; [0,1]</code></li>
+                        <ul>
+                            <li>dada por F<sub>x</sub>(x) = P(X <= x), x pertence a R</li>
+                            <li>F<sub>x</sub>(x) possui as seguintes propriedades:</li>
+                                <ul>
+                                    <li>F<sub>x</sub>(x) é limitada &rarr; 0 &le; F<sub>x</sub>(X) &le; 1</li>
+                                    <li>F<sub>x</sub>(x) é crescente &rarr; x &le; x' então F<sub>x</sub>(X) &le; F<sub>x</sub>(x')</li>
+                                    <li>F<sub>x</sub>(x) é contínua à direita &rarr; <img src="https://latex.codecogs.com/svg.image?{\color{Blue}\displaystyle\lim_{h\to&space;0^{&plus;}}F_{x}(x&plus;h)=F_{x}(x)}" title="{\color{Blue}\displaystyle\lim_{h\to 0^{+}}F_{x}(x+h)=F_{x}(x)}" /></li>
+                                    <li>se X possui distribuição de probabilidade F<sub>x</sub>(x), então: <br>
+                                        <code>P(a &lt; X &le; b) = F<sub>x</sub>(b) - F<sub>x</sub>(a)</code></li>
+                                </ul>
+                        </ul>
+                    <li>função massa de probabilidade &rarr; f<sub>x</sub>(x)</li>
+                        <ul>
+                            <li>dada pelo conjunto de valores f<sub>x</sub>(x<sub>i</sub>) = P(X = x<sub>i</sub>) tais que: <br> <img src="https://latex.codecogs.com/svg.image?{\color{Red}\sum_{i=1}^{n}f_{x}(x_{i})=\sum_{i=1}^{n}P(x=x_{i})=1}" title="{\color{Red}\sum_{i=1}^{n}f_{x}(x_{i})=\sum_{i=1}^{n}P(x=x_{i})=1}" /></li>
+                            <li>podemos calcular quaquer probabilidade P(x &isin; B) por: <br>
+                                <img src="https://latex.codecogs.com/svg.image?{\color{DarkRed}P(X\in&space;B)=\sum_{x\in&space;B}^{}f_{x}(x)}" title="{\color{DarkRed}P(X\in B)=\sum_{x\in B}^{}f_{x}(x)}" />
+                            </li>
+                        </ul>
+                    <li>valor esperado de uma variável aleatória (E(X) ou &mu;) &rarr; também chamado de média da variável aleatória</li>
+                        <ul>
+                            <li>definido com a média dos valores que ela pode assumir ponderados suas</li>
+                            <li>probabilidades <br>
+                                <img src="https://latex.codecogs.com/svg.image?{\color{Pink}E(X)=\sum_{i=1}^{n}x_{i}P(X=x_{i})=\sum_{i=1}^{n}x_{i}f_{x}(x_{i})}" title="{\color{Pink}E(X)=\sum_{i=1}^{n}x_{i}P(X=x_{i})=\sum_{i=1}^{n}x_{i}f_{x}(x_{i})}" />
+                            </li>
+                            <li>propriedades do valor esperado E(X):</li>
+                                <ul>
+                                    <li>se Z = aX + b então E(Z) = aE(X) + b e também E(X + Y) = E(X) + E(Y)</li>
+                                    <li>o desvio quadrático médio é a variância: g(X) = (X - E(X)&sup2; então E(g(X) = variância de X</li>
+                                </ul>
+                        </ul>
+                </ul>
+        
+    </ul>
     <hr>
-        
-        
-
-
+    <h2>Aula 10</h2>
     
+    <hr>
 </body>
 </html>
