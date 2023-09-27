@@ -297,8 +297,121 @@ A respeito dessas asserções, assinale a alternativa correta. <br><br>
     
 
 
-    <h2>Prova T19</h2>
-    <h4></h4>
+    <h2>Prova P019 - 09/02/2021</h2>
+    <h4>O número de buracos em uma estrada pode ser estimado pelas taxas de ocorrências. com uma média de 5 buracos por km de estrada, qual é a probabilidade da ocorrência de dois buracos em 1 km de estrada? <br> <br>
+
+        (X) A probabilidade de ocorrerem 2 buracos em 1 km de estrada é 0,084 ou 8,40%  <br>
+        <h5>Resolução</h5>
+        <p>
+            De acordo com cálculos abaixo: <br>
+            &lambda; = 5 <br>
+            t = 1 <br>
+            k = 2 <br>
+            <img src="https://latex.codecogs.com/svg.image?&space;P(X=k)=\frac{e^{-\lambda&space;t}(\lambda&space;t)^{k}}{k!}\\P(X=2)=\frac{e^{5\cdot&space;1}(5\cdot&space;1)^{2}}{2!}=0,084\\P(X=2)=8,4%" title=" P(X=k)=\frac{e^{-\lambda t}(\lambda t)^{k}}{k!}\\P(X=2)=\frac{e^{5\cdot 1}(5\cdot 1)^{2}}{2!}=0,084\\P(X=2)=8,4%" />
+        </p>
+    </h4>
+    <hr>
+    <h4>
+        Os números abaixo representam uma amostra de 17 pregos em um estudo de resistência de materias. Para que o prego seja considerado outlier (ponto fora da curva), seria necessário que tivesse (numericamente falando) uma resistência de: <br> <br>
+        <table>
+            <tr>
+                <td>4</td>
+                <td>11</td>
+                <td>12</td>
+                <td>18</td>
+                <td>40</td>
+                <td>43</td>
+                <td>45</td>
+                <td>45</td>
+                <td>54</td>
+                <td>55</td>
+                <td>67</td>
+                <td>68</td>
+                <td>70</td>
+                <td>96</td>
+                <td>98</td>
+                <td>99</td>
+            </tr>
+        </table>
+        <br>
+        Em relação à declaração acima, assinale a alternativa correta: <br> <br>
+        (X) O outlier seria aquele que resistisse acima de 150 <br>
+    </h4>
+    <h5>Resolução</h5>
+    <p>
+        Para calcular o outlier precisamos primeiro calcular o intervalo interquartil (IIQ) e o limite superior (LS). <br>
+        IIQ = Q<sub>3</sub> - Q<sub>1</sub> <br>
+        IIQ = 70 - 18 <br>
+        IIQ = 52 <br> <br>
+        LS = Q<sub>3</sub> + 1,5 * IIQ <br>
+        LS = 70 + 1,5 * 52 <br>
+        LS = 70 + 78 <br>
+        LS = 148 <br> <br>
+        Portanto, o outlier seria aquele que resistisse acima de 150.
+    </p>
+    <hr>
+    <h4>
+        Uma amostra de 30 dias do número de veículos multados em certo bairro de uma capital brasileira apresentou os números descritos abaixo. Construa o intervalo de confiança para a proporção dos dias com baixo risco a infração (com menos de 6 ocorrências) considerando uma confiança de 93,2%. <br> <br>
+        <table>
+            <tr>
+                <td>3</td>
+                <td>9
+                    <td>18</td>
+                    <td>11</td>
+                    <td>8</td>
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>17</td>
+                <td>20</td>
+                <td>12</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>11</td>
+                <td>18</td>
+                <td>13</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>16</td>
+                <td>17</td>
+                <td>12</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>13</td>
+                <td>17</td>
+                <td>9</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>5</td>
+                <td>8</td>
+                <td>5</td>
+                <td>12</td>
+            </tr>
+        </table>
+        <br> <br>
+        (X) Pode-se afirmar que a proporção populacional está entre 5% e 29% <br>
+        <h5>Resolução</h5>
+        <p>
+            Para calcular o intervalo de confiança precisamos primeiro calcular a proporção amostral (p) e o erro padrão (e). <br>
+            p = 6/30 = 0,2 <br>
+            e = &radic;(p(1-p)/n) = &radic;(0,2(1-0,2)/30) = 0,08 <br> <br>
+            Agora podemos calcular o intervalo de confiança: <br>
+            IC = p &plusmn; z * e <br>
+            IC = 0,2 &plusmn; 1,81 * 0,08 <br>
+            IC = 0,2 &plusmn; 0,145 <br>
+            IC = [0,055 ; 0,345] <br> <br>
+            Portanto, pode-se afirmar que a proporção populacional está entre 5% e 29%. <br>
+        </p>
+    </h4>
     <hr>
     
 </body>
