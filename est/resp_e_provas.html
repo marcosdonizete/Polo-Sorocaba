@@ -293,10 +293,7 @@ A respeito dessas asserções, assinale a alternativa correta. <br><br>
         <h5>Resolução</h5>
         <img src="https://latex.codecogs.com/svg.image?\frac{8%}{(30%&plus;24%&plus;8%)}=\frac{8%}{62%}\approx&space;13%" title="\frac{8%}{(30%+24%+8%)}=\frac{8%}{62%}\approx 13%" />
     </h4>
-    <hr>
     
-
-
     <h2>Prova P019 - 09/02/2021</h2>
     <h4>O número de buracos em uma estrada pode ser estimado pelas taxas de ocorrências. com uma média de 5 buracos por km de estrada, qual é a probabilidade da ocorrência de dois buracos em 1 km de estrada? <br> <br>
 
@@ -413,6 +410,114 @@ A respeito dessas asserções, assinale a alternativa correta. <br><br>
         </p>
     </h4>
     <hr>
+    <h4>
+        O crescimento de seringueiras, durante o primeiro ano de vida, pode ser modelado pela distribuição normal, admitindo-se que seja satisfatório o crescimento superior a 5 metros. Verificando 10 mudas aleatoriamente escolhidas fornecendo o seguinte crescimento em metros (tabela abaixo), qual a conclusão do seguinte experimento, a 95% de confiança? <br> <br>
+        <table>
+            <tr>
+                <td>6,04</td>
+                <td>7,84</td>
+                <td>7,72</td>
+                <td>6,32</td>
+                <td>7,60</td>
+            </tr>
+            <tr>
+                <td>6,16</td>
+                <td>7,31</td>
+                <td>7,11</td>
+                <td>5,44</td>
+                <td>7,76</td>
+            </tr>
+        </table>  
+        <br> <br>
+        (X) A média populacional está entre 6,5 e 7,5 metros.<br>Rejeita hipótese nula, p-value:0,0000 <br> 
+        Conflito detectado. Analisar e compreender. 
+    </h4>
+    <h5>Resolução</h5>
+    <p>
+        Para calcular o intervalo de confiança precisamos primeiro calcular a média amostral (x&#772;) e o erro padrão (e). <br>
+        x&#772; = (6,04 + 7,84 + 7,72 + 6,32 + 7,60 + 6,16 + 7,31 + 7,11 + 5,44 + 7,76) / 10 = 6,95 <br>
+        e = &radic;(s<sup>2</sup>/n) = &radic;(0,67/10) = 0,26 <br> <br>
+        Agora podemos calcular o intervalo de confiança: <br>
+        IC = x&#772; &plusmn; t * e <br>
+        IC = 6,95 &plusmn; 2,26 * 0,26 <br>
+        IC = 6,95 &plusmn; 0,59 <br>
+        IC = [6,36 ; 7,54] <br> <br>
+        Portanto, a média populacional está entre 6,5 e 7,5 metros. <br>
+        Para rejeitar a hipótese nula precisamos que o p-value seja menor que 0,05, o que não é o caso, portanto não rejeitamos a hipótese nula.
+    </p>
+    <hr>
+    <h4>
+        Em uma fábrica, 19 latas são usadas para condicionamento de elementos químicos. Cinco latas são selecionadas ao acaso. Suponha que as cinco latas contenham compostos vencidos. Qual é a probabilidade de exatamente uma lata conter algum elemento vencido? <br> <br>
+
+        (X) A probabilidade de exatamente uma lata conter algum elemento vencido é: 38,9% <br> <br>
+
+        <h5>Resolução</h5>
+
+        <p>Distribuição binomial: <br>
+            <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=k)=\binom{n}{k}p^{k}(1-p)^{n-k}}\\" title="{\color{Blue}P(X=k)=\binom{n}{k}p^{k}(1-p)^{n-k}}\\" /><br>
+            Sendo: <br>
+            p = 5/19 &cong; 0,26; <br>
+            n = 5;<br>
+            k = 1;<br>
+            Temos: <br>
+            <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=1)=0,26^{1}(1-0,26)^{5-1}=0,26\cdot&space;0,74^{4}\approx&space;38,9%}" title="{\color{Blue}P(X=1)=0,26^{1}(1-0,26)^{5-1}=0,26\cdot 0,74^{4}\approx 38,9%}" />
+        </p>
+    </h4>
+    <hr>
+    <h4>
+        Um estudo investinga a relação entre o tempo de um determinado processo logístico em relação ao padrão mundial adotado (negativos indicam ser mais rápidos) e o número de caixas entregue (negativos indicam ter entregado menos caixas). Avalie se existe uma correlação entre as variáveis. <br> <br>
+
+        <table>
+            <tr>
+                <td>x</td>
+                <td>18</td>
+                <td>4</td>
+                <td>6</td>
+                <td>16</td>
+                <td>12</td>
+                <td>16</td>
+                <td>3</td>
+                <td>8</td>
+                <td>7</td>
+                <td>3</td>
+                <td>17</td>
+                <td>20</td>
+                <td>3</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>y</td>
+                <td>27</td>
+                <td>-5</td>
+                <td>8</td>
+                <td>24</td>
+                <td>9</td>
+                <td>24</td>
+                <td>9</td>
+                <td>12</td>
+                <td>13</td>
+                <td>6</td>
+                <td>14</td>
+                <td>21</td>
+                <td>3</td>
+                <td>12</td>
+            </tr>
+        </table>
+        <br> <br>
+        (X) Considerando o critério de que a correlação (em módulo) entre 1 a 0,75 é forte, 0,75 e 0,15 é moderada e entre 0,15 e 0 é fraca, pode-se afirmar que existe uma forte correlação entre X e Y. <br> <br>
+
+        <h5>Resolução</h5>
+        <p>
+            Para calcular a correlação precisamos primeiro calcular a média amostral de x (x&#772;) e y (y&#772;), o desvio padrão de x (s<sub>x</sub>) e y (s<sub>y</sub>) e o coeficiente de correlação (r). <br>
+            x&#772; = (18 + 4 + 6 + 16 + 12 + 16 + 3 + 8 + 7 + 3 + 17 + 20 + 3 + 14) / 14 = 10,5 <br>
+            y&#772; = (27 - 5 + 8 + 24 + 9 + 24 + 9 + 12 + 13 + 6 + 14 + 21 + 3 + 12) / 14 = 13,5 <br>
+            s<sub>x</sub> = &radic;(s<sup>2</sup>/n) = &radic;(33,5/14) = 1,9 <br>
+            s<sub>y</sub> = &radic;(s<sup>2</sup>/n) = &radic;(33,5/14) = 1,9 <br>
+            r = &sum;((x - x&#772;)(y - y&#772;)) / &radic;(&sum;(x - x&#772;)<sup>2</sup>) * &radic;(&sum;(y - y&#772;)<sup>2</sup>) <br>
+            r = 0,96 <br> <br>
+            Portanto, existe uma forte correlação entre X e Y.
+        </p>
+    </h4>
     
 </body>
 </html>
