@@ -632,7 +632,85 @@
     </ul>
     <hr>
     <h2>Aula 10</h2>
-    
+    <h4>Principais variáveis aleatórias discretas</h4>
+        <ul>
+            <li>discreto significa um número finito de valores</li>
+            <li>não significa poucos, mas sim que não é um contínuo</li>
+            <li>massa de probabilidade &rarr; um pedaço do espaço amostral que carrega consigo uma parte da probabilidade do total do espaço amostral (que é 1). <br>
+                cada evento tem uma massa de probabilidade e quando se juntam todos dá uma massa igual a 1
+            </li>
+            <li>cada distribuição de probabilidades responde a uma pergunta ou conta uma história</li>
+            <li>é útil na interpretação e modelagem de sistemas aleatórios. Ex.: <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}X\sim\binom{n}{p}}" title="{\color{Blue}X\sim\binom{n}{p}}" /> <br>
+                (le-se X segue uma distribuição binomial com parâmetros n e p)
+            </li>
+            <li>distribuição de <mark>Bernoulli</mark> &rarr; experimento aleatório que só tem 2 possíveis resultados (sucesso - quero observar e contar(1) -, fracasso - não  quero observar(0)) <br>
+                sucesso = resultado que queria observar. Tipicamente 1 para sucesso <br>
+                fracasso = resultado que não queria observar. Tipicamente 0 para fracasso <br>
+                <ul>
+                    <li>ensaio de Bernoulli &rarr; probabilidade de obter sucesso em um experimento que só pode resultar em 'sucesso' (X = 1) ou 'fracasso' (X = 0) <br>
+                        <code>
+                            P(X = sucesso) = p <br>
+                            P(X = fracasso) = 1 - p <br>
+                            Valor esperado: E(X) = 0.P(X = 0) + 1.P(X = 1) = p <br>
+                            Variância: Var(X) = E[(X - E(X))<sup>2</sup>] = p(1 - p) <br>
+                            X ~ Bernoulli(p) &rarr; X está distribuído de acordo com uma Bernoulli de parâmetro p
+                        </code>
+                    </li>
+                </ul>
+            </li>
+            <li>distribuição <mark>Binomial</mark> &rarr; probabilidades de obter k sucesso em n ensaios de Bernoulli independentes, cada um com probabilidade p de sucesso <br>
+                <code>
+                    P(X = k) = (n k).p<sup>k</sup>(1 - p)<sup>n-k</sup> <br>
+                    k = 0, 1, ..., n <br>
+                    Valor esperado: E(X) = np <br>
+                    Variância: Var(X) = np(1 - p) <br>
+                    X ~ Bin(n, p) &rarr; X está distribuído de acordo com uma Binomial de parâmetro n e p
+                </code>
+            </li>
+            <li>distribuição de <mark>Poisson</mark> &rarr; saber a ocorrência de um evento em um determinado espaço de tempo, comprimento, área etc <br>
+                <code>
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=k)=\frac{e^{\lambda}\lambda^{k}}{k!}}" title="{\color{Blue}P(X=k)=\frac{e^{\lambda}\lambda^{k}}{k!}}" /> <br>
+                    k = 0, 1, ..., n <br>
+                    Valor esperado: E(X) = &lambda; <br>
+                    Variância: Var(X) = &lambda; <br>
+                    X ~ Poisson(&lambda;) &rarr; X está distribuído de acordo com uma Poisson de parâmetro &lambda;. X ~ (n, p). Ex.: <br>
+                    Se em 1 metro de fio eu tenho 2 defeitos em média. Qual a probabilidade de encontrar 10 defeitos em 1 metro de fio? <br>
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Red}P(X=10)=\frac{e^{2}2^{10}}{10!}\cong&space;0,0001}" title="{\color{Red}P(X=10)=\frac{e^{2}2^{10}}{10!}\cong 0,0001}" />
+                </code>
+            </li>
+            <li>distribuição <mark>Geométrica</mark> &rarr; probabilidade de realizar k ensaios independentes de Bernoulli <br>
+                <code>
+                    cada um com probabilidade de sucesso p <br>
+                    até obter o primeiro sucesso <br>
+                    descreve uma progressão geométrica <br>
+                    o próximo termo é um produto do atual vezes um fator <br>
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=k)=(1-p)^{k-1}p}" title="{\color{Blue}P(X=k)=(1-p)^{k-1}p}" /> <br>
+                    k = 0, 1, ..., n <br>
+                    Valor esperado: E(X) = 1/p <br>
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Blue}Var(X)=\frac{1-p}{p^{2}}}" title="{\color{Blue}Var(X)=\frac{1-p}{p^{2}}}" /> <br>
+                    X ~ Geom(p) <br>
+                    Ex.: Dado uma caixa com fósforos molhada, quantas tentativas de acendimento dos palitos de fósforo eu preciso tentar acender até que um acenda, dado que a média de acendimento é de 9 em cada da 10? <br>
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Red}P(X=10)=(1-0,9)^{10-1}0,9\cong&space;0,0001}" title="{\color{Red}P(X=10)=(1-0,9)^{10-1}0,9\cong 0,0001}" />
+                </code>                
+            </li>
+            <li>distribuição <mark>Hipergeométrica</mark> &rarr; escreve a probabilidade de obter um certo número de sucessos em uma amostra sem reposição de um grupo maior, onde há um número específico de sucessos e falhas <br>
+                <code>
+                    É usada, por exemplo, para calcular a probabilidade de selecionar uma quantidade exata de itens defeituosos de um lote sem reposição. <br>
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=k)=\frac{\binom{K}{k}\binom{N-K}{n-k}}{\binom{N}{n}}}" title="{\color{Blue}P(X=k)=\frac{\binom{K}{k}\binom{N-K}{n-k}}{\binom{N}{n}}}" /> <br>
+                    max(0, n + K - N) &le; k &le; min(n, K) <br>
+                    Valor esperado: E(X) = nK/N <br>
+                    Variância: <br>
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Blue}Var(X)=\frac{nK}{N}\cdot\frac{N-K}{N}\cdot\frac{N-n}{N-1}}" title="{\color{Blue}Var(X)=\frac{nK}{N}\cdot\frac{N-K}{N}\cdot\frac{N-n}{N-1}}" /> <br>
+                    X ~ Hyper(n, N, K) <br>
+                    Ex.:Suponha que temos uma urna com 10 bolas, das quais 3 são vermelhas e 7 são azuis. Se retirarmos aleatoriamente 4 bolas da urna sem reposição, qual é a probabilidade de exatamente 2 delas serem vermelhas? <br>
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=2)=\frac{\binom{3}{2}\binom{7}{2}}{\binom{10}{4}}}" title="{\color{Blue}P(X=2)=\frac{\binom{3}{2}\binom{7}{2}}{\binom{10}{4}}}" /> <br>
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Blue}=\frac{\frac{3!}{2!(3-2)!}\cdot\frac{7!}{2!(7-2)!}}{\frac{10!}{4!(10-4)!}}}" title="{\color{Blue}=\frac{\frac{3!}{2!(3-2)!}\cdot\frac{7!}{2!(7-2)!}}{\frac{10!}{4!(10-4)!}}}" /> <br>
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Blue}=\frac{3\cdot&space;21}{210}\cong&space;0,3}" title="{\color{Blue}=\frac{3\cdot 21}{210}\cong 0,3}" />
+                </code>
+            </li>
+        </ul>    
     <hr>
+    <h2>Aula 11</h1>
 </body>
 </html>
