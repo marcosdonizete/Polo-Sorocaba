@@ -1,0 +1,76 @@
+/* Estilo para menu simples e elegante */
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+body {
+        background-image: linear-gradient(to bottom, #EBFAFB, #A0F5FB);
+        background-attachment: fixed;
+        }
+h1 {
+        background-color: rgba(5, 5, 151, 0.568);
+        text-shadow: 1px 1px 0px rgba(3, 3, 114, 0.568);
+        color: white;
+        text-align: center;
+    }
+h2 {
+        background-color: rgba(0, 128, 0, 0.514);
+        color: white;
+        text-align: center;
+}
+p {
+        text-align: justify;
+        color: black;
+}
+mark {
+        background-color: yellow;
+        color: black;
+        font-weight: bold;
+}
+code {
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+}
+table, th, td {
+        border: 1px solid black;
+        text-align: center;
+}
+
+.container {
+        text-align: center; /* Centraliza horizontalmente */
+        height: 100vh; /* Centraliza verticalmente */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+#imagemCentralizada {
+        max-width: 100%; /* Evita que a imagem fique maior do que a largura da tela */
+}
