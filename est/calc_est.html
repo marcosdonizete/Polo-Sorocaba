@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Estatística</title>
+</head>
+<body>
+    <h1>Calculadora de Estatísticas</h1>
+    <p>Insira os valores separados por espaços:</p>
+    <input type="text" id="inputValues">
+    <button onclick="calcular()">Calcular</button>
+    <p>Média: <span id="media"></span></p>
+    <p>Mediana: <span id="mediana"></span></p>
+    <p>Moda: <span id="moda"></span></p>
+    <p>Desvio Padrão: <span id="desvioPadrao"></span></p>
+
+    <script>
+        function calcular() {
+            const input = document.getElementById("inputValues").value;
+            const valores = input.split(" ").map(Number);
+            
+            if (valores.length === 0) {
+                alert("Insira pelo menos um valor.");
+                return;
+            }
+
+            const media = calcularMedia(valores);
+            const mediana = calcularMediana(valores);
+            const moda = calcularModa(valores);
+            const desvioPadrao = calcularDesvioPadrao(valores);
+
+            document.getElementById("media").textContent = media.toFixed(2);
+            document.getElementById("mediana").textContent = mediana.toFixed(2);
+            document.getElementById("moda").textContent = moda.join(", ");
+            document.getElementById("desvioPadrao").textContent = desvioPadrao.toFixed(2);
+        }
+
+        function calcularMedia(valores) {
+            const soma = valores.reduce((total, valor) => total + valor, 0);
+            return soma / valores.length;
+        }
+
+        function calcularMediana(valores) {
+            const sortedValores = valores.slice().sort((a, b) => a - b);
+            const meio = Math.floor(sortedValores.length / 2);
+
+            if (sortedValores.length % 2 === 0) {
+                return (sortedValores[meio - 1] + sortedValores[meio]) / 2;
+            } else {
+                return sortedValores[meio];
+            }
+        }
+
+        function calcularModa(valores) {
+            const frequencia = {};
+
+            valores.forEach(valor => {
+                if (frequencia[valor]) {
+                    frequencia[valor]++;
+                } else {
+                    frequencia[valor] = 1;
+                }
+            });
+
+            let moda = [];
+            let maxFrequencia = 0;
+
+            for (const valor in frequencia) {
+                if (frequencia[valor] > maxFrequencia) {
+                    moda = [valor];
+                    maxFrequencia = frequencia[valor];
+                } else if (frequencia[valor] === maxFrequencia) {
+                    moda.push(valor);
+                }
+            }
+
+            return moda;
+        }
+
+        function calcularDesvioPadrao(valores) {
+            const media = calcularMedia(valores);
+            const somaDiferencasQuadradas = valores.reduce((total, valor) => total + Math.pow(valor - media, 2), 0);
+            const desvioPadrao = Math.sqrt(somaDiferencasQuadradas / valores.length);
+            return desvioPadrao;
+        }
+    </script>
+    
+</body>
+</html>
