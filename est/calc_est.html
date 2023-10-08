@@ -13,7 +13,8 @@
     <p>Média: <span id="media"></span></p>
     <p>Mediana: <span id="mediana"></span></p>
     <p>Moda: <span id="moda"></span></p>
-    <p>Desvio Padrão: <span id="desvioPadrao"></span></p>
+    <p>Desvio Padrão <strong>Populacional</strong>: <span id="desvioPadrao"></span></p>
+    <p>Desvio Padrão <strong>Amostral</strong>: <span id="desvioPadraoAmostral"></span></p>
 
     <script>
         function calcular() {
@@ -29,11 +30,13 @@
             const mediana = calcularMediana(valores);
             const moda = calcularModa(valores);
             const desvioPadrao = calcularDesvioPadrao(valores);
+            const desvioPadraoAmostral = calcularDesvioPadraoAmostral(valores);
 
             document.getElementById("media").textContent = media.toFixed(2);
             document.getElementById("mediana").textContent = mediana.toFixed(2);
             document.getElementById("moda").textContent = moda.join(", ");
             document.getElementById("desvioPadrao").textContent = desvioPadrao.toFixed(2);
+            document.getElementById("desvioPadraoAmostral").textContent = desvioPadraoAmostral.toFixed(2);
         }
 
         function calcularMedia(valores) {
@@ -83,6 +86,13 @@
             const somaDiferencasQuadradas = valores.reduce((total, valor) => total + Math.pow(valor - media, 2), 0);
             const desvioPadrao = Math.sqrt(somaDiferencasQuadradas / valores.length);
             return desvioPadrao;
+        }
+
+        function calcularDesvioPadraoAmostral(valores) {
+            const media = calcularMedia(valores);
+            const somaDiferencasQuadradas = valores.reduce((total, valor) => total + Math.pow(valor - media, 2), 0);
+            const desvioPadraoAmostral = Math.sqrt(somaDiferencasQuadradas / (valores.length - 1));
+            return desvioPadraoAmostral;
         }
     </script>
     
