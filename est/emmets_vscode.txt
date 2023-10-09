@@ -1,0 +1,16 @@
+Atalhos do VS CODE muito úteis - Emmets
+
+ctrl + shift + p	-> para envelopar
+ctrl + alt + up/down	-> selecionar para aplicar tags
+div>p>a			-> cria e aninha as tags selecionadas
+div>h1+p		-> cria e aninha as tags mas p fica em outra linha
+tag*x			-> cria x tags informadas
+tag{conteúdo}		-> o conteúdo será envelopado para tag
+nav.menu>ul>li*5	-> cria a tag <nav class="menu"> e também <ul> e 5 <li> aninhadas
+nav.menu>ul>li#item$*5	-> idem anterior mas cada <li> tem id único
+section*5#secao$>article.conteudo>h1+p{Texto}|c		->
+				cria 5 seções;
+				cada uma com um id diferente
+				cada uma com um article chamado conteudo
+				cada article com um h1 e um parágrafo com Texto dentro
+				cada um com comment filter
