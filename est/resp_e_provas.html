@@ -1154,7 +1154,296 @@
             P(M &cap; I) = P(M) * P(I|M) = 0,6 * 0,2 = 0,12 <br>
             P(I) = P(H) * P(I|H) + P(M) * P(I|M) = 0,4 * 0,1 + 0,6 * 0,2 = 0,16 <br>
             P(M|I) = 0,12 / 0,16 = 0,75 = 75% <br>
+            
+            <hr>
+            <p>
+                Um gerente observou uma lista com 50 produtos defeituosos e chegou na seguinte tabela: <br>
+            </p>
+            <table>
+                <tr>
+                    <th>Motivo do defeito</th>
+                    <th># de observações</th>
+                </tr>
+                <tr>
+                    <td>Matéria-prima</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Mão-de-obra</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>Equipamento</td>
+                    <td>12</td>
+                </tr>
+            </table> <br> <br>
+            Além disso, o gerente observou que, dos produtos defeituosos por causa da matéria-prima, 30% eram causados pelo armazenamento incorreto e o restante por causa da baixa qualidade da matéria-prima utilizada. Podemos concluir que a probabilidade de um produto ser defeituoso por causa de matéria-prima de baixa qualidade é de: <br> <br>
+
+            <strong>(X) 0,28</strong> <br>
+
+            <h5>Resolução</h5>
+
+            <p>
+                P(Matéria-prima) = 20/50 = 0,4 <br>
+                P(Matéria-prima &cap; Armazenamento incorreto) = 0,3 * 0,4 = 0,12 <br>
+                P(Matéria-prima &cap; Baixa qualidade) = 0,4 - 0,12 = 0,28 = 28%<br>
+            </p>
     </p>
+    <hr>
+    <p>
+        Considere a tabela a seguir com a distribuição dos 16.000 alunos ingressantes na Univesp em 2020, em rela~ção a localização do polo que está matriculado e ao eixo escolhido. <br> <br>
+
+        <table>
+            <tr>
+                <th>Região</th>
+                <th>Computação</th>
+                <th>Licenciatura</th>
+            </tr>
+            <tr>
+                <td>Grande São Paulo</td>
+                <td>2.000</td>
+                <td>1.500</td>
+            </tr>
+            <tr>
+                <td>Interior</td>
+                <td>3.650</td>
+                <td>8.250</td>
+            </tr>
+            <tr>
+                <td>Litoral</td>
+                <td>350</td>
+                <td>250</td>
+            </tr>
+        </table> <br>
+        Se um aluno ingressante na Univesp em 2020 é escolhido ao acaso, a probabilidade de ser do litoral ou de computação é de:  <br> <br>
+
+        <strong>(X) 0,4125</strong> <br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            P(Litoral) = 600/16000 = 0,0375 <br>
+            P(Computação) = 6000/16000 = 0,375 <br>
+            P(Litoral &cup; Computação) = 0,0375 + 0,375 = 0,4125 = 41,25%<br>
+        </p>
+    </p>
+    <hr>
+    <p>
+        O responsável pelo controle de qualidade de uma empresa irá analisar um lote de 30 peças. O lote é reprovado se forem detectadas 3 peças defeituosas. O responsável coleta 4 peças aleatoriamente, sabendo que neste lote existem 10 peças defeituosas. A probabilidade de o lote ser aprovado é de: <br> <br>
+
+        (X) 0,98 <br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            P(Defeituosa) = 10/30 = 1/3 <br>
+            P(Aprovado) = 1 - P(Reprovado) <br>
+            P(Reprovado) = P(3 defeituosas) + P(4 defeituosas) <br>
+            P(3 defeituosas) = (10/30) * (9/29) * (8/28) * (20/27) = 0,018 <br>
+            P(4 defeituosas) = (10/30) * (9/29) * (8/28) * (7/27) = 0,002 <br>
+            P(Reprovado) = 0,018 + 0,002 = 0,02 <br>
+            P(Aprovado) = 1 - 0,02 = 0,98 = 98% <br>
+        </p>
+    </p>
+    <hr>
+    <p>
+        Uma corretora fez a seguinte pergunta: Qual tipo de investimento você aplica seu dinheiro? E sugeriu as seguintes respostas: <br> <br>
+
+        A. Poupança <br>
+        B. Renda fixa, exceto poupança (CDB, Títulos Públicos, LCI, LCA etc) <br>
+        C. Renda variável (Ações, Commodities, Derivativos etc) <br> <br>
+
+        Os participantes poderima assinalar mais de uma alternativa. Na tabela abaixo estão as respostas dos 55 participantes: <br>
+
+        <table>
+            <tr>
+                <th>Tipo de investimento</th>
+                <th>número de participantes</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>A e B</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>A e C</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>B e C</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>A, B e C</td>
+                <td>2</td>
+            </tr>
+        </table> <br>
+        Ao escolher um participante aleatoriamente, qual a probabilidade de a pessoa escolhida aplicar seu dinheiro apenas em poupança? <br> <br>
+
+        <strong>(X) 0,3636</strong> <br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            P(A) = 35/55 = 0,6364 <br>
+            P(B) = 23/55 = 0,4182 <br>
+            P(C) = 20/55 = 0,3636 <br>
+            P(A &cap; B) = 7/55 = 0,1273 <br>
+            P(A &cap; C) = 10/55 = 0,1818 <br>
+            P(B &cap; C) = 8/55 = 0,1455 <br>
+            P(A &cap; B &cap; C) = 2/55 = 0,0364 <br>
+            P(A &cup; B &cup; C) = P(A) + P(B) + P(C) - P(A &cap; B) - P(A &cap; C) - P(B &cap; C) + P(A &cap; B &cap; C) <br>
+            = 20/55 = 0,3636 <br>
+         </p>
+    </p>
+    <hr>
+    <p>
+        Para um desenvolvedor as atividades do Projeto Integrador, um grupo distribuiu um questionário online, através da ferramenta google forms, a fi de coletar informações sobre o conhecimento dos alunos do eixo computação em relação à linguagem de programação Python. O questionário foi distribuído nos diversos grupos de WhatsApp, formados pelos próprios alunos da Univesp. O questionário obteve 285 respostas. <br> <br>
+
+        Considerando as afirmações acimad, avalie as asserções a seguir e a relação proposta entre elas. <br> <br>
+
+        I. O tipo de amostragem utilizada pelo grupo é não probabilístico. <br>
+        <strong>PORQUE</strong> <br>
+        II. A forma como foi distribuída o questionário é uma forma de escolha deliberada da amostra. <br> <br>
+
+        A respeito dessas asserções, assinale a opção correta. <br> <br>
+
+        <strong>(X) Asserções I e II são VERDADEIRAS e a asserção II justifica a asserção I</strong> <br>
+
+        <h5>Resolução</h5>
+
+        <P>
+            I. Verdadeiro, pois a amostragem não probabilística é aquela em que a probabilidade de cada elemento da população ser selecionado não é conhecida. <br>
+            II. Verdadeiro, pois a amostragem deliberada é aquela em que os elementos da amostra são escolhidos de forma intencional pelo pesquisador. <br> Os alunos que estavam nos grupos de WhatsApp foram selecionados deliberadamente pelo grupo, de modo que a amostra não representa todos os alunos da Univesp.
+        </P>
+    </p>
+    <hr>
+    <p>
+        Uma empresa de delivery modelou a duração em minutos do trajeto que compreende da saída do estabelecimento até o consumidor final. Tal modelo é descrito pela variável aleatória X com a seguinte função de probabilidade: <br> <br>
+
+        <table>
+            <tr>
+                <th>X</th>
+                <th>p</th>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>0,1</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>0,1</td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>0,3</td>
+            </tr>
+            <tr>
+                <td>40</td>
+                <td>0,2</td>
+            </tr>
+            <tr>
+                <td>50</td>
+                <td>0,1</td>
+            </tr>
+            <tr>
+                <td>60</td>
+                <td>0,1</td>
+            </tr>
+            <tr>
+                <td>70</td>
+                <td>0,1</td>
+            </tr>
+        </table> <br>
+
+        O tempo médio, em minutos, dessa empresa é de: <br> <br>
+
+        <strong>(X) 38 </strong><br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            E(X) = 10 * 0,1 + 20 * 0,1 + 30 * 0,3 + 40 * 0,2 + 50 * 0,1 + 60 * 0,1 + 70 * 0,1 = 38 <br>
+        </p>
+        </p>
+        <hr>
+        <p>
+            Um time de futebol, quando joga em casa, isto é, no seu estádio, tem a probabilidade de 0,85 de vitória. Em um campeonato o time atuará 10 partidas em seu estádio. A probabilidade de que ele vença em 7 partidas como mandante é de: <br> <br>
+
+            (X) <br>
+
+            <h5>Resolução</h5>
+
+            <p>
+                P(V) = 0,85 <br>
+                P(D) = 0,15 <br>
+                P(V &cap; D) = P(V) * P(D) = 0,85 * 0,15 = 0,1275 <br>
+                P(V &cap; D &cap; V &cap; D &cap; V &cap; D &cap; V &cap; D &cap; V &cap; D) = 0,1275^7 = 0,005 <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Na Univesp, no eixo computação, há 8000 alunos matriculado e, deste total, 3500 declaram não possuir vínculo empregatício com qualquer instituição pública ou privada, 2000 se declaram autônomos e o restante declarou que não desempenha atividade remunerada. <br>
+            Ao escolher aleatoriamente um aluno matriculado no eixo computação para uma entrevista, qual a probabilidade de chamar um aluno que não desempenha atividade remunerada? <br> <br>
+
+            <strong>(X) 0,3125</strong> <br>
+
+            <h5>Resolução</h5>
+
+            <p>
+                P(Não desempenha atividade remunerada) = 2500/8000 = 0,3125 <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            O dono de uma lanchonete quer fazer um banner para atrair mais clientes. Sua principal aposta é indicar a variedade opções que ode oferecer ao consumidor. Tirando os itens básicos como pão e hamburguer, ele dispõe de 7 recheios e cada lanche pode ser composto por 3 recheios diferentes. <br> <br>
+
+            A quantidade de lanches diferentes que o dono pode divulgar é de: <br> <br>
+
+            <strong>(X) 35</strong> <br>
+
+            <h5>Resolução</h5>
+
+            <p>
+                n é o número total de recheios (7 neste caso); <br>
+                k é o número de recheios a serem escolhidos (3 neste caso). <br>
+                Portanto, o número de maneiras de escolher 3 recheios diferentes entre os 7 disponíveis é: <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}\binom{7}{3}=C_{3}^{7}=\frac{7!}{(7-3)!\cdot&space;3!}=\frac{7\cdot&space;6\cdot&space;5\cdot&space;4!}{4!\cdot&space;3\cdot&space;2\cdot&space;1}=\frac{210}{6}=35}" title="{\color{Blue}\binom{7}{3}=C_{3}^{7}=\frac{7!}{(7-3)!\cdot 3!}=\frac{7\cdot 6\cdot 5\cdot 4!}{4!\cdot 3\cdot 2\cdot 1}=\frac{210}{6}=35}" /> <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Dizemos que uma variável aleatória X tem distribuição geométrica de parâmetro p se sua função de probabiidade tem a forma: <br>
+            <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=k)=(1-p)^{k}\cdot&space;p}" title="{\color{Blue}P(X=k)=(1-p)^{k-1}\cdot p}" /> <br>
+             onde: <br>
+            k = 1, 2, 3, ... <br>
+            p = 0 &le; p &le; 1 <br> <br>
+
+            Se uma variável aleatória X tem distribuição geométrica cuja probabiidade de sucesso é de 0,8 então pode-se afirmar que: <br> <br>
+
+            <strong>(X) P(X = 2) = 0,032</strong><br>
+
+            <h5>Resolução</h5>
+
+            <p>
+                X é a variável aleatória. <br>
+                k é o número de tentativas até o primeiro sucesso. <br>
+                p é a probabilidade de sucesso em uma única tentativa. <br>
+                P(X = 2) = (1 - p)<sup>k</sup> * p = (1 - 0,8)<sup>2</sup> * 0,8 = 0,032 <br>
+                
+            </p>
+        </p>
     
     <h1>Provas</h1>
     <h2>Prova T20</h2>
