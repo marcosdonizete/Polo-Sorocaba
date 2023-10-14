@@ -744,6 +744,7 @@
 
         <strong>(X) P(A&cup;B) = P(A) + P(B), se A&cap;B = &empty;</strong>
     </p>
+    <hr>
     <p>
         Quando podemos dizer que dois eventos A e B de um espaço amostral Ω são independentes? <br> <br>
 
@@ -990,6 +991,170 @@
             IV. Falso, pois a probabilidade de ser um número menor que cinco é de 4/6 ou 66,6%. <br>
     </p>
     <hr>
+    <p>
+        Um experimento aleatório consiste em escolher um número inteiro n tal que 0 &le; n &le; 9. Seja os eventos: <br> <br>
+        <code>
+            A = {n &le; 4}; <br>
+            B = {3 &le; n &le; 7}; <br>
+            C = {n &gt; 2 é par}.  <br> <br>
+        </code>
+
+        Qual conjunto corresponde ao evento A inter (B U C&#772;)? <br> <br>
+
+        <strong>(X) A &cap; (B &cup; C&#772;) = {0, 1, 2, 3, 4}</strong> <br>
+
+        <h5>Resolução</h5>
+        <p>
+            A = {n &le; 4} = {0, 1, 2, 3, 4} <br>
+            B = {3 &le; n &le; 7} = {3, 4, 5, 6, 7} <br>
+            C = {n &gt; 2 é par} = {4, 6, 8} <br>
+            C&#772; = {0, 1, 3, 5, 7, 9} <br>
+            B &cup; C&#772; = {3, 4, 5, 6, 7} &cup; {3, 5, 7, 9} = {3, 4, 5, 6, 7, 9} <br>
+            A &cap; (B &cup; C&#772;) = {0, 1, 2, 3, 4} <br>
+    </p>
+    <hr>
+    <p>
+        Considere as seguintes afirmações acerca dos axiomas da teoria das probabilidades e suas consequências e identifique se as afirmações são verdadeiras (V) ou falsas (F). <br> <br>
+
+        <code>
+            I. Se A &sub; B, então P(A) &le; P(B) <br>
+            II. P(A &cap; B) &ge; P(A) + P(B) - 1 <br>
+            III. Se os eventos A e B são independentes, então A e B&#772; também são independentes <br> <br>
+        </code>
+
+        <strong>(X) I-V; II-V; III-V</strong> <br>
+
+        <h5>Resolução</h5>
+        <p>
+            I. Verdadeiro, pois se A &sub; B, então P(A) &le; P(B) <br>
+            II. Verdadeiro, pois P(A &cap; B) &ge; P(A) + P(B) - 1 <br>
+            III. Verdadeiro, pois se os eventos A e B são independentes, então A e B&#772; também são independentes <br>
+        </p>
+    </p>
+    <hr>
+    <p>
+        Eva leu os livros Tia Zulmira e Eu, de Stanislaw Ponte Preta, e O Púcaro Búlgaro, de Campos de Carvalho.  <br> <br>
+        <code>
+            Com probabilidade &frac45; ela gostou de Tia Zulmira e Eu; <br>
+            Com probabilidade &frac25; ela gostou de O Púcaro Búlgaro; <br>
+            Com probabilidade 1/3 ela gostou dos dois livros. <br> <br>
+        </code>
+
+        Qual é, aproximadamente, a probabilidade de que Eva não tenha gostado de nenhum dos dois livros? <br> <br>
+
+        <strong>(X) 2/15</strong> <br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            P(T) = &frac45; <br>
+            P(P) = &frac25; <br>
+            P(T &cap; P) = 1/3 <br>
+            P(T &cup; P) = P(T) + P(P) - P(T &cap; P) = &frac45; + &frac25; - &frac13; = 13/15 <br>
+            P(¬(T &cup; P)) = 1 - P(T &cup; P) = 1 - 11/15 = 2/15 <br>           
+        </p>
+    </p>
+    <hr>
+    <p>
+        Uma comissão de 5 avaliadores deve ser escolhida entre 5 candidatos homens e 10 candidatas mulheres. Se os avaliadores forem escolhidos ao acaso, qual é, aproximadamente, a probabiidade de a comissão ser formada somente por mulheres? <br> <br>
+
+        <strong>(X) 8,4%</strong> <br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            n é o número total de candidatas mulheres (10 neste caso); <br>
+            k é o número de candidatas a serem escolhidas (5 neste caso). <br>
+            Portanto, o número de maneiras de escolher 5 candidatas mulheres entre as 10 disponíveis é: <br>
+            <img src="https://latex.codecogs.com/svg.image?{\color{Blue}\binom{10}{5}=C_{5}^{10}=\frac{10!}{(10-5)!\cdot&space;5!}=\frac{10\cdot&space;9\cdot&space;8\cdot&space;7\cdot&space;6\cdot&space;5!}{5!\cdot&space;5\cdot&space;4\cdot&space;3\cdot&space;2\cdot&space;1}=\frac{30240}{120}=252}" title="{\color{Blue}\binom{10}{5}=C_{5}^{10}=\frac{10!}{(10-5)!\cdot 5!}=\frac{10\cdot 9\cdot 8\cdot 7\cdot 6\cdot 5!}{5!\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}=\frac{30240}{120}=252}" /> <br>
+            Agora, a probabilidade de escolher uma comissão formada somente por mulheres é o número de maneiras de escolher 5 candidatas mulheres dividido pelo número total de maneiras de escolher 5 avaliadores de um grupo de 15 candidatos (10 mulheres + 5 homens). <br>
+            <img src="https://latex.codecogs.com/svg.image?{\color{Blue}\binom{15}{5}=C_{5}^{15}=\frac{15!}{(15-5)!\cdot&space;5!}=\frac{360360}{120}=3003}" title="{\color{Blue}\binom{15}{5}=C_{5}^{15}=\frac{15!}{(15-5)!\cdot 5!}=\frac{360360}{120}=3003}" /> <br>
+            Agora que já temos todos os dados podemos calcular a probabilidade: <br>
+            <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(A)=\frac{|A|}{|\Omega|}=\frac{252}{2003}\approx&space;0,0839\approx&space;0,084\approx&space;8,4%}" title="{\color{Blue}P(A)=\frac{|A|}{|\Omega|}=\frac{252}{2003}\approx 0,0839\approx 0,084\approx 8,4%}" /> <br>
+        </p>
+    </p>
+    <hr>
+    <p>
+        Dado um circuito com pontos a e b e entre eles há 4 interruptores independentes em paralelo com a probabilidade de cada interruptor falhar valendo p=20%, qual é a probabilidade de haver um caminho fechado entre os terminais a e b? <br> <br>
+
+        <strong>(X) Maior que 90%</strong> <br>
+
+        <h5>Resolução</h5>
+        <p>
+            A probabilidade de um único interruptor funcionar é de 1 - p, onde p é a probabilidade de falha (20% ou 0,2). <br>
+
+            Então, a probabilidade de um único interruptor funcionar é 1 - 0,2 = 0,8. <br>
+            
+            Agora, para calcular a probabilidade de pelo menos um dos 4 interruptores funcionar, podemos usar o complemento da probabilidade de todos os interruptores falharem: <br>
+            
+            P(Pelo menos um funciona) = 1 - P(Todos falham) <br>
+            
+            P(Todos falham) = (0,2)^4 (pois eles são independentes) <br>
+            
+            Agora, calculamos a probabilidade de todos falharem e depois usamos o complemento para encontrar a probabilidade de pelo menos um funcionar: <br>
+            
+            P(Todos falham) = (0,2)^4 = 0,0016 <br>
+            
+            P(Pelo menos um funciona) = 1 - 0,0016 = 0,9984 <br> <br>
+            
+            Portanto, a probabilidade de haver um caminho fechado entre os terminais a e b é aproximadamente 0,9984, ou cerca de 99,84%. Isso significa que é muito provável que pelo menos um interruptor funcione e permita o caminho fechado no circuito.            
+        </p>
+    </p>
+    <hr>
+    <p>
+        Uma empresa produz lâmpadas em 3 fábricas distintas (F1, F2 e F3), responsáveis, respecitivamente, por 50%, 30% e 20% de sua produção total. Suponha que a probabilidade de se manufaturar uma lâmpada defeituosa em cada uma dessas fábricas é, respectivamente, 2%, 5% e 1%.  <br>
+        Se uma lâmpada fabricada por essa empresa for escolhida ao acaso, qual é a probabilidade de que ela seja defeituosa? <br> <br>
+
+        <strong>(X) 2,7%</strong> <br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            P(F1) = 50% <br>
+            P(F2) = 30% <br>
+            P(F3) = 20% <br>
+            P(D1) = 2% <br>
+            P(D2) = 5% <br>
+            P(D3) = 1% <br>
+            P(D) = P(F1) * P(D1) + P(F2) * P(D2) + P(F3) * P(D3) <br>
+            P(D) = 0,5 * 0,02 + 0,3 * 0,05 + 0,2 * 0,01 = 0,027 ou 2,7% <br>
+        </p>
+    </p>
+    <hr>
+    <p>
+        Uma vacina tem 90% de eficiência na imunização contra determinada doença que acomete 30% da população não vacinada. Suponha que, em uma campanha, 80% da população tenha sido vacinada contra essa doença. Qual é, aproximadamente, a probabilidade de que, após a campanha, um sujeito que adquiriu a doença tenha sido vacinado? <br> <br>
+
+        <strong>(X) 27%</strong> <br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            P(V) = 90% <br>
+            P(D) = 30% <br>
+            P(V&#772;) = 80% <br>
+            P(D|V) = ? <br>
+            P(D|V) = P(D &cap; V) / P(V) <br>
+            P(D &cap; V) = P(D) * P(V) = 0,3 * 0,9 = 0,27 = 27%<br>                    
+        </p>
+    <hr>
+    <p>
+        Os funcionários de determinado escritório são 40% homens e 60% mulheres. Nos quais, 10% dos homens e 20% das mulheres falam inglês. Um cliente estrangeiro liga para o escritório e é atendido por um funcionário que fala inglês. Qual é a probabilidade de que o funcionário que atendeu a chamada seja uma mulher? <br> <br>
+
+        <strong>(X) 75%</strong> <br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            P(H) = 40% <br>
+            P(M) = 60% <br>
+            P(I|H) = 10% <br>
+            P(I|M) = 20% <br>
+            P(M|I) = ? <br>
+            P(M|I) = P(M &cap; I) / P(I) <br>
+            P(M &cap; I) = P(M) * P(I|M) = 0,6 * 0,2 = 0,12 <br>
+            P(I) = P(H) * P(I|H) + P(M) * P(I|M) = 0,4 * 0,1 + 0,6 * 0,2 = 0,16 <br>
+            P(M|I) = 0,12 / 0,16 = 0,75 = 75% <br>
+    </p>
     
     <h1>Provas</h1>
     <h2>Prova T20</h2>
