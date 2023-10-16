@@ -564,13 +564,20 @@
                     </ul>
             </ul>    
     <hr>
-    <h2>Aula 9</h2>
+    <h2>Aula 9 - (Semana 4 - vídeo 1)</h2>    
+        <p>
+            Nesta semana começamos nosso estudo de variáveis aleatórias, em particular das variáveis aleatórias discretas, suas propriedades básicas e algumas aplicações. Discutiremos também duas grandezas muito importantes usadas para caracterizar variáveis aleatórias: seu valor esperado (ou média ou esperança) e sua variância (ou desvio quadrático médio). <br>
+            Intuitivamente, uma variável aleatória “mede” uma grandeza observada em um experimento aleatório. Se Ω for um espaço amostral e o resultado do experimento aleatório é ω, um “processo de medição” é realizado para obter um número X(ω). Assim, uma variável aleatória é na verdade uma função a valores reais em um espaço amostral, X:Ω→R. As “medições” de X geralmente levam a afirmações da forma a&le;X&lt;b, e é natural perguntar sobre a probabilidade de que X esteja entre a e b em uma determinada realização do experimento aleatório. Veremos que os valores de P(X≤b) definem uma função que caracteriza completamente a variável aleatória X: sua distribuição de probabilidades.
+            <br>
+        </p>
+        
+    
     <h4>Variáveis aleatórias e valores esperados</h4>
     <ul>
-        <li>variável aleatória &rarr; descreve o resultade um experimento aleatório em termos de números</li>
+        <li>variável aleatória &rarr; descreve o resultado de um experimento aleatório em termos de números</li>
         <li>fornecem uma alternativa para estudar a teoria das probabilidades e estatística</li>
         <li>é preferível falar de variáveis aleatórios do que falar de eventos</li>
-        <li>é uma função: <code>X: &Omega; &rarr; &Ropf;</code></li>
+        <li>é uma função: <code>X: &Omega; &rarr; &Ropf; (le-se: "função que pega eventos do espaço amostral &Omega; e levam a um número real)</code></li>
             <ul>
                 <li>entra um conjunto na variável aleatória e sai um conjunto</li>
             </ul>
@@ -603,11 +610,11 @@
                 <ul>
                     <li>se X é uma variável aleatória e x é um número real dado, então podemos definir o evento (X = x) como o conjunto: <br><code>(X = x) = {&omega; &isin;; &Omega;:X(&omega;) = x} <br>
                         (X &le; x) = {&omega; &isin;; &Omega;: X(&omega;) &le; x} <br>
-                        (X &ge; x) = {&omega; &isin; &Omega;: X(&omega;) >= x} <br>
+                        (X &ge; x) = {&omega; &isin; &Omega;: X(&omega;) &ge; x} <br>
                         (X &gt; x) = {&omega; &isin; &Omega;: X(&omega;) > x} <br>
                         (x<sub>1</sub> &lt; X &le; x<sub>2</sub>) = {&omega; &isin; &Omega;: x1 &lt; X(&omega;) &le; x2} <br>
                         podemos calcular suas probabilidades como: <br>
-                        P(X = x) = &sum; &omega; &isin; P{&omega;:X(&omega;) = x}
+                        <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=x)=\sum_{\omega&space;E\Omega}^{}P(\omega:X(\omega)=x)}" title="{\color{Blue}P(X=x)=\sum_{\omega E\Omega}^{}P(\omega:X(\omega)=x)}" />
                     </code>
                     </li>
                 </ul>
@@ -616,19 +623,19 @@
                     <li>dizemos que determinamos a distribuição de probabilidade de X quando pudermos especificar todas as probabilidades envolvendo X</li>
                     <li>distribuição cumulativa de probabilidades: <code>R: R &rarr; [0,1]</code></li>
                         <ul>
-                            <li>dada por F<sub>x</sub>(x) = P(X <= x), x pertence a R</li>
+                            <li>dada por F<sub>X</sub>(x) = P(X &le; x), x pertence a R</li>
                             <li>F<sub>x</sub>(x) possui as seguintes propriedades:</li>
                                 <ul>
-                                    <li>F<sub>x</sub>(x) é limitada &rarr; 0 &le; F<sub>x</sub>(X) &le; 1</li>
-                                    <li>F<sub>x</sub>(x) é crescente &rarr; x &le; x' então F<sub>x</sub>(X) &le; F<sub>x</sub>(x')</li>
-                                    <li>F<sub>x</sub>(x) é contínua à direita &rarr; <img src="https://latex.codecogs.com/svg.image?{\color{Blue}\displaystyle\lim_{h\to&space;0^{&plus;}}F_{x}(x&plus;h)=F_{x}(x)}" title="{\color{Blue}\displaystyle\lim_{h\to 0^{+}}F_{x}(x+h)=F_{x}(x)}" /></li>
+                                    <li>F<sub>X</sub>(x) é limitada &rarr; 0 &le; F<sub>X</sub>(X) &le; 1</li>
+                                    <li>F<sub>X</sub>(x) é crescente &rarr; x &le; x' então F<sub>X</sub>(X) &le; F<sub>X</sub>(x')</li>
+                                    <li>F<sub>X</sub>(x) é contínua à direita &rarr; <img src="https://latex.codecogs.com/svg.image?{\color{Blue}\displaystyle\lim_{h\to&space;0^{&plus;}}F_{x}(x&plus;h)=F_{x}(x)}" title="{\color{Blue}\displaystyle\lim_{h\to 0^{+}}F_{x}(x+h)=F_{x}(x)}" /></li>
                                     <li>se X possui distribuição de probabilidade F<sub>x</sub>(x), então: <br>
-                                        <code>P(a &lt; X &le; b) = F<sub>x</sub>(b) - F<sub>x</sub>(a)</code></li>
+                                        <code>P(a &lt; X &le; b) = F<sub>X</sub>(b) - F<sub>X</sub>(a)</code></li>
                                 </ul>
                         </ul>
                     <li>função massa de probabilidade &rarr; f<sub>x</sub>(x)</li>
                         <ul>
-                            <li>dada pelo conjunto de valores f<sub>x</sub>(x<sub>i</sub>) = P(X = x<sub>i</sub>) tais que: <br> <img src="https://latex.codecogs.com/svg.image?{\color{Red}\sum_{i=1}^{n}f_{x}(x_{i})=\sum_{i=1}^{n}P(x=x_{i})=1}" title="{\color{Red}\sum_{i=1}^{n}f_{x}(x_{i})=\sum_{i=1}^{n}P(x=x_{i})=1}" /></li>
+                            <li>dada pelo conjunto de valores f<sub>X</sub>(x<sub>i</sub>) = P(X = x<sub>i</sub>) tais que: <br> <img src="https://latex.codecogs.com/svg.image?{\color{Red}\sum_{i=1}^{n}f_{x}(x_{i})=\sum_{i=1}^{n}P(x=x_{i})=1}" title="{\color{Red}\sum_{i=1}^{n}f_{x}(x_{i})=\sum_{i=1}^{n}P(x=x_{i})=1}" /></li>
                             <li>podemos calcular quaquer probabilidade P(x &isin; B) por: <br>
                                 <img src="https://latex.codecogs.com/svg.image?{\color{DarkRed}P(X\in&space;B)=\sum_{x\in&space;B}^{}f_{x}(x)}" title="{\color{DarkRed}P(X\in B)=\sum_{x\in B}^{}f_{x}(x)}" />
                             </li>
@@ -642,14 +649,15 @@
                             <li>propriedades do valor esperado E(X):</li>
                                 <ul>
                                     <li>se Z = aX + b então E(Z) = aE(X) + b e também E(X + Y) = E(X) + E(Y)</li>
-                                    <li>o desvio quadrático médio é a variância: g(X) = (X - E(X)&sup2; então E(g(X) = variância de X</li>
+                                    <li>o desvio quadrático médio é a variância: g(X) = (X - E(X)&sup2;) então E(g(X))
+                                         = variância de X</li>
                                 </ul>
                         </ul>
                 </ul>
         
     </ul>
     <hr>
-    <h2>Aula 10</h2>
+    <h2>Aula 10 - (Semana 4 - vídeo 2)</h2>
     <h4>Principais variáveis aleatórias discretas</h4>
         <ul>
             <li>discreto significa um número finito de valores</li>
@@ -683,18 +691,22 @@
                     k = 0, 1, ..., n <br>
                     Valor esperado: E(X) = np <br>
                     Variância: Var(X) = np(1 - p) <br>
-                    X ~ Bin(n, p) &rarr; X está distribuído de acordo com uma Binomial de parâmetro n e p
+                    X ~ Bin(n, p) &rarr; X está distribuído de acordo com uma Binomial de parâmetro n e p <br>
+                    Conta a seguinte história: Qual a probabilidade de obter k sucessos em n ensaios de Bernoulli independentes? <br>
                 </code>
             </li>
             <li>distribuição de <mark>Poisson</mark> &rarr; saber a ocorrência de um evento em um determinado espaço de tempo, comprimento, área etc <br>
                 <code>
-                    <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=k)=\frac{e^{\lambda}\lambda^{k}}{k!}}" title="{\color{Blue}P(X=k)=\frac{e^{\lambda}\lambda^{k}}{k!}}" /> <br>
-                    k = 0, 1, ..., n <br>
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=k)=\frac{e^{-\lambda}\lambda^{k}}{k!}}" title="{\color{Blue}P(X=k)=\frac{e^{\lambda}\lambda^{k}}{k!}}" /> <br>
+                    P(X = k) é a probabilidade de um evento ocorrer exatamente k vezes. <br>                    
+                    e é o número de Euler, aproximadamente 2.71828 <br>
+                    &lambda; é a média de ocorrências do evento em um intervalo específico <br>
+                    k = 0, 1, ..., n número de ocorrências que desejamos calcular<br>
                     Valor esperado: E(X) = &lambda; <br>
                     Variância: Var(X) = &lambda; <br>
                     X ~ Poisson(&lambda;) &rarr; X está distribuído de acordo com uma Poisson de parâmetro &lambda;. X ~ (n, p). Ex.: <br>
                     Se em 1 metro de fio eu tenho 2 defeitos em média. Qual a probabilidade de encontrar 10 defeitos em 1 metro de fio? <br>
-                    <img src="https://latex.codecogs.com/svg.image?{\color{Red}P(X=10)=\frac{e^{2}2^{10}}{10!}\cong&space;0,0001}" title="{\color{Red}P(X=10)=\frac{e^{2}2^{10}}{10!}\cong 0,0001}" />
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Red}P(X=10)=\frac{e^{-2}2^{10}}{10!}\cong&space;0,0001}" title="{\color{Red}P(X=10)=\frac{e^{-2}2^{10}}{10!}\cong 0,0001}" />. Conferir essas informações <br>
                 </code>
             </li>
             <li>distribuição <mark>Geométrica</mark> &rarr; probabilidade de realizar k ensaios independentes de Bernoulli <br>
@@ -729,7 +741,40 @@
             </li>
         </ul>    
     <hr>
-    <h2>Aula 11</h1>
+    <h2>Aula 11 - (Semana 4 - vídeo 3)</h1>
+    <h4>Variáveis aleatórias discretas: exercícios resolvidos</h4>
+    <p>
+        Exemplo 1: Distribuição binomial <br>
+        Um canal de comunicação digital com ruído possui 1% de probabilidade de transmitir um bit incorretamente. Gostaríamos de saber qual é a probabilidade de se observar mais de um erro a cada 16 bits recebidos. <br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            O número de X bits incorretos em cada bloco de 16 bits pode ser modelado pela distribuição binomial com parâmetros: <br>
+            n = 16 <br>
+            p = 0,01 <br>
+            P(X&gt;1) = P(X&ge;2) = 1 - P(X&le;1) = 1 - P(X=0) - P(X=1) <br>
+            P(X&ge;2) = 1- (0,99)<sup>16</sup> - 16.0,01.(0,99)<sup>15</sup> <br>
+            P(X&ge;2) &approx; 0,0109 &approx; 1,1%<br>
+            O valor esperado do número de bits errados por pacote de 16 bits é: <br>
+            E(X) = np = 16.0,01 = 0,16 (exorbitante)<br> <br>
+
+            Calculando pela distribuição de Poisson seria mais adequado: <br>
+            &lambda; = np = 0,16 <br>
+            P(X&ge;2) = 1 - P(X&le;1) = 1 - P(X=0) - P(X=1) <br>
+            P(X&ge;2) = 1 - e<sup>-0,16</sup> - 0,16.e<sup>-0,16</sup> <br>
+            P(X&ge;2) &approx; 0,0109 &approx; 1,1% <br> <br>           
+        </p>
+    </p>
+    <p>
+        Exemplo 2: Distribuição Geométrica <br>
+        Calcular o valor esperado de uma variável aleatória distribuída geometricamente X ~Geom(p), de parâmetro p. <br> <br>
+        P(X = k) = (1 - p)<sup>k-1</sup>.p <br>
+        k = 1, 2, 3, ... <br> <br>
+
+        E(X) = &sum;<sub>k=1</sub><sup>&infin;</sup>k.P(X = k) <br> 
+        E(X) = 1/p
+    </p>
     <hr>
 </body>
 </html>
