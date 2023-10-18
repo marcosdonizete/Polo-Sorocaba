@@ -1473,6 +1473,387 @@
             <strong>(X) distribuição hipergeométrica</strong> <img src="https://latex.codecogs.com/svg.image?{\color{Blue}H(n,N,K)=\frac{\binom{K}{n}\binom{N-K}{n}}{\binom{N}{n}}}" title="{\color{Blue}H(n,N,K)=\frac{\binom{K}{n}\binom{N-K}{n}}{\binom{N}{n}}}" /> <br>
             A distribuição hipergeométrica descreve a probabilidade de observar k indivíduos com determinada característica em uma amostra de tamanho n obtida sem reposição em uma população finita de N indivíduos contendo K indivíduos com a característica. No nosso caso, a população consiste de N bolas ( N−K brancas e K pretas) e a característica é ser uma bola preta.
         </p>
+        <hr>
+        <p>
+            Sabe-se que, em um determinado bairro, 10% das pessoas possuem um carro ano 2022. Se 25 pessoas forem selecionadas ao acaso, com reposição, qual a probabilidade de que exatamente cinco pessoas possuam um carro ano 2022? <br> <br>
+            Utilize a distribuição binomial e assinale a alternativa correta. <br> <br>
+            <strong>(X) 6,46%</strong> <br>
+            <h5>Resolução</h5>
+            <p>
+                n = 25 <br>
+                k = 5 <br>
+                p = 0,1 <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=5)=\binom{n}{k}\cdot&space;p^{k}\cdot(1-p)^{n-k}}" title="{\color{Blue}P(X=5)=\binom{n}{k}\cdot p^{k}\cdot(1-p)^{n-k}}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=5)=\binom{25}{5}\cdot&space;p^{5}\cdot(1-p)^{25-5}}" title="{\color{Blue}P(X=5)=\binom{25}{5}\cdot p^{5}\cdot(1-p)^{25-5}}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=5)=\frac{25\cdot&space;24\cdot&space;23\cdot&space;22\cdot&space;21\cdot&space;20!}{(20-5!)5!}\cdot&space;0,1^{5}\cdot(1-0,1)^{20}=0,0646\approx&space;6,46%}" title="{\color{Blue}P(X=5)=\frac{25\cdot 24\cdot 23\cdot 22\cdot 21\cdot 20!}{(20-5!)5!}\cdot 0,1^{5}\cdot(1-0,1)^{20}=0,0646\approx 6,46%}" /> <br>
+                P(X = 5) = (25! / (5! * (25 - 5)!) * (0,1)<sup>5</sup> * (1 - 0,1)<sup>25 - 5</sup> = 0,0646 = 6,46% <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            A distribuição binomial é uma distribuição de probabilidade discreta que descreve o número de sucessos em uma sequência de experimentos independentes, cada um com dois possíveis resultados: sucesso ou fracasso. Cada experimento é chamado de tentativa. <br> <br>
+
+            Sobre a distribuição binomial, analise as asserções a seguir e a relação proposta entre elas. <br>
+
+            I. O experimento é repetido por um número fixo de tentativas, onde cada tentativa depende das outras <br> 
+            <strong>PORQUE</strong> <br>
+            II. A probabilidade de sucesso é a mesma para cada tentativa <br> <br>
+
+            A respeito dessas asserções, assinale a alternativa correta. <br> <br>
+
+            <strong>(X) A asserção I é uma proposição falsa, e a II é uma proposição verdadeira</strong> <br>
+        </p>
+        <hr>
+        <p>
+            A <strong>distribuição geométrica</strong> é uma distribuição de probabilidade discreta em que a tentativa se repete até que o sucesso ocorra. Nesse caso, as tentativas repetidas são independentes umas das outras, e a probabilidade de sucesso é constante para cada tentativa. <br> <br>
+
+            Sabendo disso, se a probabilidade de um vendedor fazer uma venda para o primeiro cliente que entra na loja é de 0,15, então, julgue os itens que seguem: <br> <br>
+
+            I. A probabilidade de a primeira venda ser para o segundo cliente 5,2% <br>
+            II. A probabilidade de a primeira venda ser para o quarto cliente é de 9,2% <br>
+            III. A probabilidade de a primeira venda ser para o quinto cliente é de 7,8% <br>
+            IV. A probabilidade de a primeira venda ser para o quarto ou quinto cliente é de 17% <br> <br>
+
+            <strong>(X) II, III e IV, apenas</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                p = 0,15 <br>
+                k = 1, 2, 3, ... <br>
+                <code>P(X = k) = (1 - p)<sup>k - 1</sup> * p (fórmula da distribuição geométrica) <br></code>
+                I. P(X = 2) = (1 - p)<sup>k - 1</sup> * p = (1 - 0,15)<sup>2 - 1</sup> * 0,15 = 0,1275 = 12,75% <br>
+                II. P(X = 4) = (1 - p)<sup>k - 1</sup> * p = (1 - 0,15)<sup>4 - 1</sup> * 0,15 &approx; 0,09211875 &approx; 9,2% <br>
+                III. P(X = 5) = (1 - p)<sup>k - 1</sup> * p = (1 - 0,15)<sup>5 - 1</sup> * 0,15 &approx; 0,0783009375 &approx; 7,8% <br>
+                IV. P(X = 4) + P(X = 5) = 0,09211875 + 0,07830009375 = 0,1711128125 &approx; 17,1% <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            A <strong>distribuição de Poisson</strong> é uma distribuição de probabilidade discreta de uma variável aleatória que consiste em prever a probabilidade de um determinado evento acontecer em um determinado período de tempo, sabendo a frequência com a qual o evento ocorreu. <br> <br>
+
+            Sabendo que a média de acidentes por mês em um determinado cruzamento é de dois, assinale a alternativa correta que apresenta qual é a probabilidade de, em um mês qualquer, ocorrerem três acidentes nesse mesmo cruzamento. <br> <br>
+
+            <strong>(X) &approx; 18%</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                λ = 2 <br>
+                k = 3 <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=k)=\frac{\lambda^{k}\cdot&space;e^{-\lambda}}{k!}}" title="{\color{Blue}P(X=k)=\frac{\lambda^{k}\cdot e^{-\lambda}}{k!}}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=3)=\frac{2^{3}\cdot&space;e^{-2}}{3!}=0,1804\approx&space;18,04%}" title="{\color{Blue}P(X=3)=\frac{2^{3}\cdot e^{-2}}{3!}=0,1804\approx 18,04%}" /> <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Experimentos <strong>binomiais</strong> são experimentos de probabilidade que têm somente dois resultados possíveis: sucesso ou fracasso, cujo experimento é repetido por um número fixo de tentativas, em que cada tentativa é independente das outras.  <br> <br>
+
+            Sabendo disso, observe as afirmativas a seguir. <br> <br>
+
+            I. (  ) Uma cirurgia tem 85% chance de sucesso e 15% de chance de fracasso. <br>
+            II. (  ) Um aluno, em uma determinada disciplina, pode ser aprovado ou reprovado. <br>
+            III. (  ) No lançamento de uma moeda, pode-se obter face cara ou coroa. <br>
+            IV. (  ) Uma peça pode ser defeituosa ou não defeituosa. <br> <br>
+
+            <strong>(X) I, II, III e IV</strong> <br>
+
+            <h5>Resolução</h5>
+
+            <p>
+                I. Verdadeiro, pois a cirurgia tem apenas dois resultados possíveis: sucesso ou fracasso. <br>
+                II. Verdadeiro, pois o aluno pode ser aprovado ou reprovado. <br>
+                III. Verdadeiro, pois o lançamento de uma moeda tem apenas dois resultados possíveis: cara ou coroa. <br>
+                IV. Verdadeiro, pois a peça pode ser defeituosa ou não defeituosa. <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Se, em um teste de matemática que contém dez questões com quatro alternativas cada uma, em que apenas uma delas é correta, um aluno que nada sabe a respeito da matéria chuta uma resposta para cada questão. <br> <br>
+
+            Assinale a alternativa correta, indicando qual é a probabilidade de o aluno acertar exatamente cinco questões.  <br> <br>
+
+            <strong>(X) 5,83%</strong> <br>
+
+            <h5>Resolução</h5>
+
+            <p>
+                n = 10 <br>
+                k = 5 <br>
+                p = 0,25 <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=5)=\binom{n}{k}\cdot&space;p^{k}\cdot(1-p)^{n-k}}" title="{\color{Blue}P(X=5)=\binom{n}{k}\cdot p^{k}\cdot(1-p)^{n-k}}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=5)=\binom{10}{5}\cdot&space;0,25^{5}\cdot(1-0,25)^{10-5}}" title="{\color{Blue}P(X=5)=\binom{10}{5}\cdot 0,25^{5}\cdot(1-0,25)^{10-5}}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=5)=\frac{10!}{(10-5)!5!}\cdot&space;0,25^{5}\cdot(0,75)^{5}=0,0583\approx&space;5,83%}" title="{\color{Blue}P(X=5)=\frac{10!}{(10-5)!5!}\cdot 0,25^{5}\cdot(0,75)^{5}=0,0583\approx 5,83%}" /> <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            No pedágio de uma determinada rodovia, aos finais de semana, passam, em média, 3600 veículos por hora. Qual a probabilidade de passarem trinta carros em quinze segundos? <br> <br>
+
+            Utilize a <strong>distribuição de Poisson</strong> e assinale a alternativa correta. <br> <br>
+
+            <strong>(X) 0,02</strong> <br>
+
+            <h5>Resolução</h5>
+
+            <p>
+                &lambda; = 3600/60 * 15 = 15 veículos/segundo<br>
+                k = 30 <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=k)=\frac{\lambda^{k}\cdot&space;e^{-\lambda}}{k!}}" title="{\color{Blue}P(X=k)=\frac{\lambda^{k}\cdot e^{-\lambda}}{k!}}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X=30)=\frac{e^{-15}\cdot&space;15^{30}}{30!}=0,000221\cong&space;0,02%}" title="{\color{Blue}P(X=30)=\frac{e^{-15}\cdot 15^{30}}{30!}=0,000221\cong 0,02%}" />         <br>               
+            </p>
+        </p>
+        <hr>
+        <p>
+            Por definição, a média de uma variável aleatória representa o que se espera acontecer em milhares de experimentos, também é denominada de valor esperado, e calculada da seguinte forma: E(x)=μ=∑xP(x). <br> <br>
+
+            Considere a distribuição de probabilidade para o grau de satisfação dos clientes em relação ao serviço prestado por uma empresa e encontre a média, em que 1 é insatisfeito, e 5, muito satisfeito. <br> <br>
+
+            <table>
+                <tr>
+                    <th>x</th>
+                    <th>P(x)</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0,10</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>0,15</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>0,30</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>0,32</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>0,13</td>
+                </tr>
+            </table> <br>
+
+            <strong>(X) 3,23</strong> 
+
+            <h5>Resolução</h5>
+
+            <p>
+                E(x) = 1 * 0,10 + 2 * 0,15 + 3 * 0,30 + 4 * 0,32 + 5 * 0,13 = 3,23 <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            A média de uma variável aleatória, também conhecida por valor esperado, representa o que se espera acontecer em milhares de experimentos: E(x)=μ=∑xP(x). <br> <br>
+
+            Sabendo disso, encontre o valor esperado das características passivo-agressivas de 125 funcionários de uma empresa de acordo com os dados da tabela abaixo, em que o escore 1 representa extremamente passivo, e o escore 5 representa extremamente agressivo. <br> <br>
+
+            <table>
+                <tr>
+                    <th>x</th>
+                    <th>Frequência</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>47</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>2</td>
+                </tr>
+            </table> <br>
+
+            <strong>(X) 2,768</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                P(1) = 15/125 = 0,12 <br>
+                P(2) = 32/125 = 0,256 <br>
+                P(3) = 47/125 = 0,376 <br>
+                P(4) = 29/125 = 0,232 <br>
+                P(5) = 2/125 = 0,016 <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}E(x)=1\cdot&space;P(1)&plus;2\cdot&space;P(2)&plus;3\cdot&space;P(3)&plus;4\cdot&space;P(4)&plus;5\cdot&space;P(5)}" title="{\color{Blue}E(X)=1\cdot P(1)+2\cdot P(2)+3\cdot P(3)+4\cdot P(4)+5\cdot P(5)}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}E(x)=(1\cdot&space;0,12)&plus;(2\cdot&space;0,256)&plus;(3\cdot&space;0,376)&plus;(4\cdot&space;0,232)&plus;(5\cdot&space;0,016)=2,768}" title="{\color{Blue}E(x)=(1\cdot 0,12)+(2\cdot 0,256)+(3\cdot 0,376)+(4\cdot 0,232)+(5\cdot 0,016)=2,768}" /> <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            A <strong>distribuição de Bernoulli</strong> é uma distribuição de probabilidade discreta utilizada para modelar experimentos ou eventos que têm apenas dois resultados possíveis: sucesso ou fracasso. Essa distribuição é amplamente utilizada para analisar eventos binários, em que cada tentativa é considerada independente, e a probabilidade de sucesso (ou fracasso) é constante em todas as tentativas. <br> <br>
+
+            Sabendo disso, assinale a alternativa que indica uma situação que pode ser modelada por uma distribuição de Bernoulli. <br> <br>
+
+            <strong>(X) O resultado do lançamento de uma moeda</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                O resultado do lançamento de uma moeda pode ser modelado por uma distribuição de Bernoulli, pois o resultado do lançamento de uma moeda tem apenas dois resultados possíveis: cara ou coroa. <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            A prefeitura de uma determinada cidade está interessada em identificar a probabilidade de que em um ano qualquer ocorra 1 chuva de intensidade extrema para dimensionar a equipe necessária na contenção de danos a comunidade, para isso eles tem a média de ocorrência de chuvas de intensidade extrema em 30 anos. <br> <br>
+
+            Para encontrar a probabilidade procurada, qual distribuição ela deverá utilizar? Assinale a alternativa correta: <br> <br>
+
+            <strong>(X) Distribuição de Poisson</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                A distribuição de Poisson é uma distribuição de probabilidade discreta de uma variável aleatória que consiste em prever a probabilidade de um determinado evento acontecer em um determinado período de tempo, sabendo a frequência com a qual o evento ocorreu. <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Uma variável aleatória X pode assumir os valores inteiros de 1 a 6 com probabiliaddes P(X = k) = ak<sup>2</sup>. <br> <br>
+
+            Quanto deve valer a para que a distribuição de probabilidades de X seja uma distribuição legítima? <br> <br>
+
+            <strong>(X) 1/91</strong> <br>
+
+            <h5>Resolução</h5>
+
+            <p>
+                Para que a distribuição de probabilidades seja legítima, a soma de todas as probabilidades deve ser igual a 1. Portanto, temos: <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}\sum_{k=1}^{6}P(X=k)=1}" title="{\color{Blue}\sum_{k=1}^{6}P(X=k)=1}" /> <br>
+                P(1) + P(2) + P(3) + P(4) + P(5) + P(6) = 1 <br>
+                Substituindo as probabilidades P(X = k) = ak<sup>2</sup>, obtemos: <br>
+                a1<sup>2</sup> + a2<sup>2</sup> + a3<sup>2</sup> + a4<sup>2</sup> + a5<sup>2</sup> + a6<sup>2</sup> = 1 <br>
+                Simplificando: <br>
+                a + 4a + 9a + 16a + 25a + 36 = 1 <br>
+                91a = 1 <br>
+                a = 1/91 <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Uma variável aleatória X pode assumir os valores inteiros de 1 a 6 com probabilidades P(X = K = a/k, em que a é uma constante. usando o valor apropriado para a, qual é o valor esperado de X? <br> <br>
+
+            <strong>(X) 120/49 (&approx; 2,45)</strong> <br>
+
+            <h5>Resolução</h5>
+
+            <p>
+                E(X) = &sum; k * P(X = k) <br>
+                Agora, somando de k = 1 a 6: <br>
+                E(X) = 1 * a/1 + 2 * a/2 + 3 * a/3 + 4 * a/4 + 5 * a/5 + 6 * a/6 <br>
+                Simplificando: <br>
+                E(X) = a + a + a + a + a + a <br>
+                E(X) = 6a <br>
+                Agora, para encontrar o valor apropriado de 'a' de modo que a distribuição seja válida, sabemos que a soma de todas as probabilidades deve ser igual a 1: <br>
+                &sum; P(X = k) = 1 <br>
+                Neste caso: <br>
+                &sum; a/k = 1 <br>
+                P(1) + P(2) + P(3) + P(4) + P(5) + P(6) = 1 <br>
+                Substituindo as probabilidades P(X = k) = a/k, obtemos: <br>
+                A soma das frações é aproximadamente igual a 2,45. Portanto: <br>
+                a * 2,45 = 1 <br>
+                a = 1/2,45 <br>
+                a &approx; 0,4082 <br>
+                Agora, substituindo o valor de 'a' na expressão de E(X): <br>
+                E(X) = 6 * 0,4082 <br>
+                E(X) &approx; 2,45 <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Relacione cada uma das distribuições de probabilidade abaixo com suas respectivas descrições: <br> <br>
+
+            I. Distribuição binomial. <br>
+            II. Distribuição de Poisson. <br>
+            III. Distribuição hipergeométrica. <br> <br>
+
+            A. Probabilidade de observar k indivíduos com determinada característica em uma amostra de tamanho n obtida sem reposição de uma população finita de N indivíduos contendo K indivíduos com a característica. <br>
+            B. Probabilidade de observar k eventos em um período unitário se os eventos ocorrem aleatoriamente a uma taxa média de lâmbada eventos por unidade de tempo. <br>
+            C. Probabilidade de obter k sucessos em n ensaios de Bernoulli independentes cada um com probabilidade p de sucesso.
+        </p> <br>
+
+        <strong>(X) I - C; II - B; III - A</strong> <br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            I. Distribuição binomial: Probabilidade de obter k sucessos em n ensaios de Bernoulli independentes cada um com probabilidade p de sucesso. <br>
+            II. Distribuição de Poisson: Probabilidade de observar k eventos em um período unitário se os eventos ocorrem aleatoriamente a uma taxa média de lâmbada eventos por unidade de tempo. <br>
+            III. Distribuição hipergeométrica: Probabilidade de observar k indivíduos com determinada característica em uma amostra de tamanho n obtida sem reposição de uma população finita de N indivíduos contendo K indivíduos com a característica. <br>
+        </p>
+        <hr>
+        <p>
+            Suponha que 15% da população mundial é canhota. Qual é, aproximadamente, a probabilidade de que em uma amostra aleatória simples de 30 pessoas haja pelo menos 5 pessoas canhotas? <br> <br>
+
+            (X) <br>
+
+            <h5>Resolução</h5>
+
+            <p>
+               n = 30 <br>
+               k = 5 <br> 
+               p = 0,15 <br>
+            </p>            
+        </p>
+        <hr>
+        <p>
+            Em Jundiaí, SP, em média 9 dias em junho apresentam em algum momento temperaturas inferiores a 10 graus Celsius. <br> <br>
+
+            Podemos dizer que o desvio padrão do número de dias em junho que apresentam e algum momento temperaturas inferiores a 10 graus Celsius vale: <br> <br>
+
+            <strong>(X) 2,7 (2,5 dias)</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                λ = 9 <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}\sigma&space;=&space;\sqrt{\lambda}&space;=&space;\sqrt{9}&space;=&space;3}" title="{\color{Blue}\sigma = \sqrt{\lambda} = \sqrt{9} = 3}" /> <br>
+                Para calcular o desvio padrão, precisamos saber como os dados estão distribuídos em torno da média.
+            </p>
+        </p>
+        <hr>
+        <p>
+            Três amigos, Ana, Beto e Carlos, jogam sucessivamente um dado (isto é, Ana, Beto, Carlos, depois Ana, Beto, Carlos novamente, e assim por diante) até que alguém tire o valor 6 e ganhe o jogo. <br> <br>
+
+            Quanto vale, aproximadamente, a probabilidade de que Ana ganhe o jogo?  <br> <br>
+
+            <strong>(X) sem resposta ainda (40%)</strong>
+
+            <h5>Resolução</h5>             
+        </p>
+        <hr>
+        <p>
+            Cada setor de 4096 bytes de um HD usado para backup de arquivos possui 0,01% de probabilidade de apresentar defeito, com uma distribuição de Poisson. <br> <br>
+
+            Qual é, aproximadamente, a probabilidade de encontrarmos menos de 3 setores defeituosos em um arquivo de 80 MBytes gravado nesse Hd? (1 MByte = 1024 x 1024 bytes). <br> <br>
+
+            <strong>(X) sem resposta ainda (entre 60 e 70%)</strong>
+
+            <h5>Resolução</h5>
+        </p>
+        <hr>
+        <p>
+            Em um baralho completo de 52 cartas, retiram-se 8 cartas ao acaso sem reposição. Qual é, aproximadamente, a probabilidade de que 4 dessas cartas sejam de copas? <br> <br>
+
+            <strong>(X) sem resposta ainda (7,80%)</strong> <br>
+
+            <h5>Resolução</h5>            
+        </p>
+        
+
+
     
     <h1>Provas</h1>
     <h2>Prova T20</h2>
