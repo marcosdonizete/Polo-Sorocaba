@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Média e Desvio Padrão</title>
+</head>
+<body>
+    <h1>Calculadora de Média e Desvio Padrão</h1>
+    <p>Insira os valores separados por espaços:</p>
+    <input type="text" id="inputValues">
+    <button onclick="calcular()">Calcular</button>
+    <p>Média: <span id="media"></span></p>
+    <p>Desvio Padrão: <span id="desvioPadrao"></span></p>
+
+    <script>
+        function calcular() {
+            const input = document.getElementById("inputValues").value;
+            const valores = input.split(" ").map(Number);
+            
+            if (valores.length === 0) {
+                alert("Insira pelo menos um valor.");
+                return;
+            }
+
+            const media = calcularMedia(valores);
+            const desvioPadrao = calcularDesvioPadrao(valores);
+
+            document.getElementById("media").textContent = media.toFixed(2);
+            document.getElementById("desvioPadrao").textContent = desvioPadrao.toFixed(2);
+        }
+
+        function calcularMedia(valores) {
+            const soma = valores.reduce((total, valor) => total + valor, 0);
+            return soma / valores.length;
+        }
+
+        function calcularDesvioPadrao(valores) {
+            const media = calcularMedia(valores);
+            const somaDiferencasQuadradas = valores.reduce((total, valor) => total + Math.pow(valor - media, 2), 0);
+            const desvioPadrao = Math.sqrt(somaDiferencasQuadradas / valores.length);
+            return desvioPadrao;
+        }
+    </script>
+</body>
+</html>
