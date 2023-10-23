@@ -741,7 +741,7 @@
             </li>
         </ul>    
     <hr>
-    <h2>Aula 11 - (Semana 4 - vídeo 3)</h1>
+    <h2>Aula 11 - (Semana 4 - vídeo 3)</h2>
     <h4>Variáveis aleatórias discretas: exercícios resolvidos</h4>
     <p>
         Exemplo 1: Distribuição binomial <br>
@@ -776,5 +776,76 @@
         E(X) = 1/p
     </p>
     <hr>
+    <h2>Aula 12 - (Semana 5 - vídeo 1)</h2>
+    <p>
+        Nesta semana continuamos nosso estudo das variáveis aleatórias, mas agora daquelas que podem assumir um conjunto contínuo de valores, tipicamente um subintervalo de &#8477;. Uma variável aleatória X contínua pode ser inteiramente caracterizada por sua distribuição de probabilidades F<sub>X</sub>(x)=P(X &le; x), também denominada “distribuição cumulativa de probabilidades”, ou, alternativamente, por sua função densidade de probabilidades f<sub>X</sub>(x)=F<sub>X'</sub>(x), a derivada de F<sub>X</sub>(x) em relação a x. O emprego dessas funções requer o uso do cálculo diferencial e integral, mas em nossa disciplina esse uso será em nível elementar. Seremos apresentados a algumas das variáveis aleatórias contínuas mais úteis na prática e, em particular, à variável aleatória normal ou gaussiana, a mais importante variável aleatória da probabilidade e estatística devido à sua relação com o teorema central do limite, que como o próprio nome indica, é o “teorema central” da teoria estatística. Também veremos como aproximar uma distribuição binomial por uma distribuição normal de parâmetros apropriados, uma ferramenta muito útil na prática.
+    </p>
+    <h4>Variáveis aleatórias contínuas (<mark>VAC</mark>)</h4>
+        <ul>
+            <li>X é contínua se pode assumir qualquer valor num dado intervalo real: X:&Omega; &rarr; I &#8838; &#8477;</li>
+            <li>a variável contínua é como um limite da variável discreta (com grande número de valores)</li>
+            <li>exemplo: probabilidade numa roleta com 37 casas</li>
+                P(X = k) = 1/37 <br>
+                probabilidade de observar a bola caindo em alguma casa no intervalor a &le; X < b
+                é dada por: <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(a\leq&space;X<b)=\int_{k=a}^{b-1}P(X=k)}" title="{\color{Blue}P(a\leq X<b)=\int_{k=a}^{b-1}P(X=k)}" /> <br>
+                P(X = k) = f<sub>X</sub>(k).&Delta; <br>
+                f<sub>X</sub>(k) &rarr; é a densidade de probabilidade no valor x = k <br>
+                &Delta; &rarr; argura do invervalo de classe (neste caso Delta = 1) <br>
+                a altura multiplicada pela densidade dá a probabilidade <br>
+                se P(X = k) = 1/n deve valer f<sub>X</sub>(k).&Delta;, então <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}f_{X}(k)=\frac{1}{b-a}}" title="{\color{Blue}f_{X}(k)=\frac{1}{b-a}}" />
+            <li>valor esperado de uma VAC</li>
+                <ul>
+                    <li>a VAC X está caracterizada pela sua distribuição de probabilidades</li>
+                    <li>f: &#8477;<sup>+</sup>(f(x) &ge; 0) tal que:</li> <br>
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Blue}\int_{-\infty}^{&plus;\infty}f(x)dx=1}" title="{\color{Blue}\int_{-\infty}^{+\infty}f(x)dx=1}" /> <br>
+                    define uma VAC para a qual: <br>
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(a\leq&space;X<b)=\int_{a}^{b}f(x)dx}" title="{\color{Blue}P(a\leq X<b)=\int_{a}^{b}f(x)dx}" /> <br>
+                    <img src="https://latex.codecogs.com/svg.image?{\color{Blue}E(X)=\int_{-\infty}^{&plus;\infty}xf(x)dx}" title="{\color{Blue}E(X)=\int_{-\infty}^{+\infty}xf(x)dx}" /> <br>
+                </ul>
+            <li>principais VACs:</li>
+                <ul>
+                    <li><mark>distribuição uniforme</mark></li>
+                        <ul>
+                            <li>dada por pdf (função distribuição de probabilidade):</li> <br>
+                            <img src="https://latex.codecogs.com/svg.image?{\color{Blue}f_{X}(x)=\begin{cases}\frac{a}{b-a}&\text{,}a<x<b\\0&\text{,}x\exists(1,b)\end{cases}}" title="{\color{Blue}f_{X}(x)=\begin{cases}\frac{a}{b-a}&\text{,}a<x<b\\0&\text{,}x\exists(1,b)\end{cases}}" /> <br>
+                            valor esperado: E(X) = &frac12;(a + b) <br>
+                            variância: Var(X) = <img src="https://latex.codecogs.com/svg.image?{\color{Blue}\frac{(b-a)^{2}}{12}}" title="{\color{Blue}\frac{(b-a)^{2}}{12}}" /> <br>
+                            X ~ U(a, b) &rarr; X está distribuído de acordo com uma uniforme de parâmetros a e b <br>
+                        </ul>
+                    <li><mark>distribuição exponencial</mark></li>
+                        <ul>
+                            <li>pdf é dada por:</li>
+                            <img src="https://latex.codecogs.com/svg.image?{\color{Blue}f_{X}(x)=\begin{cases}\lambda&space;e^{-\lambda&space;x}&\text{,}x>0\\0&\text{,}x<0\end{cases}}" title="{\color{Blue}f_{X}(x)=\begin{cases}\lambda e^{-\lambda x}&\text{,}x>0\\0&\text{,}x<0\end{cases}}" /> <br>
+                            valor esperado: E(X) = 1/&lambda; <br>
+                            variância: Var(X) = 1/&lambda;<sup>2</sup> <br>
+                            X ~ Exp(&lambda;) &rarr; X está distribuído de acordo com uma exponencial de parâmetro &lambda; <br>
+                            uma variável aleatória exponencial não tem memória (o que já aconteceu não afeta o que acontecerá com a variável) <br>
+                            <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X>s&plus;t|X>s)=P(X>t)}" title="{\color{Blue}P(X>s+t|X>s)=P(X>t)}" /> <br>
+                        </ul>
+                    <li><mark>distribuição normal</mark> (<mark>Gaussiana</mark>) &rarr; é a mais importante</li>
+                        <ul>
+                            <li>pdf é dada por:</li>
+                            <img src="https://latex.codecogs.com/svg.image?{\color{Blue}f_{X}(x)=\frac{1}{\sqrt{2\pi\sigma}}\cdot&space;e^{\frac{-(x-\mu)^{2}}{2\sigma^{2}}}}" title="{\color{Blue}f_{X}(x)=\frac{1}{\sqrt{2\pi\sigma}}\cdot e^{\frac{-(x-\mu)^{2}}{2\sigma^{2}}}}" /> <br>
+                            valor esperado: E(X) = &mu; <br>
+                            variância: Var(X) = &sigma;<sup>2</sup> <br>
+                            X ~ N(&mu;, &sigma;<sup>2</sup>) &rarr; X está distribuído de acordo com uma normal de parâmetros &mu; e &sigma;<sup>2</sup> <br>
+                        </ul>
+                    <li><mark>distribuição gama</mark></li>
+                        <ul>
+                            <li>pdf dada por:</li>
+                            <img src="https://latex.codecogs.com/svg.image?{\color{Blue}f_{X}(x)=\begin{cases}\frac{\lambda&space;e^{-\lambda&space;x}(\lambda&space;x)^{\alpha-1}}{\Gamma(\alpha)}&\text{,}x>0\\0&\text{,}x<0\end{cases}}" title="{\color{Blue}f_{X}(x)=\begin{cases}\frac{\lambda e^{-\lambda x}(\lambda x)^{\alpha-1}}{\Gamma(\alpha)}&\text{,}x>0\\0&\text{,}x<0\end{cases}}" /> <br>
+                            valor esperado: E(X) =1/p; <br>
+                            variância: <img src="https://latex.codecogs.com/svg.image?{\color{Blue}Var(X)=\frac{(1-p)}{p^{2}}}" title="{\color{Blue}Var(X)=\frac{(1-p)}{p^{2}}}" /> <br>
+                            X ~ Gama(&alpha;, &lambda;) ou &Gamma;(&alpha;,&lambda;) &rarr; X está distribuído de acordo com uma gama de parâmetros &alpha; e &lambda; <br>
+                            generaliza outras distribuições importantes da probabilidade e estatística <br>
+                            quando &alpha; = 1 &rarr; &Gamma;(1, &lambda;) = Exp(&lambda;) pois &Gamma;(1) = 1<br>
+                            quando &alpha; = n/2 e &lambda; = 1/2 &rarr; &Gamma;(n/2, 1/2) = &chi;<sup>2</sup>(n) (se torna a distribuição qui-quadrado &chi;<sup>2</sup> de n graus de liberdade)<br>
+                            quando &alpha; = n (um # inteiro), às vezes gama é denomidada distribuição de Erlang <br>
+                            o nome gama vem da função gama de Euler &Gamma;(z) = &int;<sub>0</sub><sup>&infin;</sup>x<sup>z-1</sup>e<sup>-x</sup>dx <br>
+                        </ul>
+                </ul>
+        </ul>
 </body>
 </html>
