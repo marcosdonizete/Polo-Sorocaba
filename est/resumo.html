@@ -847,5 +847,57 @@
                         </ul>
                 </ul>
         </ul>
+    <hr>
+    <h2>Aula 13 - (Semana 5 - vídeo 2)</h2>
+    <h4>A aproximação normal à distribuição binomial</h4>
+        <ul>
+            <li>tem a ver com o teorema central do limite pois uma variável binomial nada mais é que uma soma de variáveis de Bernoulli</li>
+            <li>a binomial é uma soma incomoda devido a grandeza dos parâmetros</li>
+            <li>existe uma fórmula mais simples deste cálculo (uma aproximação que resolve o problema)</li>
+            <li>o valor exato não é tão importante, por isso a aproximação serve</li>
+            <li>o valor do erro também pode ser calculado</li>
+            <li>a distribuição binomial se assemelha a uma curva normal (forma de sino)</li>
+            <li>exemplo: para X ~ Bin(n, p) (sendo X uma variável binomial n,p ) com n = 25 e p = 1/4 temos:</li>
+                E(X) = np = 25/4 = 6,25 <br>
+                Var(X) = np(1 - p) = 75/16 = 4,6875 <br>
+                se postularmos X ~ N(np, np(1-p), podemos calcular P(X &le; 10) então: <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X\leq&space;10)=P(Z\leq\frac{10-np}{\sqrt{np(1-p)}})=P(Z\leq\sqrt{3})}" title="{\color{Blue}P(X\leq 10)=P(Z\leq\frac{10-np}{\sqrt{np(1-p)}})=P(Z\leq\sqrt{3})}" /> <br>
+                onde Z ~ N(0,1) é uma variável aleatória normal padrão <br>
+                calculando usando a distribuição binomial chega-se a: <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X\leq&space;10)=\sum_{k=0}^{10}\binom{25}{k}\left(\frac{1}{4}\right)^{k}\left(\frac{3}{4}\right)^{25-k}\approx&space;0,9703}" title="{\color{Blue}P(X\leq 10)=\sum_{k=0}^{10}\binom{25}{k}\left(\frac{1}{4}\right)^{k}\left(\frac{3}{4}\right)^{25-k}\approx 0,9703}" /> <br>
+                calculando usando a distribuição normal chega-se a: <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(Z\leq\sqrt{3})=P(Z\leq&space;1,732)=0,9582}" title="{\color{Blue}P(Z\leq\sqrt{3})=P(Z\leq 1,732)=0,9582}" /> <br>
+                a<strong> diferença entre a distribuição binomial e a distribuição normal é: 0,9703 - 0,9582 = 0,0124 &rarr; <mark>1,24%</mark></strong> 
+                <br>
+                o erro é pequeno o cálculo usando distribuição normal é mais fácil <br>
+            <li>podemos utilizar a aproximação normal quando:</li> 
+                <ul>
+                    <li><code>n &ge; 30; <mark>E</mark></code></li>
+                    <li><code>np &ge; 5; <mark>E</mark></code></li>
+                    <li><code>n(1 - p) &ge; 5</code></li>
+                    <li>quanto maior o valor de n melhor será a aproximação</li>
+                    <li>quando n não for muito grande podemos efetuar uma correção de continuidade à aproximação normal</li>
+                </ul> 
+            <li>correção de continuidade</li>
+                <ul>
+                    <li>compensa a diferença entre a área do retângulo da distribuição binomial e a curva suave da distribuição normal</li>
+                    <li>aproximamos cada ponto médico c do histrograma pelo intervalo (c - &frac12;, c + &frac12;)</li>
+                    <li>soma-se as áreas abaixo da curva normal</li>
+                        P(c - &frac12; &le; X &le; c + &frac12;) &rarr; P(c - &frac12; &le; X &le; c + &frac12;) <br>
+                        a probabilidade binomial P(a &le; X &le; b) é aproximada pela probabilidade normal através da fórmula: <br>
+                        <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(a\leq&space;X\leq&space;b)=\Phi\left(\frac{b&plus;\frac{1}{2}-\mu}{\sigma}\right)-\Phi\left(\frac{a-\frac{1}{2}-\mu}{\sigma}\right)}" title="{\color{Blue}P(a\leq X\leq b)=\Phi\left(\frac{b+\frac{1}{2}-\mu}{\sigma}\right)-\Phi\left(\frac{a-\frac{1}{2}-\mu}{\sigma}\right)}" /> <br>
+                        <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(a\leq&space;X\leq&space;b)\approx&space;P\left(\frac{a-\frac{1}{2}-np}{\sqrt{np(1-p)}}\leq&space;Z\leq&space;\frac{b&plus;\frac{1}{2}-np}{\sqrt{np(1-p)}}\right)}" title="{\color{Blue}P(a\leq X\leq b)\approx P\left(\frac{a-\frac{1}{2}-np}{\sqrt{np(1-p)}}\leq Z\leq \frac{b+\frac{1}{2}-np}{\sqrt{np(1-p)}}\right)}" /> <br>
+                        exemplo: <br>
+                        &mu; = np = 25/4 = 6,25 <br>
+                        &sigma; = &radic;(np(1 - p)) = &radic;(75/16) = 2,7386 <br>
+                        P(X &le; 10) = P(-&infin; &le; X &le; 10) &approx; &Phi;(17/5&Sqrt;3) &approx; 0,9752<br>
+                        0,9752 - 0,9703 = 0,0049 &rarr; <mark><strong>erro de 0,49% (um erro ainda menor do que a diferença binomia-normal de 1,24% calculada anteriormente)</strong></mark><br>
+                </ul>
+
+
+
+
+
+        </ul>
 </body>
 </html>
