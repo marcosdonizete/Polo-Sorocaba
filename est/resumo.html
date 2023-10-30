@@ -895,5 +895,60 @@
                 </ul>
         </ul>
 <h2>Aula 14 (Semana 6 - vídeo 1)</h2>
+<p>
+    Nesta semana, vamos apresentar três resultados importantes para a estatística: as desigualdades de Markov e de Chebyshev e o teorema central do limite. As duas desigualdades são uteis para estimar probabilidades de eventos nas “caudas” das distribuições de probabilidade, isto é, a probabilidade de uma variável aleatória X exceder determinado valor, geralmente maior que a média. A desigualdade de Markov usa apenas a expectativa da variável aleatória e fornece estimativas geralmente grosseiras, mas ainda assim úteis. A desigualdade de Chebyshev usa tanto a expectativa quanto a variância da variável aleatória e geralmente fornece estimativas mais precisas (mas não muito). Essas desigualdades fornecem uma derivação simples da lei fraca dos grandes números, que nos diz que podemos estimar a média de uma variável aleatória tão precisamente quanto queiramos, bastando para isso usar amostras suficientemente grandes. A lei forte dos grandes números é uma afirmação matematicamente mais forte desse fato, de maior interesse teórico mas de menor interesse prático. <br>
+
+    O teorema central do limite, que veremos sem prova, afirma que a distribuição da soma de n variáveis aleatórias independentes pode ser aproximada por uma distribuição normal, independentemente da distribuição particular das n variáveis aleatórias. É por esta razão que a distribuição normal desempenha um papel tão importante em aplicações práticas. O teorema central do limite, como o próprio nome indica, é o “teorema central” da teoria estatística. <br>
+
+    Ao final desta semana, você deverá ser capaz de: <br> <br>
+
+    Compreender e aplicar as desigualdades de Markov e de Chebyshev à estimativa de probabilidades. <br>
+    Compreender e aplicar as leis fraca e forte dos grandes números; <br>
+    Compreender e aplicar o teorema central do limite à estatística. <br> <br>
+
+    O teorema central do limite é um resultado de suma importância para todos os métodos da inferência estatística e deve ser bem compreendido pelos estudantes.
+</p>
+<h4>Leis dos grandes números</h4>
+    <ul>
+        <li>é uma família de teoremas envolvendo distribuições de probabilidades</li>
+        <li>garante que a média dos resultados obtidos a partir de um grande número de experimentos aleatórios tende a se aproximar do valor esperado da variável aleatória</li>
+        <li>garante também que a distribuição de probabilidades dessa média amostral tende a uma distribuição normal</li>
+        <li>em suma: a média amostral tende para a média da população (quando o # de dados é muito grande)</li>
+        <li>permite estimar probabilidades de ocorrênca de eventos nas caudas de distribuições</li>
+        <li>parte do conhecimento parcial das distribuições</li>
+        <li>desigualdade de <mark>Markov</mark></li>
+            <ul>
+                <li>requer somente o conhecimeno de E(X) para ser aplicada</li>
+                <li>fornece estimativas grosseiras para P(X &ge;seja X uma VA com distribuição f<sub>X</sub> e seja h &ge; 0 uma função não descrescente t)</li>
+                <li>Podemos escrever o valor esperado como:</li>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}E[h(X)]=\int_{-\infty}^{&plus;\infty}h(x)f_{X}dx\geq\int_{t}^{&plus;\infty}h(x)f_{X}dx}\to&space;" title="{\color{Blue}E[h(X)]=\int_{-\infty}^{+\infty}h(x)f_{X}dx\geq\int_{t}^{+\infty}h(x)f_{X}dx}\to " /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}E[h(x)]\geq&space;h(t)\int_{t}^{&plus;\infty}f_{X}(x)dx=h(t)P(X\geq&space;t)}" title="{\color{Blue}E[h(x)]\geq h(t)\int_{t}^{+\infty}f_{X}(x)dx=h(t)P(X\geq t)}" /> 
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X\geq&space;t)\leq\frac{E[h(X)]}{h(t)}}" title="{\color{Blue}P(X\geq t)\leq\frac{E[h(X)]}{h(t)}}" />. (desigualdade de Markov) <br>
+                <li>ex: Se h(X) = X, obtém-se: </li>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X\geq&space;t)\leq\frac{E[X]}{t}}" title="{\color{Blue}P(X\geq t)\leq\frac{E[X]}{t}}" /> <br>
+                <li>ex_1: Se a média salaria de um país é de 3 salários mínimos, qual fração da população ganha menos de 10 salários mínimos?</li>
+                P(X &ge; 10) &le; E(X)/10 = 3/10 = 0,3 &rarr; <mark>30%</mark> ((estimativa grosseira. Pode serbem menor que 30% mas não passa disso). Baseado no pouco que sei, posso dizer que não é mais do que 30%) <br>
+            </ul>
+        <li>desigualdade de <mark>Chebyshev</mark></li>
+            <ul>
+                <li><mark>não exige que X &ge; 0</mark></li>
+                <li>usa-se <img src="https://latex.codecogs.com/svg.image?{\color{Blue}Y^{2}=[X-E(X)^{2}]}" title="{\color{Blue}Y^{2}=[X-E(X)^{2}]}" /> na desigualdade de Markov</li>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(Y^{2}\geq&space;t^{2})\leq\frac{E[Y^{2}]}{t^{2}}}" title="{\color{Blue}P(Y^{2}\geq t^{2})\leq\frac{E[Y^{2}]}{t^{2}}}" />
+                <li>como <img src="https://latex.codecogs.com/svg.image?{\color{Blue}E(Y^{2})=E([X-E(X)^{2}])=\sigma^{2}_{X}}" title="{\color{Blue}E(Y^{2})=E([X-E(X)^{2}])=\sigma^{2}_{X}}" /> e P(Y<sup>2</sup> &ge; t<sup>2</sup>) &equiv; P(|Y| &ge; t) obtemos</li>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(Y^{2}\geq&space;t^{2})=P(|X-E(X)|\geq&space;t)\leq\frac{\sigma^{2_{X}}}{t^{2}}}" title="{\color{Blue}P(Y^{2}\geq t^{2})=P(|X-E(X)\geq t)\leq\frac{\sigma^{2_{X}}}{t^{2}}}" />
+                <li>fazendo t = k&sigma;,<sub>X</sub> obtemos</li>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(|X-E(X)|\leq&space;k\sigma^{X})\geq\frac{1}{k^{2}}...ou...1-\frac{1}{k^{2}}}" title="{\color{Blue}P(|X-E(X)|\leq k\sigma^{X})\geq\frac{1}{k^{2}}...ou...1-\frac{1}{k^{2}}}" />
+            </ul>
+        <li>lei fraca dos grandes números</li>
+            <ul>
+                <li>é usado para obter o teorema central do limite</li>
+                <li>garante que o valor esperado de uma grandeza se desvia não muito da média populacional (se o tamanho da amostra for muito bom)</li>
+                <li>verifica se a média da amostra está perto ou longe da média de toda a população</li>
+                <li>quanto maior a amostra mais perto do valor correto estará</li>
+                valor esperado: E(X&#772;) = E(X) <br>
+                variância: Var(X&#772;) = &sigma;<sup>2</sup><sub>X</sub>/n <br>
+                aplicando Chebyshev a X&#772; obtemos:
+            </ul>
+    </ul>
 </body>
 </html>
