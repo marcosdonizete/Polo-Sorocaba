@@ -2886,8 +2886,84 @@
                 <img src="https://latex.codecogs.com/svg.image?{\color{Blue}n=384,16}" title="{\color{Blue}n=384,16}" /> <br>
                 n &approx; 385 <br>
             </p>
-
         </p>
+        <h2>Semana 6</h2>
+        <p>
+            Identifique a afirmação verdadeira acerca das desigualdades de Markov e de Chebyshev. <br> <br>
+
+            (X) A desigualdade de Chebyshev é derivada a partir da desigualdade de Markov.
+            
+            <h5>Resolução</h5>
+
+            <p>
+                A desigualdade de Chebyshev é derivada a partir do emprego da desigualdade de Markov P(X &ge; t) &le; E(X)/t usando no lugar da variável aleatória X a variável aleatória Y2=[X - E(X)]<sup>2</sup> e escolhendo o valor de t = k&sigma;X , com k &gt; 0
+            </p>
+        </p>
+        <hr>
+        <p>
+            Para determinado casal, um tudo de pasta de dentes dura 30 dias com desvio padrão de 5 dias. Eles compra um pacote de 12 tubos para economizar. Qual é a probabilidade dos 12 tubos durarem 1 ano? <br> <br>
+
+            <strong>(X) &approx; 38,6%</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                n = 12 <br>
+                &mu; = 30 <br>
+                &sigma; = 5 <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(Z\leq\frac{x-n\mu}{\sigma\sqrt{n}})}" title="{\color{Blue}P(Z\leq\frac{x-n\mu}{\sigma\sqrt{n}})}" /> <br>
+                X<sub>i</sub> = i-ésimo tudo de pasta de dentes <br>
+                X<sub>i</sub> ~ N(30, 5) <br>
+                X = X<sub>1</sub> + X<sub>2</sub> + ... + X<sub>12</sub> <br>
+                Usando o TCL podemos estimar a probabilidade de que X = X<sub>1</sub> + X<sub>2</sub> + ... + X<sub>12</sub> &ge; 365 <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X\leq&space;365)=P\left(Z\leq\frac{365-12\cdot&space;30}{5\sqrt{12}}\right)\approx&space;P(Z\leq&space;0,2887)}" title="{\color{Blue}P(X\leq 365)=P\left(Z\leq\frac{365-12\cdot 30}{5\sqrt{12}}\right)\approx P(Z\leq 0,2887)}" /> <br>
+                Consultando a tabela da distribuição normal padrão, temos que: <br>
+                P(Z &ge; 365) = 1 - P(Z &le; 365) &approx; 38,6% <br>
+            </p>           
+        </p>
+        <hr>
+        <p>
+            A renda média familiar mensal da população
+            de determinada cidade vale R$ 3200 com um desvio
+            padrão de R$ 1000. Qual é a probabilidade de que uma
+            pesquisa salarial com 100 famílias forneça um valor
+            médio diferente do valor populacional por no máximo &PlusMinus; 5%, isto é, entre R$ 3040 e R$ 3360? <br> <br>
+
+            <strong>(X) &approx; 89%</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                n = 100 <br>
+                &mu; = 3200 <br>
+                &sigma; = 1000 <br>
+                Como E(X&#772;) = &mu; e &sigma;<sub>X&#772;</sub> = &sigma;/&Sqrt;n = 100, pelo TCL temos:
+                <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(3040\leq\bar{X}\leq&space;3360)\simeq&space;P(\frac{3040-\mu}{\sigma&space;_{\bar{X}}}\leq&space;Z\leq\frac{3360-\mu}{\sigma&space;_{\bar{X}}})}" title="{\color{Blue}P(3040\leq\bar{X}\leq 3360)\simeq P(\frac{3040-\mu}{\sigma _{\bar{X}}}\leq Z\leq\frac{3360-\mu}{\sigma _{\bar{X}}})}" /> <br>
+                Normalizando: <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(3040\leq\bar{X}\leq&space;3360)\simeq&space;P(\frac{3040-3200}{100}\leq&space;Z\leq\frac{3360-3200}{100})}" title="{\color{Blue}P(3040\leq\bar{X}\leq 3360)\simeq P(\frac{3040-3200}{100}\leq Z\leq\frac{3360-3200}{100})}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(3040\leq\bar{X}\leq&space;3360)\simeq&space;P(-1,6\leq&space;Z\leq&space;1,6)}" title="{\color{Blue}P(3040\leq\bar{X}\leq 3360)\simeq P(-1,6\leq Z\leq 1,6)}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(3040\leq\bar{X}\leq&space;3360)\simeq&space;P(Z\leq&space;1,6)-P(Z\leq&space;-1,6)}" title="{\color{Blue}P(3040\leq\bar{X}\leq 3360)\simeq P(Z\leq 1,6)-P(Z\leq -1,6)}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(3040\leq\bar{X}\leq&space;3360)\simeq&space;0,9452-0,0548}" title="{\color{Blue}P(3040\leq\bar{X}\leq 3360)\simeq 0,9452-0,0548}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(3040\leq\bar{X}\leq&space;3360)\simeq&space;0,89}" title="{\color{Blue}P(3040\leq\bar{X}\leq 3360)\simeq 0,89}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(3040\leq\bar{X}\leq&space;3360)\simeq&space;89\%}" title="{\color{Blue}P(3040\leq\bar{X}\leq 3360)\simeq 89\%}" /> <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Uma amostra de tamanho n de determinada variável aleatória (por exemplo, medidas de alguma variável física) possui média X&#772; com valor esperado E(X&#772;) = &mu; e variância Var(X&#772;) = &sigma;<sup>2</sup>. Se for agora tomada uma amostra de tamanho 2n , quais seriam os novos valores de valor esperado e desvio-padrão amostrais?<br> <br>
+
+            <strong>(X) E(X&#772;) = &mu; e &sigma;<sub>X&#772;</sub> = &sigma;<sup>2</sup>/2</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                A média amostral possui valor esperado e não depende do tamanho n da amostra, enquanto a variância uma grandeza que depende de n e torna-se cada vez menor quanto maior o tamanho da amostra. <br>
+                E(X&#772;) = &mu; <br>
+                &sigma;<sub>X&#772;</sub> = &sigma;<sup>2</sup>/2 <br>
+            </p>
+        </p>
+        
 
         
 
