@@ -894,7 +894,7 @@
                         0,9752 - 0,9703 = 0,0049 &rarr; <mark><strong>erro de 0,49% (um erro ainda menor do que a diferença binomia-normal de 1,24% calculada anteriormente)</strong></mark><br>
                 </ul>
         </ul>
-<h2>Aula 14 (Semana 6 - vídeo 1)</h2>
+<h2>Aula 14 (Semana 6 - vídeos 1 e 2)</h2>
 <p>
     Nesta semana, vamos apresentar três resultados importantes para a estatística: as desigualdades de Markov e de Chebyshev e o teorema central do limite. As duas desigualdades são uteis para estimar probabilidades de eventos nas “caudas” das distribuições de probabilidade, isto é, a probabilidade de uma variável aleatória X exceder determinado valor, geralmente maior que a média. A desigualdade de Markov usa apenas a expectativa da variável aleatória e fornece estimativas geralmente grosseiras, mas ainda assim úteis. A desigualdade de Chebyshev usa tanto a expectativa quanto a variância da variável aleatória e geralmente fornece estimativas mais precisas (mas não muito). Essas desigualdades fornecem uma derivação simples da lei fraca dos grandes números, que nos diz que podemos estimar a média de uma variável aleatória tão precisamente quanto queiramos, bastando para isso usar amostras suficientemente grandes. A lei forte dos grandes números é uma afirmação matematicamente mais forte desse fato, de maior interesse teórico mas de menor interesse prático. <br>
 
@@ -948,7 +948,58 @@
                 valor esperado: E(X&#772;) = E(X) <br>
                 variância: Var(X&#772;) = &sigma;<sup>2</sup><sub>X</sub>/n <br>
                 aplicando Chebyshev a X&#772; obtemos:
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(|\bar{X}-E(x)|\geq\epsilon)\leq\frac{\sigma^{2}_{X}}{n\epsilon^{2}}}" title="{\color{Blue}P(|\bar{X}-E(x)|\geq\epsilon)\leq\frac{\sigma^{2}_{X}}{n\epsilon^{2}}}" /> <br>
+                fazendo m &rarr; e &epsilon; &gt; 0 obtemos a lei fraca dos grandes números: <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}\displaystyle\lim_{n\to\infty}P(|\bar{X}-E(X)|\geq\epsilon)=0}" title="{\color{Blue}\displaystyle\lim_{n\to\infty}P(|\bar{X}-E(X)|\geq\epsilon)=0}" /> <br>
+            </ul>
+        <li>lei forte dos grandes números</li>
+            <ul>
+                <li>garante que para valores de n suficientemente grandes, quase nunca o valor</li>
+                <li>esperado (E(X)) vai estar longe do valor esperado da população</li>
+                <li>não é muito importante estatisticamente</li>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(\displaystyle\lim_{n\to\infty}|\bar{X}-E(X)|\geq\epsilon)=0}" title="{\color{Blue}P(\displaystyle\lim_{n\to\infty}|\bar{X}-E(X)|\geq\epsilon)=0}" />
+            </ul>
+        <li>teorema central do limite (<mark>TCL</mark>)</li>
+            <ul>
+                <li>é o teorema mais importante da probabilidade</li>
+                <li>afirma que a soma de n variáveis aleatórias independentes pode ser aproximada por uma distribuição normal</li>
+                <li>independentemente da distribuição particular das n variáveis aleatórias</li>
+                <li>garante que a distribuição amostral da média tende a uma distribuição normal de probabilidades</li>
+                <li>mesmo que não se saiba muita coisa sobre a distribuição de probabilidade verdadeira do que se está medindo, conhecendo-se a média e o desvio padrão, consegue-se fazer bons cáculos se a amostra for suficientemente grande</li>
+                <li>faz-se substituindo a distribuição de probabilidades pela distribuição normal</li>
+                <li>Sejam:</li>
+                    <ul>
+                        <li>X1, X2, ..., Xn (VA independentes: normal, gaussiana, poisson etc)</li>
+                        cada uma com valor esperado: E(X<sub>i</sub>) = &mu; <br>
+                        cada uma com variância: Var(X<sub>i</sub>) = &sigma;<sup>2</sup> <br>
+                        Z a variável aleatória da soma das variáveis aleatórias X<sub>i</sub> <br>
+                        Z = X<sub>1</sub> + X<sub>2</sub> + ... + X<sub>n</sub> <br>
+                        <img src="https://latex.codecogs.com/svg.image?{\color{Blue}Z=\frac{\sum_{i=1}^{n}X_{i}-\sum_{i=1}^{n}\mu&space;_{i}}{\sqrt{\sum_{i=1}^{n}\sigma^{2}_{i}}}}" title="{\color{Blue}Z=\frac{\sum_{i=1}^{n}X_{i}-\sum_{i=1}^{n}\mu _{i}}{\sqrt{\sum_{i=1}^{n}\sigma^{2}_{i}}}}" /> <br>
+                        valor esperado de Z: E(Z) = 0 <br>
+                        variância de Z: Var(Z) = 1 no limite n &rarr; &infin; <br>
+                        Z ~ N(0,1)
+                    </ul>
+                <li>caso de variáveis idênticas (identicamente distribuídas)</li>
+                    <ul>
+                        <li>Quando todas as variáveis aleatórias X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>n</sub> sãoindependentes e identicamente distribuídas, a variável
+                        aleatória Z<sub>n</sub> assume a expressão:</li>
+                        <img src="https://latex.codecogs.com/svg.image?{\color{Blue}Z_{n}=\frac{X-n\mu}{\sqrt{n\sigma^{2}}}}" title="{\color{Blue}Z_{n}=\frac{\sum_{i=1}^{n}X_{i}-n\mu}{\sqrt{n\sigma^{2}}}}" /> <br>
+                        onde colocamos X = X<sub>1</sub> + X<sub>2</sub> + ... + X<sub>n</sub> <br>
+                        Pelo TCL, temos Z ~ N(o, 1) e daí: <br>
+                        <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X\leq&space;x)=P\left(\frac{X-n\mu}{\sigma\sqrt{n}}\leq\frac{x-n\mu}{\sigma\sqrt{n}}\right)\approx&space;P\left(Z\leq\frac{x-n\mu}{\sigma\sqrt{n}}\right)}" title="{\color{Blue}P(X\leq x)=P\left(\frac{X-n\mu}{\sigma\sqrt{n}}\leq\frac{x-n\mu}{\sigma\sqrt{n}}\right)\approx P\left(Z\leq\frac{x-n\mu}{\sigma\sqrt{n}}\right)}" /> <br>
+                        exemplo: está na página de respostas (semana 6)
+                    </ul>
+                <li>TCL para a média amostral</li>
+                    <ul>
+                        <li>distribuição amostral da média</li>
+                        <li>valor esperado: E(X&#772;) = &mu;</li>
+                        <li>variância: Var(X&#772;) = &sigma;<sup>2</sup>/n</li>
+                        <li>aplicando TCL a Xbarra encontramos: </li>
+                        <img src="https://latex.codecogs.com/svg.image?{\color{Blue}P(X\leq&space;x)=P\left(\frac{X-n\mu}{\sigma\sqrt{n}}\leq\frac{x-n\mu}{\sigma\sqrt{n}}\right)\approx&space;P\left(Z\leq\frac{x-n\mu}{\sigma\sqrt{n}}\right)}" title="{\color{Blue}P(X\leq x)=P\left(\frac{X-n\mu}{\sigma\sqrt{n}}\leq\frac{x-n\mu}{\sigma\sqrt{n}}\right)\approx P\left(Z\leq\frac{x-n\mu}{\sigma\sqrt{n}}\right)}" /> <br>
+                        <li>exemplo: está na página de respostas (semana 6)</li>
+                    </ul>                
             </ul>
     </ul>
+    <h2>Semana 7</h2>
 </body>
 </html>
