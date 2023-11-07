@@ -3702,7 +3702,7 @@
         <p>
             Que propriedades um bom estimador <img src="https://latex.codecogs.com/svg.image?{\color{Blue}\hat{\theta}}" title="{\color{Blue}\hat{\theta}}" /> deve ter? <br> <br>
 
-            (X) Ele deve ser não tendencioso, eficiente e consistente
+            <strong>(X) Ele deve ser não tendencioso, eficiente e consistente</strong>
 
             <h5>Resolução</h5>
 
@@ -3711,6 +3711,46 @@
                 não tendencioso: <img src="https://latex.codecogs.com/svg.image?{\color{Blue}E(\hat{\theta})&space;=&space;\theta}" title="{\color{Blue}E(\hat{\theta}) = \theta}" />; <br>
                 eficiente: <img src="https://latex.codecogs.com/svg.image?{\color{Blue}Var(\hat{\theta})&space;\leq&space;Var(\tilde{\theta})}" title="{\color{Blue}Var(\hat{\theta}) \leq Var(\tilde{\theta})}" />, para qualquer outro estimador não tendencioso <img src="https://latex.codecogs.com/svg.image?{\color{Blue}\tilde{\theta}}" title="{\color{Blue}\tilde{\theta}}" />,  isto é, sua variância deve ser a menor possível dentre os estimadores não tendenciosos; e <br>
                 consistente: <img src="https://latex.codecogs.com/svg.image?{\color{Blue}lim_{n&space;\rightarrow&space;\infty}&space;Var(\hat{\theta})&space;=&space;0}" title="{\color{Blue}lim_{n \rightarrow \infty} Var(\hat{\theta}) = 0}" /> (a probabilidade de que seu valor difira do valor do parâmetro &theta; diminui com o tamanho da amostra), isto é, sua variância deve tender a zero quando o tamanho da amostra tende ao infinito, o que significa que o estimador <img src="https://latex.codecogs.com/svg.image?{\color{Blue}\hat{\theta_{n}}}" title="{\color{Blue}\hat{\theta_{n}}}" />  <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Quanto vale z<sub>c</sub> para um intervalo de confiança com nível de confiança c = 95%? <br> <br>
+
+            <strong>(X) 1,96</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                O valor de zc para um intervalo de confiança com nível de confiança c é definido pela expressão P(-z<sub>c</sub> &le; Z &le; z,sub>c)=c , com Z ~ N(0,1) uma variável aleatória normal padrão. Com c = 0,95 encontramos (consultando uma tabela ou decorando) que z<sub>c</sub> &approx; 1,960 . Os valores de z<sub>c</sub>=1,645 , 1,960 , 2,241 , 2,576 e 2,807 são associados, respectivamente, aos níveis de confiança de 90% , 95% , 97,5% , 99% e 99,5% 
+            </p>
+        </p>
+        <hr>
+        <p>
+            Quanto vale o valor esperado E(X<sup>2</sup>) da variável aleatória X<sup>2</sup> = (n - 1)s<sup>2</sup>/&sigma;<sup>2</sup> , onde s<sup>2</sup> é a variância amostral e &sigma;<sup>2</sup> é a variância populacional? <br> <br>
+
+            <strong>(X) E(X<sup>2</sup>) = n - 1</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                O valor esperado E(X<sup>2</sup>) da variável aleatória X<sup>2</sup> = (n - 1)s<sup>2</sup>/&sigma;<sup>2</sup> , onde s<sup>2</sup> é a variância amostral e &sigma;<sup>2</sup> é a variância populacional, é dado por: <br> <br>
+
+                E(X<sup>2</sup>) = E((n - 1)s<sup>2</sup>/&sigma;<sup>2</sup>) = (n - 1)E(s<sup>2</sup>)/&sigma;<sup>2</sup> = (n - 1)&sigma;<sup>2</sup>/&sigma;<sup>2</sup> = n - 1
+            </p>
+        </p>
+        <hr>
+        <p>
+            Qual é a distribuição de probabilidades da média amostral de uma população da qual não se conhece a variância? <br> <br>
+
+            (X) Distribuição t de Student com n - 1 graus de liberdade
+
+            <h5>Resolução</h5>
+
+            <p>
+                A distribuição de probabilidades da média amostral de uma população da qual não se conhece a variância é a distribuição t de Student com n - 1 graus de liberdade. <br>
+                A distribuição t de Student é uma distribuição de probabilidades contínua que é usada para estimar a média de uma população quando a amostra é pequena (n &lt; 30) e/ou quando a variância populacional é desconhecida. <br>
+                Se a distribuição de uma variável aleatória X for normal (ou aproximadamente normal), então a média amostral X&#772; centralizada e normalizada como t = (X&#772; - &mu;)/(s/&Sqrt;n) em que s é o desvio-padrão amostral, possui uma distribuição t de Student de parâmetro (graus de liberdade) n−1 , em que n é o tamanho das amostras usadas para calcular as médias amostrais.   
             </p>
         </p>
 
