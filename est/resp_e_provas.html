@@ -3743,7 +3743,7 @@
         <p>
             Qual é a distribuição de probabilidades da média amostral de uma população da qual não se conhece a variância? <br> <br>
 
-            (X) Distribuição t de Student com n - 1 graus de liberdade
+            <strong>(X) Distribuição t de Student com n - 1 graus de liberdade</strong>
 
             <h5>Resolução</h5>
 
@@ -3753,7 +3753,567 @@
                 Se a distribuição de uma variável aleatória X for normal (ou aproximadamente normal), então a média amostral X&#772; centralizada e normalizada como t = (X&#772; - &mu;)/(s/&Sqrt;n) em que s é o desvio-padrão amostral, possui uma distribuição t de Student de parâmetro (graus de liberdade) n−1 , em que n é o tamanho das amostras usadas para calcular as médias amostrais.   
             </p>
         </p>
+        <hr>
+        <p>
+            Uma pesquisa selecionou canetas de uma mesma marca para pesar. Foram selecionados 26 aparelhos, em que verificou-se desvio padrão de 0,1 grama. <br> <br>
 
+            Supondo que os pesos são normalmente distribuídos, construa um intervalo de confiança de 99% para o desvio padrão populacional e assinale a alternativa correta. <br> <br>
+
+            <strong>(X) Com 99% de confiança, pode-se dizer que o desvio padrão da população está entre 0,073 e 0,155 grama.</strong> 
+
+            <h5>Resolução</h5>
+
+            <p>
+                Para construir um intervalo de confiança de 99% para o desvio padrão populacional, precisamos usar a distribuição qui-quadrado. <br>
+                O intervalo de confiança de 99% para o desvio padrão populacional é dado por: <br> <br>
+
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{(n-1)s^2}{\chi_{\alpha/2}^2},\frac{(n-1)s^2}{\chi_{1-\alpha/2}^2})}" title="{\color{Blue}(\frac{(n-1)s^2}{\chi_{\alpha/2}^2},\frac{(n-1)s^2}{\chi_{1-\alpha/2}^2})}" /> <br> <br>
+
+                Onde: <br>
+
+                n = tamanho da amostra <br>
+                s = desvio padrão da amostra <br>
+                &alpha; = nível de significância <br>
+                &chi;<sub>&alpha;/2</sub><sup>2</sup> = valor crítico da distribuição qui-quadrado com n - 1 graus de liberdade e nível de significância &alpha;/2 <br>
+                &chi;<sub>1-&alpha;/2</sub><sup>2</sup> = valor crítico da distribuição qui-quadrado com n - 1 graus de liberdade e nível de significância 1 - &alpha;/2 <br> <br>
+
+                No nosso caso, temos: <br> <br>
+
+                n = 26 <br>
+                s = 0,1 <br>
+                &alpha; = 1 - 0,99 = 0,01 <br>
+                &chi;<sub>&alpha;/2</sub><sup>2</sup> = 0,01/2 = 0,005 <br>
+                &chi;<sub>1-&alpha;/2</sub><sup>2</sup> = 1 - 0,005 = 0,995 <br> <br>
+
+                Agora, podemos calcular o intervalo de confiança: <br> <br>
+
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{(n-1)s^2}{\chi_{\alpha/2}^2},\frac{(n-1)s^2}{\chi_{1-\alpha/2}^2})}" title="{\color{Blue}(\frac{(n-1)s^2}{\chi_{\alpha/2}^2},\frac{(n-1)s^2}{\chi_{1-\alpha/2}^2})}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{(26-1)0,1^2}{\chi_{0,005}^2},\frac{(26-1)0,1^2}{\chi_{0,995}^2})}" title="{\color{Blue}(\frac{(26-1)0,1^2}{\chi_{0,005}^2},\frac{(26-1)0,1^2}{\chi_{0,995}^2})}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{25*0,01}{\chi_{0,005}^2},\frac{25*0,01}{\chi_{0,995}^2})}" title="{\color{Blue}(\frac{25*0,01}{\chi_{0,005}^2},\frac{25*0,01}{\chi_{0,995}^2})}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{0,25}{\chi_{0,005}^2},\frac{0,25}{\chi_{0,995}^2})}" title="{\color{Blue}(\frac{0,25}{\chi_{0,005}^2},\frac{0,25}{\chi_{0,995}^2})}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{0,25}{37,6525},\frac{0,25}{0,000975})}" title="{\color{Blue}(\frac{0,25}{37,6525},\frac{0,25}{0,000975})}" /> <br>
+                # Resultado da conta acima: <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(0,0066,2564,103)}" title="{\color{Blue}(0,0066,2564,103)}" /> <br>               
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(0,073,0,155)}" title="{\color{Blue}(0,073,0,155)}" />
+            </p>
+        </p>
+        <hr>
+        <p>
+            Em uma amostra aleatória de 60 micro-ondas, verificou-se que a média de custos de reparo da amostra é de R$ 170,00, com desvio padrão amostral de R$ 18,00. Sabendo disso, construa um intervalo de confiança de 99% para a média de custos de reparo dos micro-ondas e assinale a alternativa correta. <br> <br>
+
+            <strong>(X) IC = (163,82; 176,19)</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                Para construir um intervalo de confiança de 99% para a média de custos de reparo dos micro-ondas, precisamos usar a distribuição t de Student. <br>
+                O intervalo de confiança de 99% para a média de custos de reparo dos micro-ondas é dado por: <br> <br>
+
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\bar{x}&space;-&space;t_{\alpha/2}&space;\frac{s}{\sqrt{n}},\bar{x}&space;&plus;&space;t_{\alpha/2}&space;\frac{s}{\sqrt{n}})}" title="{\color{Blue}(\bar{x} - t_{\alpha/2} \frac{s}{\sqrt{n}},\bar{x} + t_{\alpha/2} \frac{s}{\sqrt{n}})}" /> <br> <br>
+
+                Onde: <br>
+
+                &alpha; = nível de significância <br>
+                t<sub>&alpha;/2</sub> = valor crítico da distribuição t de Student com n - 1 graus de liberdade e nível de significância &alpha;/2 <br>
+                &bar;x = média amostral <br>
+                s = desvio padrão amostral <br>
+                n = tamanho da amostra <br> <br>
+
+                No nosso caso, temos: <br> <br>
+
+                &alpha; = 1 - 0,99 = 0,01 <br>
+                t<sub>&alpha;/2</sub> = 0,01/2 = 0,005 <br>
+                n = 60 <br>
+                &bar;x = 170 <br>
+                s = 18 <br> <br>
+
+                Agora, podemos calcular o intervalo de confiança: <br> <br>
+
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\bar{x}&space;-&space;t_{\alpha/2}&space;\frac{s}{\sqrt{n}},\bar{x}&space;&plus;&space;t_{\alpha/2}&space;\frac{s}{\sqrt{n}})}" title="{\color{Blue}(\bar{x} - t_{\alpha/2} \frac{s}{\sqrt{n}},\bar{x} + t_{\alpha/2} \frac{s}{\sqrt{n}})}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(170&space;-&space;t_{0,005}&space;\frac{18}{\sqrt{60}},170&space;&plus;&space;t_{0,005}&space;\frac{18}{\sqrt{60}})}" title="{\color{Blue}(170 - t_{0,005} \frac{18}{\sqrt{60}},170 + t_{0,005} \frac{18}{\sqrt{60}})}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(170&space;-&space;3,291&space;\frac{18}{\sqrt{60}},170&space;&plus;&space;3,291&space;\frac{18}{\sqrt{60}})}" title="{\color{Blue}(170 - 3,291 \frac{18}{\sqrt{60}},170 + 3,291 \frac{18}{\sqrt{60}})}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(170&space;-&space;3,291&space;\frac{18}{7,746},170&space;&plus;&space;3,291&space;\frac{18}{7,746})}" title="{\color{Blue}(170 - 3,291 \frac{18}{7,746},170 + 3,291 \frac{18}{7,746})}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(170&space;-&space;3,291&space;2,324,170&space;&plus;&space;3,291&space;2,324)}" title="{\color{Blue}(170 - 3,291 2,324,170 + 3,291 2,324)}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(170&space;-&space;7,64,170&space;&plus;&space;7,64)}" title="{\color{Blue}(170 - 7,64,170 + 7,64)}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(162,36,177,64)}" title="{\color{Blue}(162,36,177,64)}" /> <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Determine o intervalo de confiança de 95% para a temperatura média de geladeiras, ao selecionar aleatoriamente 26 geladeiras de uma mesma marca. Sabe-se que a temperatura média da amostra é de 4ºC, com desvio padrão da amostra de 0,5ºC. <br> <br>
+
+            Assuma que as temperaturas são normalmente distribuídas e assinale a alternativa correta. <br> <br>
+
+            <strong>(X)  IC = (3,798; 4,202)</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                IC = x&#772; &plusmn; Z(s / &Sqrt;n) <br>
+
+                Onde: <br>
+                x&#772; = média amostral <br>
+                Z = valor crítico da distribuição normal padrão <br>
+                s = desvio padrão amostral <br>
+                n = tamanho da amostra <br> <br>
+
+                Para um IC de 95%, Z é aproximadamente 1,96. Substituindo os valores dados: <br> <br>
+
+                IC = 4 &plusmn; 1,96(0,5 / &Sqrt;26) <br>
+                IC = 4 &plusmn; 1,96(0,5 / 5,099) <br>
+                IC = 4 &plusmn; 1,96(0,098) <br>
+                IC = 4 &plusmn; 0,192 <br>
+                IC = (4 - 0,192; 4 + 0,192) <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Por definição, a margem de erro (E) diz respeito à maior distância entre o ponto de estimativa e o valor do parâmetro estimado, sendo calculada como E = zc * (s / &Sqrt;n). <br> <br>
+
+            Se um pesquisador encontrou  a margem de erro de 0,019, a um nível de confiança de 95%, para uma amostra de 50 nadadores de 200 metros, que tem um tempo médio de 3,15 minutos e desvio padrão de 0,07 minutos, então, é correto dizer que a estimativa da média populacional é dada por: <br> <br>
+
+            <strong>(X) 3,131 &lt; &mu; &lt; 3,169</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                IC = x&#772; &plusmn; Z(s / &Sqrt;n) <br>
+
+                Onde: <br>
+                x&#772; = média amostral <br>
+                Z = valor crítico da distribuição normal padrão <br>
+                s = desvio padrão amostral <br>
+                n = tamanho da amostra <br> <br>
+
+                Para um IC de 95%, Z é aproximadamente 1,96. Substituindo os valores dados: <br> <br>
+
+                Agora, podemos calcular o intervalo de confiança: <br> <br>
+
+                IC = 3,15 &plusmn; 1,96(0,07 / &Sqrt;50) <br>
+                IC = 3,15 &plusmn; 1,96(0,07 / 7,071) <br>
+                IC = 3,15 &plusmn; 1,96(0,0099) <br>
+                IC = 3,15 &plusmn; 0,0194 <br>
+                IC = (3,15 - 0,0194; 3,15 + 0,0194) <br>
+                IC = (3,131; 3,169) <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Uma pesquisa selecionou aleatoriamente 20 instituições financeiras que realizam financiamento imobiliário para determinar o atual índice de juros. Verificou-se que a média da amostra dos juros é de 9,48%, com desvio padrão de 0,42%. <br> <br>
+
+            Sabendo disso, construa um intervalo de 99% de confiança para a média populacional do índice de juros do financiamento e assinale a alternativa correta. <br> <br>
+
+            <strong>(X) IC = (9,21; 9,75)</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                Para construir um intervalo de confiança de 99% para a média populacional do índice de juros, podemos usar a fórmula: <br> <br>
+
+                IC = x&#772; &plusmn; Z(s / &Sqrt;n) <br> <br>
+
+                Onde: <br>
+                x&#772; = média amostral (9,48%)<br>
+                Z =  é o valor crítico para um intervalo de confiança de 99% (para uma distribuição normal padrão, Z &approx; 2,576 ) <br> 
+                s = desvio padrão amostral (0,42%)<br>
+                n = tamanho da amostra (20) <br> <br>
+
+                Substituindo os valores: <br> <br>
+
+                IC = 9,48 &plusmn; 2,576(0,42 / &Sqrt;20) <br>
+                IC = 9,48 &plusmn; 2,576(0,42 / 4,472) <br>
+                IC = 9,48 &plusmn; 2,576(0,094) <br>
+                IC = 9,48 &plusmn; 0,242 <br>
+                IC = (9,48 - 0,242; 9,48 + 0,242) <br>
+                IC = (9,238; 9,722) <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Você quer encontrar uma estimação intervalar do número de anúncios que aparecem por hora assistida de vídeo no YouTube. Para isto, foram amostrados aleatoriamente 50 vídeos, encontrando-se uma média amostral dos dados de 4 vídeos e a partir de uma consulta a tabela de t-student calculou-se a margem de erro de 1,2 vídeos para 49 graus de liberdade a 95%.  <br> <br>
+
+            Sabendo disso, com 95% de confiança, é correto afirmar que a média populacional do número de vídeos está entre: <br> <br>
+
+            <strong>(X) A média populacional do número de vídeos está entre 2,8 e 5,2</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                Para encontrar o intervalo de confiança, somamos e subtrai a margem de erro da média amostral. O intervalo de confiança de 95% é dado por: <br> <br>
+
+                IC = x&#772; &plusmn; margem de erro <br> <br>
+
+                Onde: <br>
+                x&#772; = média amostral (4 vídeos) <br>
+                margem de erro = 1,2 vídeos <br> <br>
+
+                Substituindo os valores: <br> <br>
+
+                IC = 4 &plusmn; 1,2 <br>
+                IC = (4 - 1,2; 4 + 1,2) <br>
+                IC = (2,8; 5,2) <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            O diretor de uma faculdade quer determinar a idade média dos estudantes matriculados na instituição. A estimativa precisa estar a 1 ano da média populacional. Se ele utilizou a fórmula   para determinar o tamanho mínimo da amostra necessária para construir um intervalo de confiança de 95% para a média populacional, e encontrou o resultado de 8,64, é correto dizer que deverão ser entrevistados, pelo menos: <br> <br>
+
+            <strong>(X) 9 estudantes</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                Para encontrar o tamanho mínimo da amostra necessária para construir um intervalo de confiança de 95% para a média populacional, usamos a fórmula: <br> <br>
+
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}n&space;=&space;(\frac{z_{\alpha/2}&space;\sigma}{E})^2}" title="{\color{Blue}n = (\frac{z_{\alpha/2} \sigma}{E})^2}" /> <br> <br>
+
+                Onde: <br>
+                n = tamanho da amostra <br>
+                z<sub>&alpha;/2</sub> = valor crítico da distribuição normal padrão <br>
+                &sigma; = desvio padrão populacional <br>
+                E = margem de erro <br> <br>
+
+                Substituindo os valores: <br> <br>
+
+                n = (1,96 * &sigma; / 1)² <br>
+                8,64 = (1,96 * &sigma; / 1)² <br>
+                8,64 = (1,96 * &sigma;)² <br>
+                8,64 = 3,8416 * &sigma;² <br>
+                &sigma;² = 8,64 / 3,8416 <br>
+                &sigma;² = 2,25 <br>
+                &sigma; = &Sqrt;2,25 <br>
+                &sigma; = 1,5 <br> <br>
+
+                Agora, podemos calcular o tamanho mínimo da amostra: <br> <br>
+
+                n = (1,96 * 1,5 / 1)² <br>
+                n = (1,96 * 1,5)² <br>
+                n = 2,94² <br>
+                n = 8,6436 <br>
+                n = 8,64 <br>
+                n &approx; 9 <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Uma pesquisa selecionou canetas de uma mesma marca para pesar. Foram selecionados 26 aparelhos, em que verificou-se desvio padrão de 0,1 grama. <br> <br>
+
+            Supondo que os pesos são normalmente distribuídos, com um intervalo de confiança de 99%, o desvio padrão está entre: <br> <br>
+
+            <strong>(X) 0,073 e 0,155 grama</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                Para construir um intervalo de confiança de 99% para o desvio padrão populacional, precisamos usar a distribuição qui-quadrado. <br>
+                O intervalo de confiança de 99% para o desvio padrão populacional é dado por: <br> <br>
+
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{(n-1)s^2}{\chi_{\alpha/2}^2},\frac{(n-1)s^2}{\chi_{1-\alpha/2}^2})}" title="{\color{Blue}(\frac{(n-1)s^2}{\chi_{\alpha/2}^2},\frac{(n-1)s^2}{\chi_{1-\alpha/2}^2})}" /> <br> <br>
+
+                Onde: <br>
+
+                n = tamanho da amostra <br>
+                s = desvio padrão da amostra <br>
+                &alpha; = nível de significância <br>
+                &chi;<sub>&alpha;/2</sub><sup>2</sup> = valor crítico da distribuição qui-quadrado com n - 1 graus de liberdade e nível de significância &alpha;/2 <br>
+                &chi;<sub>1-&alpha;/2</sub><sup>2</sup> = valor crítico da distribuição qui-quadrado com n - 1 graus de liberdade e nível de significância 1 - &alpha;/2 <br> <br>
+
+                No nosso caso, temos: <br> <br>
+
+                n = 26 <br>
+                s = 0,1 <br>
+                &alpha; = 1 - 0,99 = 0,01 <br>
+                &chi;<sub>&alpha;/2</sub><sup>2</sup> = 0,01/2 = 0,005 <br>
+                &chi;<sub>1-&alpha;/2</sub><sup>2</sup> = 1 - 0,005 = 0,995 <br>
+                <mark>Parei por aqui</mark>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Uma seleção aleatória de 30 amostras de salgadinhos foi pesada e verificou-se um desvio padrão da amostra de 1,20 grama. <br> <br>
+
+            Supondo que os pesos são normalmente distribuídos, construa um intervalo de confiança de 99% para o desvio padrão da população e assinale a alternativa correta. <br> <br>
+
+            <strong>(X) Com 99% de confiança, o desvio padrão populacional está entre 0,89 e 1,78 grama</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                Para construir um intervalo de confiança de 99% para o desvio padrão populacional, precisamos usar a distribuição qui-quadrado. <br>
+                O intervalo de confiança de 99% para o desvio padrão populacional é dado por: <br> <br>
+
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{(n-1)s^2}{\chi_{\alpha/2}^2},\frac{(n-1)s^2}{\chi_{1-\alpha/2}^2})}" title="{\color{Blue}(\frac{(n-1)s^2}{\chi_{\alpha/2}^2},\frac{(n-1)s^2}{\chi_{1-\alpha/2}^2})}" /> <br> <br>
+
+                Onde: <br>
+
+                n = tamanho da amostra <br>
+                s = desvio padrão da amostra <br>
+                &alpha; = nível de significância <br>
+                &chi;<sub>&alpha;/2</sub><sup>2</sup> = valor crítico da distribuição qui-quadrado com n - 1 graus de liberdade e nível de significância &alpha;/2 <br>
+                &chi;<sub>1-&alpha;/2</sub><sup>2</sup> = valor crítico da distribuição qui-quadrado com n - 1 graus de liberdade e nível de significância 1 - &alpha;/2 <br> <br>
+
+                No nosso caso, temos: <br> <br>
+
+                n = 30 <br>
+                s = 1,20 <br>
+                &alpha; = 1 - 0,99 = 0,01 <br>
+                &chi;<sub>&alpha;/2</sub><sup>2</sup> = 0,01/2 = 0,005 <br>
+                &chi;<sub>1-&alpha;/2</sub><sup>2</sup> = 1 - 0,005 = 0,995 <br> <br>
+
+                Agora, podemos calcular o intervalo de confiança: <br> <br>
+
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{(n-1)s^2}{\chi_{\alpha/2}^2},\frac{(n-1)s^2}{\chi_{1-\alpha/2}^2})}" title="{\color{Blue}(\frac{(n-1)s^2}{\chi_{\alpha/2}^2},\frac{(n-1)s^2}{\chi_{1-\alpha/2}^2})}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{(30-1)1,20^2}{\chi_{0,005}^2},\frac{(30-1)1,20^2}{\chi_{0,995}^2})}" title="{\color{Blue}(\frac{(30-1)1,20^2}{\chi_{0,005}^2},\frac{(30-1)1,20^2}{\chi_{0,995}^2})}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{29*1,44}{\chi_{0,005}^2},\frac{29*1,44}{\chi_{0,995}^2})}" title="{\color{Blue}(\frac{29*1,44}{\chi_{0,005}^2},\frac{29*1,44}{\chi_{0,995}^2})}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{41,76}{\chi_{0,005}^2},\frac{41,76}{\chi_{0,995}^2})}" title="{\color{Blue}(\frac{41,76}{\chi_{0,005}^2},\frac{41,76}{\chi_{0,995}^2})}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{41,76}{45,722},\frac{41,76}{0,975})}" title="{\color{Blue}(\frac{41,76}{45,722},\frac{41,76}{0,975})}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(0,913,42,88)}" title="{\color{Blue}(0,913,42,88)}" /> <br>
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(0,913,1,78)}" title="{\color{Blue}(0,913,1,78)}" /> <br>                
+            </p>
+        </p>
+        <hr>
+        <p>
+            Uma pesquisa buscou identificar a média dos preços de smartphones comercializados em lojas on-line. Sabendo disso, construa um intervalo de confiança de 95% para a média populacional, sabendo que de uma amostra aleatória de 32 smartphones verificou-se que a média de preço é de R$ 3.500,00, com desvio padrão amostral de R$ 850,00. <br> <br>
+
+            Assinale a alternativa correta que apresenta o referido intervalo de confiança. <br> <br>
+
+            <strong>(X) IC = (3.193,54; 3.806,46)</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                Para construir um intervalo de confiança de 95% para a média populacional, podemos usar a fórmula: <br> <br>
+
+                IC = x&#772; &plusmn; Z(s / &Sqrt;n) <br> <br>
+
+                Onde: <br>
+                x&#772; = média amostral (R$ 3.500,00) <br>
+                Z = valor crítico da distribuição normal padrão <br>
+                s = desvio padrão amostral (R$ 850,00) <br>
+                n = tamanho da amostra (32) <br> <br>
+
+                Para um IC de 95%, Z é aproximadamente 1,96. Substituindo os valores dados: <br> <br>
+
+                IC = 3.500,00 &plusmn; 1,96(850,00 / &Sqrt;32) <br>
+                IC = 3.500,00 &plusmn; 1,96(850,00 / 5,657) <br>
+                IC = 3.500,00 &plusmn; 1,96(150,47) <br>
+                IC = 3.500,00 &plusmn; 294,85 <br>
+                IC = (3.500,00 - 294,85; 3.500,00 + 294,85) <br>
+                IC = (3.205,15; 3.794,85)
+            </p>
+        </p>
+        <hr>
+        <p>
+            Uma pesquisa buscou identificar a idade das pessoas que foram assistir a um determinado filme de super-heróis. Na sequência, apresenta-se uma amostra aleatória da idade de 20 pessoas, obtendo-se a média de 19 anos: <br> <br>
+
+            <table>
+                <tr>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>21</td>
+                    <td>18</td>
+                    <td>17</td>
+                    <td>16</td>
+                    <td>15</td>
+                </tr>
+
+                <tr>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>16</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>20</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>22</td>
+                </tr>
+            </table> <br> <br>
+
+            A partir dos dados apresentados, encontre a estimativa pontual da média populacional e assinale a alternativa correta: <br> <br>
+
+            (X) 19 anos
+
+            <h5>Resolução</h5>
+
+            <p>
+                Para encontrar a estimativa pontual da média populacional, basta calcular a média da amostra. <br> <br>
+
+                Média = (19 + 20 + 24 + 25 + 26 + 21 + 18 + 17 + 16 + 15 + 17 + 18 + 16 + 14 + 15 + 20 + 18 + 19 + 20 + 22) / 20 <br>
+                Média = 380 / 20 <br>
+                Média = 19 <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Qual é o valor crítico z<sub>c</sub> para um intervalo de confiança de 90% para a média amostral de uma população em que a variância é conhecida? <br> <br>
+
+            <strong>(X) 1,645</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                Para um intervalo de confiança de 90%, temos: <br> <br>
+
+                &alpha; = 1 - 0,90 = 0,10 <br>
+                &alpha;/2 = 0,10/2 = 0,05 <br>
+                &alpha;/2 = 0,05 <br> <br>
+
+                Agora, podemos encontrar o valor crítico: <br> <br>
+
+                z<sub>c</sub> = 1,645 <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Supondo que a população é normalmente distribuída com um valor &sigma; = 4,8, qual deve ser o tamanho mínimo da amostra necessário para estar 95% confiante de que a média amostral dista no máximo de uma unidade da média populacional (isto é, |X&#772; - &mu;| &le; 1)? <br> <br>
+
+            <strong>(X) 89</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                Para encontrar o tamanho mínimo da amostra necessário para estar 95% confiante de que a média amostral dista no máximo de uma unidade da média populacional, usamos a fórmula: <br> <br>
+
+                <img src="https://latex.codecogs.com/svg.image?{\color{Blue}n&space;=&space;(\frac{z_{\alpha/2}&space;\sigma}{E})^2}" title="{\color{Blue}n = (\frac{z_{\alpha/2} \sigma}{E})^2}" /> <br> <br>
+
+                Onde: <br>
+                n = tamanho da amostra <br>
+                z<sub>&alpha;/2</sub> = valor crítico da distribuição normal padrão <br>
+                &sigma; = desvio padrão populacional <br>
+                E = margem de erro <br> <br>
+
+                Substituindo os valores: <br> <br>
+
+                n = (1,96 * 4,8 / 1)² <br>
+                n = (1,96 * 4,8)² <br>
+                n = 9,408² <br>
+                n = 88,6 <br>
+                n &approx; 89 <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Determine quais das seguintes declarações são verdadeiras (V) ou falsas (F): <br> <br>
+
+            I. Quanto maior o tamanho da amostra, maior será a amplitude do intervalo de confiança. <br>
+            II. Quanto maior o nível de confiança desejado, maior deve ser o tamanho da amostra a ser usada. <br>
+            III. Quanto maior o nível de confiança desejado, maior será a amplitude do intervalo de confiança. <br> <br>
+
+            <strong>(X) F, V, V</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                I. Falso. Quanto maior o tamanho da amostra, menor será a amplitude do intervalo de confiança. <br>
+                II. Verdadeiro. Quanto maior o nível de confiança desejado, maior deve ser o tamanho da amostra a ser usada. <br>
+                III. Verdadeiro. Quanto maior o nível de confiança desejado, maior será a amplitude do intervalo de confiança. <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            A temperatura X dos cafés expressos servidos em 16 cafeterias na cidade de São Paulo foi medida e chegou-se a uma temperatura média de 74 °C com um desvio padrão amostral de 5 °C.  <br> <br>
+
+            Supondo que a distribuição das temperaturas dos cafés expressos servidos na cidade de São Paulo é aproximadamente normal, qual é o intervalo de confiança de 99% para a temperatura X dos expressos? <br> <br>
+
+            <strong>(X) 70,3 &le; X &le; 77,7 °C</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                Para construir um intervalo de confiança de 99% para a média populacional, podemos usar a fórmula: <br> <br>
+
+                IC = x&#772; &plusmn; Z(s / &Sqrt;n) <br> <br>
+
+                Onde: <br>
+                x&#772; = média amostral (74 °C) <br>
+                Z = valor crítico da distribuição normal padrão <br>
+                s = desvio padrão amostral (5 °C) <br>
+                n = tamanho da amostra (16) <br> <br>
+
+                Para um IC de 99%, Z é aproximadamente 2,58. Substituindo os valores dados: <br> <br>
+
+                IC = 74 &plusmn; 2,576(5 / &Sqrt;16) <br>
+                IC = 74 &plusmn; 2,576(5 / 4) <br>
+                IC = 74 &plusmn; 2,576(1,25) <br>
+                IC = 74 &plusmn; 3,22 <br>
+                IC = (74 - 3,22; 74 + 3,22) <br>
+                IC = (70,78; 77,22) <br>
+            </p>
+        </p>
+        <hr>
+        <p>
+            Em um teste de matemática padronizado aplicado a estudantes do 9° ano do Ensino Fundamental, as notas finais de 12 alunos selecionados ao acaso foram as seguintes (escala de 0 a 100): <br>
+
+            <table>
+                <tr>
+                    <td>27</td>
+                    <td>65</td>
+                    <td>21</td>
+                    <td>28</td>
+                    <td>74</td>
+                    <td>47</td>
+                </tr>
+
+                <tr>
+                    <td>43</td>
+                    <td>55</td>
+                    <td>48</td>
+                    <td>32</td>
+                    <td>48</td>
+                    <td>50</td>
+                </tr>
+            </table> <br>
+
+            Supondo que as notas dos alunos no teste seguem uma distribuição normal, qual é o intervalo de confiança de 80% para o valor da média das notas na população de alunos do 9° ano? <br> <br>
+
+            <strong>(X) 39,8 &le; X &le; 51,6</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                Para construir um intervalo de confiança de 80% para a média populacional, podemos usar a fórmula: <br> <br>
+
+                IC = x&#772; &plusmn; Z(s / &Sqrt;n) <br> <br>
+
+                Onde: <br>
+                x&#772; = média amostral (45,67) <br>
+                Z = valor crítico da distribuição normal padrão <br>
+                s = desvio padrão amostral (15,09) <br>
+                n = tamanho da amostra (12) <br> <br>
+
+                Para um IC de 80%, Z é aproximadamente 1,28. Substituindo os valores dados: <br> <br>
+
+                IC = 45,67 &plusmn; 1,28(15,09 / &Sqrt;12) <br>
+                IC = 45,67 &plusmn; 1,28(15,09 / 3,464) <br>
+                IC = 45,67 &plusmn; 1,28(4,36) <br>
+                IC = 45,67 &plusmn; 5,58 <br>
+                IC = (45,67 - 5,58; 45,67 + 5,58) <br>
+                IC = (40,09; 51,25) <br>
+            </p>            
+        </p>
+        <hr>
+        <p>
+            Identifique quais das seguintes afirmações da distribuição X<sup>2</sup><sub>n</sub> são verdadeiras (V) e quais são falsas (F). <br> <br>
+
+            I. A distribuição X<sup>2</sup><sub>n</sub> possui um único parâmetro. <br>
+            II. A distribuição X<sup>2</sup><sub>n</sub> é assimétrica à esquerda para todo n &lt; 1. <br>
+            III. A distribuição surge no contexto da estimação da variância desconhecida de uma população cuja distribuição não é normal (gaussiana). <br> <br>
+
+            <strong>(X) V, F, F</strong>
+
+            <h5>Resolução</h5>
+
+            <p>
+                I. Verdadeiro. A distribuição X<sup>2</sup><sub>n</sub> possui um único parâmetro, que é o número de graus de liberdade. <br>
+                II. Falso. A distribuição X<sup>2</sup><sub>n</sub> é assimétrica à direita para todo n &lt; 1. <br>
+                III. Falso. A distribuição surge no contexto da estimação da variância desconhecida de uma população cuja distribuição é normal (gaussiana). <br>                
+            </p>
+        </p>
         
 
         
