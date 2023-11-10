@@ -58,3 +58,14 @@
     - `Ctrl + Shift + R` : Go to Symbol
     - `Ctrl + Shift + T` : Go to Symbol
     - `Ctrl + Shift + U` : Go to Symbol
+
+## ***Dicas do Copilot***
+Número um: descreva o objetivo no topo do arquivo. Faça um pequeno comentário rápido, algumas linhas, três linhas, quatro linhas. O que você está fazendo, como vai fazer, alguma informação relevante que você acha que o GitHub Copilot pode precisar?
+
+Número dois: seja flexível. Vimos isso ao passarmos por nossas demonstrações aqui. Esse GitHub Copilot é probabilístico e nem sempre retornará exatamente os mesmos valores na mesma situação. Às vezes as coisas mudam e queremos ser flexíveis com isso.
+
+Número três: fornecemos exemplos e isso pode ser muito útil para o GitHub. Copiloto para poder entender o que estou tentando realizar. Como observação lateral, uma pergunta que me fazem com frequência é sobre esses comentários. Devemos removê-los? Devemos adicioná-los? Minha opinião pessoal é deixá-los para trás. E a razão para isso é porque são artefatos. Foi assim que meu código foi gerado e quero ver isso. E se mais tarde voltarmos e fizermos algum ajuste fino nesse modelo, não ter aquele texto descrevendo o que foi construído será realmente útil.
+
+Lembre-se sempre, e isso é uma verdade universal, acho que um bom código gera um bom código, nomeie as coisas corretamente e siga as melhores práticas.
+Quando você fizer isso GitHub, Wolf ou GitHub Copilo seguirá junto com isso.
+E por fim, a parte mais importante, provavelmente o tema de toda esta apresentação é acima de tudo, siga o fluxo.
