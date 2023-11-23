@@ -4363,6 +4363,7 @@
                 A distribuição normal é a mais importante em estatística matemática, e o estudante de estatística e probabilidade deve se familiarizar ao máximo com todos os aspectos dessa distribuição - seus valores típicos, propriedades funcionais, ocorrências, limites, emprego na estimação de parâmetros, consulta de tabelas da distribuição (cumulativa) normal padrão em suas diversas apresentações alternativas etc.
             </p>
         </p>
+
         
 
         
@@ -4370,6 +4371,275 @@
 
     
     <h1>Provas</h1>
+    <h2>Prova P018 - 01/12/2020</h2>
+    <h4>
+        O número de falhas em peças de um fabricante de roupas é calculado em taxas de ocorrências. Com uma média de 0,1 falha por m2 de tecido, qual é a probabilidade de ocorrência de duas falhas em 1 m<sup>2</sup> de tecido? <br> <br>
+
+        (X) 0,45%
+
+        <h5>Resolução</h5>
+
+        <p>
+            &lambda; = 0,1 <br>
+            k = 2 <br>
+            P(X = 2) = <img src="https://latex.codecogs.com/svg.image?{\color{Blue}e^{-0,1}&space;\frac{0,1^2}{2!}}" title="{\color{Blue}e^{-0,1} \frac{0,1^2}{2!}}" /> <br>
+            P(X = 2) = 0,0004524 &approx; 0,45%
+        </p>
+    </h4>
+    <hr>
+    <h4>
+        Os números abaixo representam as notas tiradas por 17 alunos em um estudo de proficiência na língua inglesa valendo 100 pontos. Para que, dados os resultados abaixo, uma nota seja considerada outlier (ponto fora da curva), seria necessário que o aluno obtivesse quantos acertos? <br> <br>
+
+        <table>
+            <tr>
+                <td>1</td>
+                <td>7</td>
+                <td>10</td>
+                <td>11</td>
+                <td>13</td>
+                <td>29</td>
+                <td>30</td>
+                <td>36</td>
+                <td>49</td>
+                <td>50</td>
+                <td>55</td>
+                <td>62</td>
+                <td>63</td>
+                <td>73</td>
+                <td>85</td>
+                <td>85</td>
+                <td>92</td>
+            </tr>
+        </table> <br> <br>
+
+        (X) Não é possível que algum aluno seja considerado outlier. <br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            Para um valor ser considerado outlier, ele deve ser menor que Q<sub>1</sub> - 1,5 * IQR ou maior que Q<sub>3</sub> + 1,5 * IQR. <br> <br>
+
+            Q<sub>1</sub> = 13 <br>
+            Q<sub>3</sub> = 63 <br>
+            IQR = Q<sub>3</sub> - Q<sub>1</sub> = 63 - 13 = 50 <br> <br>
+
+            Q<sub>1</sub> - 1,5 * IQR = 13 - 1,5 * 50 = -62 <br>
+            Q<sub>3</sub> + 1,5 * IQR = 63 + 1,5 * 50 = 138 <br> <br>
+
+            Como não há nenhum valor menor que -62 ou maior que 138, não há outliers.
+        </p>
+    </h4>
+    <hr>
+    <h4>
+        Uma amostra de 30 dias do número de ocorrências policiais em certo bairro de uma capital brasileira apresentou os números descritos abaixo. Construa o intervalo de confiança para a proporção dos dias seguros (com menos de 6 ocorrências) considerando uma confiança de 93,8%. <br> <br>
+
+        <table>
+            <tr>
+                <td>15</td>
+                <td>18</td>
+                <td>18</td>
+                <td>11</td>
+                <td>14</td>
+            </tr>
+
+            <tr>
+                <td>20</td>
+                <td>9</td>
+                <td>15</td>
+                <td>14</td>
+                <td>3</td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>6</td>
+                <td>3</td>
+                <td>16</td>
+                <td>14</td>
+            </tr>
+
+            <tr>
+                <td>19</td>
+                <td>7</td>
+                <td>3</td>
+                <td>5</td>
+                <td>15</td>
+            </tr>
+
+            <tr>
+                <td>18</td>
+                <td>11</td>
+                <td>3</td>
+                <td>3</td>
+                <td>13</td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td>6</td>
+                <td>6</td>
+                <td>15</td>
+                <td>2</td>
+            </tr>
+        </table> <br> <br>
+
+        (X) Pode-se afirmar que a proporção populacional está entre 9% e 37%.
+
+        <h5>Resolução</h5>
+
+        <p>
+            Para construir um intervalo de confiança para a proporção populacional, podemos usar a fórmula: <br> <br>
+
+            <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{p&space;\pm&space;Z_{\alpha/2}&space;\sqrt{\frac{p(1-p)}{n}}}{1&space;&plus;&space;\frac{Z_{\alpha/2}^2&space;p(1-p)}{n}})}" title="{\color{Blue}(\frac{p \pm Z_{\alpha/2} \sqrt{\frac{p(1-p)}{n}}}{1 + \frac{Z_{\alpha/2}^2 p(1-p)}{n}})}" /> <br> <br>
+
+            Onde: <br>
+            p = proporção amostral <br>
+            Z<sub>&alpha;/2</sub> = valor crítico da distribuição normal padrão <br>
+            n = tamanho da amostra <br> <br>
+
+            Para um IC de 93,8%, Z<sub>&alpha;/2</sub> é aproximadamente 1,81. Substituindo os valores dados: <br> <br>
+
+            IC = <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{0,37&space;\pm&space;1,81&space;\sqrt{\frac{0,37(1-0,37)}{30}}}{1&space;&plus;&space;\frac{1,81^2&space;0,37(1-0,37)}{30}})}" title="{\color{Blue}(\frac{0,37 \pm 1,81 \sqrt{\frac{0,37(1-0,37)}{30}}}{1 + \frac{1,81^2 0,37(1-0,37)}{30}})}" /> <br>
+            IC = <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{0,37&space;\pm&space;1,81&space;\sqrt{\frac{0,37&space;0,63}{30}}}{1&space;&plus;&space;\frac{1,81^2&space;0,37&space;0,63}{30}})}" title="{\color{Blue}(\frac{0,37 \pm 1,81 \sqrt{\frac{0,37 0,63}{30}}}{1 + \frac{1,81^2 0,37 0,63}{30}})}" /> <br>
+            IC = <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{0,37&space;\pm&space;1,81&space;\sqrt{\frac{0,2331}{30}}}{1&space;&plus;&space;\frac{1,81^2&space;0,2331}{30}})}" title="{\color{Blue}(\frac{0,37 \pm 1,81 \sqrt{\frac{0,2331}{30}}}{1 + \frac{1,81^2 0,2331}{30}})}" /> <br>
+            IC = <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{0,37&space;\pm&space;1,81&space;0,068}{1&space;&plus;&space;0,2331&space;0,098})}" title="{\color{Blue}(\frac{0,37 \pm 1,81 0,068}{1 + 0,2331 0,098})}" /> <br>
+            IC = <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(\frac{0,37&space;\pm&space;0,123}{1,022})}" title="{\color{Blue}(\frac{0,37 \pm 0,123}{1,022})}" /> <br>
+            IC = <img src="https://latex.codecogs.com/svg.image?{\color{Blue}(0,37&space;-&space;0,123&space;;&space;0,37&space;&plus;&space;0,123)}" title="{\color{Blue}(0,37 - 0,123 ; 0,37 + 0,123)}" /> <br>
+            IC = (0,247 ; 0,493)
+        </p>    
+    </h4>
+    <hr>
+    <h4>
+        O crescimento de bebês, durante o primeiro mês de vida, pode ser modelado pela distribuição normal, admitindo-se que seja satisfatório o crescimento superior a 5 centímetros. Verificando 10 famílias com bebês (sem gêmeos) e aleatoriamente escolhidos fornecendo o seguinte crescimento em centímetros (tabela abaixo). Qual a conclusão do seguinte experimento, considerando a confiança de 95%? <br> <br>
+
+        <table>
+            <tr>
+                <td>6,60</td>
+                <td>5,49</td>
+                <td>6,30</td>
+                <td>4,64</td>
+                <td>6,04</td>
+            </tr>
+            <tr>
+                <td>5,81</td>
+                <td>4,63</td>
+                <td>7,34</td>
+                <td>4,24</td>
+                <td>4,57</td>
+            </tr>
+        </table> <br> <br>
+
+        (X) Não rejeita hipótese nula, p-value: 0,0580. <br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            Para resolver essa questão, precisamos primeiro calcular a média e o desvio padrão da amostra. <br> <br>
+
+            Média = (6,60 + 5,49 + 6,30 + 4,64 + 6,04 + 5,81 + 4,63 + 7,34 + 4,24 + 4,57) / 10 <br>
+            Média = 55,66 / 10 <br>
+            Média = 5,566 <br> <br>
+
+            Desvio padrão = √( (6,60 - 5,566)² + (5,49 - 5,566)² + (6,30 - 5,566)² + (4,64 - 5,566)² + (6,04 - 5,566)² + (5,81 - 5,566)² + (4,63 - 5,566)² + (7,34 - 5,566)² + (4,24 - 5,566)² + (4,57 - 5,566)² ) / 10 <br>
+            Desvio padrão = 0,758 <br> <br>
+
+            Agora, podemos calcular o valor de Z: <br> <br>
+
+            Z = (5 - 5,566) / (0,758 / &Sqrt;10) <br>
+            Z = -0,566 / (0,758 / 3,162) <br>
+            Z = -0,566 / 0,239 <br>
+            Z = -2,37 <br> <br>
+
+            Como Z é menor que -1,96, não rejeitamos a hipótese nula.
+        </p>
+    </h4>
+    <hr>
+    <h4>
+        Em uma fábrica, 24 tanques são usados para armazenagem do produto acabado. Quatro posições são selecionadas ao acaso e sem reposição. Suponha que seis posições contenham equipamentos eletrônicos danificados. Qual é a probabilidade de exatamente uma posição conter equipamentos danificados? <br> <br>
+
+        (X) 42,2% <br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            Distribuição Binomial <br>
+            P(X = k) = <img src="https://latex.codecogs.com/svg.image?{\color{Blue}C_{n}^{k}&space;p^k&space;(1-p)^{n-k}}" title="{\color{Blue}C_{n}^{k} p^k (1-p)^{n-k}}" /> <br> <br>
+            Sendo: <br>
+            p = 6/24 = 0,25 <br>
+            n = 4 <br>
+            k = 1 <br> <br>
+
+            P(X = 1) = <img src="https://latex.codecogs.com/svg.image?{\color{Blue}C_{4}^{1}&space;0,25^1&space;(1-0,25)^{4-1}}" title="{\color{Blue}C_{4}^{1} 0,25^1 (1-0,25)^{4-1}}" /> <br>
+            P(X = 1) = <img src="https://latex.codecogs.com/svg.image?{\color{Blue}4&space;0,25&space;0,421875}" title="{\color{Blue}4 0,25 0,421875}" /> <br>
+            P(X = 1) = 0,421875 &approx; 42,2%
+        </p>
+    </h4>
+    <hr>
+    <h4>
+        Um estudo investiga a relação entre o tempo de um determinado processo computacional em relação ao padrão mundial adotado (negativos indicam ser mais rápidos) e o número de pixels marcados em uma matriz (negativos indicam ter marcado menos). Avalie se existe correlação entre as variáveis. <br>
+
+        <table>
+            <tr>
+                <td>x</td>
+                <td>8</td>
+                <td>20</td>
+                <td>7</td>
+                <td>18</td>
+                <td>8</td>
+                <td>11</td>
+                <td>2</td>
+                <td>13</td>
+                <td>3</td>
+                <td>19</td>
+                <td>10</td>
+                <td>6</td>
+                <td>1</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>y</td>
+                <td>8</td>
+                <td>12</td>
+                <td>5</td>
+                <td>23</td>
+                <td>3</td>
+                <td>10</td>
+                <td>-2</td>
+                <td>15</td>
+                <td>4</td>
+                <td>18</td>
+                <td>15</td>
+                <td>0</td>
+                <td>-3</td>
+                <td>16</td>
+            </tr>
+        </table> <br> <br>
+
+        (X) Considerando o critério de que a correlação (em módulo) entre 1 e 0,75 é forte, 0,75 e 0,15 é moderada e entre 0,15 e 0 é fraca, pode-se afirmar que existe uma forte correlação entre X e Y, indicando que existe um forte relacionamento entre o tempo do determinado processo e o número de pixels marcados na matriz. <br>
+
+        <h5>Resolução</h5>
+
+        <p>
+            Para resolver essa questão, precisamos primeiro calcular a média e o desvio padrão de X e Y. <br> <br>
+
+            Média de X = (8 + 20 + 7 + 18 + 8 + 11 + 2 + 13 + 3 + 19 + 10 + 6 + 1 + 18) / 14 <br>
+            Média de X = 144 / 14 <br>
+            Média de X = 10,29 <br> <br>
+
+            Desvio padrão de X = √( (8 - 10,29)² + (20 - 10,29)² + (7 - 10,29)² + (18 - 10,29)² + (8 - 10,29)² + (11 - 10,29)² + (2 - 10,29)² + (13 - 10,29)² + (3 - 10,29)² + (19 - 10,29)² + (10 - 10,29)² + (6 - 10,29)² + (1 - 10,29)² + (18 - 10,29)² ) / 14 <br>
+            Desvio padrão de X = 5,98 <br> <br>
+
+            Média de Y = (8 + 12 + 5 + 23 + 3 + 10 - 2 + 15 + 4 + 18 + 15 + 0 - 3 + 16) / 14 <br>
+            Média de Y = 114 / 14 <br>
+            Média de Y = 8,14 <br> <br>
+
+            Desvio padrão de Y = √( (8 - 8,14)² + (12 - 8,14)² + (5 - 8,14)² + (23 - 8,14)² + (3 - 8,14)² + (10 - 8,14)² + (-2 - 8,14)² + (15 - 8,14)² + (4 - 8,14)² + (18 - 8,14)² + (15 - 8,14)² + (0 - 8,14)² + (-3 - 8,14)² + (16 - 8,14)² ) / 14 <br>
+            Desvio padrão de Y = 7,98
+        </p>
+    </h4>
+    <hr>
+    
+
     <h2>Prova T20</h2>
     <h4>Classifique o tipo de cada uma das variáveis descritas a seguir em termos de seu tipo: <br> <br>
         I. Distância entre as casas de duas pessoas em uma determinada cidade <br>
