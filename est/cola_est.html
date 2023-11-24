@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cola</title>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom, #EBFAFB, #A0F5FB);
+            background-attachment: fixed;
+        }
+        h1 {
+            background-color: rgba(5, 5, 151, 0.568);
+            text-shadow: 1px 1px 0px rgba(3, 3, 114, 0.568);
+            color: white;
+            text-align: center;
+        }
+        h2 {
+            background-color: rgba(0, 128, 0, 0.514);
+            color: white;
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+            color: black;
+        }
+        mark {
+            background-color: yellow;
+            color: black;   
+            font-weight: bold;           
+        }
+        code {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        table, th, td {
+            border: 1px solid black;
+            text-align: left;
+        }
+        div {
+            width: 320px;
+            height: 230px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        }
+        #div1 {
+            background-color: rgba(0, 128, 0, 0.514);            
+        }   
+        #div2 {
+            background-color: rgba(5, 5, 151, 0.568);            
+        }
+        #div3 {
+            background-color: rgba(255, 0, 0, 0.514);            
+        }
+        #div4 {
+            background-color: rgba(255, 255, 0, 0.514);            
+        }
+        #div5 {
+            background-color: rgba(235, 114, 114, 0.514);            
+        }
+        #div6 {
+            background-color: rgba(93, 131, 104, 0.655);            
+        }
+        #div7 {
+            background-color: rgba(86, 121, 152, 0.514);            
+        }
+        #div8 {
+            background-color: rgba(145, 114, 145, 0.514);            
+        }
+        #div9 {
+            background-color: rgba(171, 140, 140, 0.514);            
+        }
+        #div10 {
+            background-color: rgba(140, 157, 171, 0.514);            
+        }
+        #div11 {
+            background-color: rgba(171, 140, 140, 0.514);            
+        }
+        #div12 {
+            background-color: rgba(140, 157, 171, 0.514);            
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <code>
+            <p>Bernoulli</p>
+            P(X = sucesso) = p <br>
+            P(X = fracasso) = 1 - p <br>
+            E(X) = p <br>
+            Var(X) = p(1 - p) <br> <br>
+            X ~ Bernoulli(p)
+        </code>
+
+    </div>
+    <div id="div2">
+        <code>
+            <p>Binomial</p>
+            <img src="https://latex.codecogs.com/svg.image?&space;P(X=k)=\binom{n}{k}\cdot&space;p^{k}\cdot(1-p)^{n-k}" title=" P(X=k)=\binom{n}{k}\cdot p^{k}\cdot(1-p)^{n-k}" /> <br>
+            E(X) = np <br>
+            Var(X) = np(1 - p) <br> <br>
+            X ~ Binomial(n, p) <br>
+            keyword: ensaios de Bernoulli independentes
+        </code>
+    </div>
+    <div id="div3">
+        <code>
+            <p>Poisson</p>
+            <img src="https://latex.codecogs.com/svg.image?&space;P(X=k)=\frac{\lambda^{k}}{k!}\cdot&space;e^{-\lambda}" title=" P(X=k)=\frac{\lambda^{k}}{k!}\cdot e^{-\lambda}" /> <br>
+            E(X) = Var(X) = &lambda; <br> <br>
+            X ~ Poisson(&lambda;) <br>
+            keyword: evento ocorrer em determinado tempo, espaço, comprimento, área etc.
+        </code>
+    </div>
+    <div id="div4">
+        <code>
+            <p>Variáveis Aleatórioas Contínuas(<mark>VAC</mark></p>
+            <img src="https://latex.codecogs.com/svg.image?\int_{-\infty}^{&plus;\infty}f(x)dx=1" title="\int_{-\infty}^{+\infty}f(x)dx=1" /> <br>
+            <img src="https://latex.codecogs.com/svg.image?P(a\leq&space;X\leq&space;b)=\int_{a}^{b}f(x)dx" title="P(a\leq X\leq b)=\int_{a}^{b}f(x)dx" /> <br>
+            <img src="https://latex.codecogs.com/svg.image?E(X)=\int_{-\infty}^{&plus;\infty}x(fx)dx" title="E(X)=\int_{-\infty}^{+\infty}x(fx)dx" />
+        </code>
+    </div>
+    <hr>
+    <div id="div5">
+        <code>
+            <p>Distribuição Uniforme</p>
+            <img src="https://latex.codecogs.com/svg.image?f_{X}(x)=\begin{cases}\frac{a}{b-a}&\text{,}a<x<b\\0&\text{,}x\exists(1,b)\end{cases}" title="f_{X}(x)=\begin{cases}\frac{a}{b-a}&\text{,}a<x<b\\0&\text{,}x\exists(1,b)\end{cases}" /> <br>
+            E(X) = &frac12;(a + b) <br>
+            <img src="https://latex.codecogs.com/svg.image?Var(x)=\frac{(b-a)^{2}}{12}" title="Var(x)=\frac{(b-a)^{2}}{12}" /> <br> <br>
+            X ~ U(a, b) <br>
+        </code>
+    </div>
+    <div id="div6">
+        <code>
+            <p>Distribuição Exponencial</p>
+            <img src="https://latex.codecogs.com/svg.image?f_{X}(x)=\begin{cases}\lambda&space;e^{-\lambda&space;x}&\text{,}x\geq&space;0\\0&\text{,}x<0\end{cases}" title="f_{X}(x)=\begin{cases}\lambda e^{-\lambda x}&\text{,}x\geq 0\\0&\text{,}x<0\end{cases}" /> <br>
+            E(X) = 1/&lambda; <br>
+            <img src="https://latex.codecogs.com/svg.image?Var(X)=\frac{1}{\lambda^{2}}" title="Var(X)=\frac{1}{\lambda^{2}}" /> <br> <br>
+            X ~ Exp(&lambda;) <br>
+        </code>
+    </div>
+    <div id="div7">
+        <code>
+            <p>Distribuição Normal</p>
+            Z ~ N(0, 1) <br>
+            P(Z &le; z) = &Phi;(z) = consultar tabela<br>
+            P(Z &le; z) = P(Z &lt; z) = mesma coisa<br> 
+            Padronizar: <br>
+            X ~ N(4, &sigma;<sup>2</sup>) <br>
+            <img src="https://latex.codecogs.com/svg.image?Z=\frac{X-\mu}{\sigma}" title="Z=\frac{X-\mu}{\sigma}" /> <br>
+            Se P(Z &lt; z) = 1 - P(Z &le; z) (contínua) <br>
+        </code>
+    </div>
+    <div id="div8">
+        <code>
+            <p>continuação Dist. Normal</p>
+            Se z for negativo: <br>
+            P(Z &gt; -z) = P(Z &lt; z) <br>
+            P(Z &lt -z) = P(Z &gt; z) = 1 - P(Z &lt; z) <br> <br>
+            Se z estiver entre dois valores: <br>
+            P(0,2 &lt; Z &lt; 0,4) = P(Z &lt; 0,4) - P(Z &lt; 0,2) <br>
+            P(|Z| &gt; 0,5) = 2P(Z &gt; 0,5) = 2(1 - P(Z &lt; 0,5)) <br>
+        </code>
+    </div>
+    <hr>
+    <div id="div9">
+        <code>
+            <p>Distribuição Geométrica</p>
+            <img src="https://latex.codecogs.com/svg.image?P(X=k)=(1-p)^{k-1}\cdot&space;p" title="P(X=k)=(1-p)^{k-1}\cdot p" /> <br>
+            E(X) = 1/p <br>
+            <img src="https://latex.codecogs.com/svg.image?Var(X)=\frac{1-p}{p^{2}}" title="Var(X)=\frac{1-p}{p^{2}}" /> <br> <br>
+            X ~ Geom(p) <br>
+            keyword: k ensaios, cada um com probab. de  sucesso p (caixa de fósforo)
+        </code>
+    </div>
+    <div id="div10">
+        <code>
+            <p>Distribuição hipergeométrica</p>
+            <img src="https://latex.codecogs.com/svg.image?P(X=k)=\frac{\binom{r}{k}\cdot\binom{N-r}{n-k}}{\binom{N}{n}}" title="P(X=k)=\frac{\binom{r}{k}\cdot\binom{N-r}{n-k}}{\binom{N}{n}}" /> <br>
+            E(X) = nr/N <br>
+            <img src="https://latex.codecogs.com/svg.image?Var(X)=\frac{nr}{N}\cdot\frac{N-r}{N}\cdot\frac{N-n}{N-1}" title="Var(X)=\frac{nr}{N}\cdot\frac{N-r}{N}\cdot\frac{N-n}{N-1}" /> <br> <br>
+            X ~ H(n, N, r) <br>
+        </code> 
+    </div>
+    <div id="div11">
+        <code>
+            <p>Desigualdade de Markov</p>
+            <img src="https://latex.codecogs.com/svg.image?P(X\geq&space;t)\leq&space;\frac{E(X)}{t}" title="P(X\geq a)\leq \frac{E(X)}{a}" /> <br>
+            P(X &ge; 10) = 3/10 = 0,3 = 30% <br>
+            <p>Desigualdade de Chebyshev</p>
+            <img src="https://latex.codecogs.com/svg.image?P(|X-E(X)|\leq&space;k\alpha&space;_{X})=1-\frac{1}{k^{2}}" title="P(|X-E(X)|\leq k\alpha _{X})=1-\frac{1}{k^{2}}" />
+        </code>
+    </div>
+    <div id="div12">
+        <code>
+            <p>Qui-Quadrado</p> 
+            <img src="https://latex.codecogs.com/svg.image?X=\sum_{i=1}^{k}\frac{(O_{i}-E_{i})^{2}}{E_{i}}" title="X=\sum_{i=1}^{k}\frac{(O_{i}-E_{i})^{2}}{E_{i}}" /> <br>
+            <img src="https://latex.codecogs.com/svg.image?P(\sqrt{\frac{(n-1)\cdot&space;s^{2}}{X_{R}^{2}}}<\sigma<\sqrt{\frac{(n-1)\cdot&space;s^{2}}{X_{L}^{2}}})" title="P(\sqrt{\frac{(n-1)\cdot s^{2}}{X_{R}^{2}}}<\sigma<\sqrt{\frac{(n-1)\cdot s^{2}}{X_{L}^{2}}})" />
+        </code>
+    </div>
+    <hr>
+    <table>
+        <tr>
+            <td>
+                <strong>Níveis de confiança clássicos:</strong> <br>
+                <table>
+                    <tr>
+                        <td>NC</td>
+                        <td>90%</td>
+                        <td>95%</td>
+                        <td>97,50</td>
+                        <td>99%</td>
+                        <td>99,5%</td>
+                    </tr>
+                    <tr>
+                        <td>z<sub>c</sub></td>
+                        <td>1,645</td>
+                        <td>1,96</td>
+                        <td>2,241</td>
+                        <td>2,576</td>
+                        <td>2,807</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <strong>Sturge</strong> <br>
+                K = 1 + log<sub>2</sub>n <br>
+                &Delta; = (X<sub>max</sub> - X<sub>min</sub>)/K <br>
+            </td>
+            <td>
+                <strong>Assimétrica à esquerda:</strong> <br>
+                x&#772; &lt; mediana &lt; moda <br>
+                <strong>Assimétrica à direita:</strong> <br>
+                moda &lt; mediana &lt; x&#772; <br>
+            </td>
+            <td>
+                <strong>Variância populacional:</strong> <br>
+                &sigma;<sup>2</sup> = &sum; (x - &mu;)<sup>2</sup>/N <br>
+                <strong>Variância amostral:</strong> <br>
+                s<sup>2</sup> = &sum; (x - x&#772;)<sup>2</sup>/n-1 <br>
+            </td>
+            <td>
+                <strong>Leptocúrtica</strong> <br>
+                Mais de &frac13; estão no lado esquerdo. Magra. <br>
+                <strong>Mesocúrtica</strong> <br>
+                &frac13; estão no lado esquerdo e &frac13; no lado direito. Normal. <br>
+            </td>
+            <td>
+                <strong>Eventos Equiprováveis</strong> <br>
+                P(&Omega;) = P(A<sub>1</sub>) + P(A<sub>2</sub>) + ... + P(A<sub>n</sub>) = 1 <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                P(A) = quantidade de A / total observado <br>
+                Espaço amostral = &Omega; <br>
+            </td>
+            <td>
+                <strong>Axiomas</strong> <br>
+                1° P(A) &gt; 0 se A &sube;; &Omega; <br>
+                2° P(&Omega;) = 1 <br>
+                3° P(A &cup; B) = P(A) + P(B) se A &cap; B = &empty; <br>
+                P(A &cup; B) = P(A) + P(B) - P(A &cap; B) se A &cap; B &ne; &empty; <br>
+            </td>
+            <td>
+                P(A|B) = P(A &cap; B)/P(B) <br>                
+                <strong>Se A independente de B:</strong> <br>
+                P(A &cap; B) = P(A)P(B) <br>
+                <strong>Quando não se conhece P(B):</strong> <br>
+                <img src="https://latex.codecogs.com/svg.image?P(B)=\sum_{i-1}^{n}P(B|A_{i})\cdot&space;P(A_{i})" title="P(B)=\sum_{i-1}^{n}P(B|A_{i})\cdot P(A_{i})" /> 
+            </td>
+            <td>
+                <strong>Teorema de Bayes</strong> <br>
+                <img src="https://latex.codecogs.com/svg.image?P(A|B)=P(A)\cdot\frac{P(B|A)}{P(B)}" title="P(A|B)=P(A)\cdot\frac{P(B|A)}{P(B)}" />
+            </td>
+            <td>
+                <strong>Se A &sub; &Omega;:</strong> <br>
+                <img src="https://latex.codecogs.com/svg.image?P(A)=\frac{|A|}{|\Omega|}" title="P(A)=\frac{|A|}{|\Omega|}" />
+            </td>
+            <td>
+                <strong>Regra da Adição</strong> <br>
+                P(A &cup; B) = P(A) + P(B) - P(A &cap; B) <br>
+                <strong>Regra do Produto</strong> <br>
+                P(A &cap; B) = P(A|B)P(B) <br>
+            </td>
+        </tr>
+    </table>
+
+    
+</body>
+</html>
