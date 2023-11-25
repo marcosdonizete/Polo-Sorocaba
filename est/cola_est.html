@@ -275,7 +275,9 @@
                 <img src="https://latex.codecogs.com/svg.image?P(B)=\sum_{i-1}^{n}P(B|A_{i})\cdot&space;P(A_{i})" title="P(B)=\sum_{i-1}^{n}P(B|A_{i})\cdot P(A_{i})" /> 
             </td>
             <td>
-                <strong>Teorema de Bayes</strong> <br>
+                <strong>Teorema de Bayes <br>
+                    Implica que a crença atualizada é resultado da crença inicial multiplicada pela sua atualização.
+                </strong> <br>
                 <img src="https://latex.codecogs.com/svg.image?P(A|B)=P(A)\cdot\frac{P(B|A)}{P(B)}" title="P(A|B)=P(A)\cdot\frac{P(B|A)}{P(B)}" />
             </td>
             <td>
@@ -283,14 +285,241 @@
                 <img src="https://latex.codecogs.com/svg.image?P(A)=\frac{|A|}{|\Omega|}" title="P(A)=\frac{|A|}{|\Omega|}" />
             </td>
             <td>
-                <strong>Regra da Adição</strong> <br>
+                <strong>Regra da Adição <br>
+                    Para quando A ocorre e B não ocorre, B ocorre e A não ocorre ou A e B ocorrem.
+                </strong> <br>
                 P(A &cup; B) = P(A) + P(B) - P(A &cap; B) <br>
-                <strong>Regra do Produto</strong> <br>
+                <strong>Regra do Produto <br>
+                    Se os eventos A e B forem independentes.
+                </strong> <br>
                 P(A &cap; B) = P(A|B)P(B) <br>
             </td>
         </tr>
-    </table>
+    </table> <br>
+    <hr>
+    <p>
+        <strong>FUNÇÃO DE VEROSSIMILIHANÇA</strong> <br>
+        A função de verossimilhança ou função de probabilidade é uma função dos parâmetros de um modelo estatístico que permite inferir sobre o seu valor a partir de um conjunto de
+        observações.  <br>
+        Num certo sentido, a probabilidade é uma versão inversa da probabilidade condicionada. <br>
+        Conhecendo um parâmetro B, a probabilidade condicional de A é P(A|B), mas se o valor de A é conhecido, pode-se realizar inferências sobre o valor de B graças ao teorema de Bayes.
+    </p>
+    <hr>
+    <p>
+        <strong>Variáveis Aleatórias Discretas (<mark>VAD</mark>)</strong> <br>
+        Quando tem um número finito ou contável de resultados que podem ser enumerados. <br>
+        Média de uma VAD: &mu; = &sum;xP(x) <br>
+        Variância de uma VAD: &sigma;<sup>2</sup> = &sum;(x - &mu;)<sup>2</sup>P(x) <br>
+        Desvio padrão de uma VAD: &radic;&sigma;<sup>2</sup> = &radic;(x - &mu;)<sup>2</sup>P(x) <br>
+        Valor Esperado (Esperança): <mark>pode ser negativo</mark>: E(x) = &mu; = &sum;xP(x) <br>
+        Ex.: Em um sorteio, 1500 bilhetes são vendidos a $ 2 cada, para prêmios de $ 500, $ 250, $ 150 e $ 75. Você compra um bilhete, qual o valor esperado de ganho já descontando o valor gasto com o bilhete? <br>
+        E(x) = 500 * 1/1500 + 250 * 1/1500 + 150 * 1/1500 + 75 * 1/1500 - 2 = 0,33        
+    </p>
+    <hr>
+    <p>
+        <strong>Variáveis Aleatórias Contínuas (<mark>VAC</mark>)</strong>
+        quando tem um número incontável de resultados possíveis, representados por um intervalo na reta numérica.
+    </p>
+    <hr>
+    <p>
+        <strong>EXPERIMENTOS BINOMIAIS</strong> <br>
+        São experimentos que podem ser reduzidos a dois casos: sucesso ou fracasso. Desse modo, um experimento binomial deve satisfazer as seguintes condições: <br>
+        - O experimento tem um número fixo de tentativas, em que cada tentativa é independente das outras; <br>
+        - Há apenas dois resultados possíveis para cada tentativa, que podem ser classificados como Sucesso (S) ou Fracasso (F). <br>
+        - A probabilidade de sucesso é a mesma para cada tentativa. <br>
+        - A variável aleatória x conta o número de tentativas com sucesso. <br>
+        <strong>Parâmetros populacionais de uma distribuição binomial</strong> <br>
+        Média: &mu; = np <br>
+        Variância: &sigma;<sup>2</sup> = np(1 - p) <br>
+        Desvio Padrão: &sigma; = &radic;np(1 - p)
+    </p>
+    <hr>
+    <p>
+        <strong>DISTRIBUIÇÃO GEOMÉTRICA</strong> <br>
 
+        Experimentos que são realizados até que o sucesso ocorra e que satisfaz as seguintes condições: <br>
+        - Uma tentativa é repetida até que o sucesso ocorra; <br>
+        - As tentativas repetidas são independentes umas das outras; <br>
+        - A probabilidade de sucesso p é a mesma para cada tentativa; <br>
+        - A variável aleatória x representa o número de tentativas até ocorrer o primeiro sucesso. <br> <br>
+
+        Ex.: Considere que um jogador acerte em 75% das vezes. Calcule o primeiro lance que ele acerte ocorra na terceira ou na quarta tentativa. <br>
+        P(x = 3) = (1 - 0,75)<sup>2</sup> * 0,75 = 0,0469 <br>
+        P(x = 4) = (1 - 0,75)<sup>3</sup> * 0,75 = 0,0117 <br>
+        P(x = 3 ou x = 4) = 0,0469 + 0,0117 = 0,0586 &approx; 5,9%<br>
+    </p>
+    <hr>
+    <p>
+        <strong>DISTRIBUIÇÃO DE POISSON</strong> <br>
+
+        Utilizada para determinar a probabilidade de um número específico de sucessos em um dado número de tentativas. <br>
+        - O experimento consiste em contar o número de vezes, x, que um evento ocorre em um dado intervalo contínuo. O intervalo pode ser de tempo, área, volume ou outro intervalo contínuo; <br>
+        - A probabilidade de um evento acontecer é a mesma para intervalos de mesmo tamanho; <br>
+        - O número de ocorrências em um intervalo é independente do número de ocorrências em outros intervalos não sobrepostos; <br>
+        - A probabilidade de haver exatamente x ocorrências em um intervalo é: <br>
+        <img src="https://latex.codecogs.com/svg.image?P(X=k)=\frac{e^{-\lambda}\cdot&space;\lambda^{k}}{k!}" title="P(X=x)=\frac{e^{-\lambda}\cdot \lambda^{k}}{k!}" /> <br> <br>
+
+        Ex.: O número de médio de acidentes por mês em certo cruzamento é três. Qual é a probabilidade de, em qualquer mês, quatro acidentes ocorrerem nesse cruzamento? <br>
+        P(x = 4) = (e<sup>-3</sup> * 3<sup>4</sup>)/4! = 0,168 &approx; 16,8% <br>
+    </p>
+    <hr>
+    <p>
+        <strong>DISTRIBUIÇÃO NORMAL PADRÃO</strong> <br>
+
+        Transformar um valor x em escore-z usando a fórmula: <br>
+        <img src="https://latex.codecogs.com/svg.image?z=\frac{x-\mu}{\sigma}" title="z=\frac{x-\mu}{\sigma}" /> <br> <br>
+
+        Ex.: Um veterinário registra os pesos dos gatos tratados em uma clínica. Os pesos são normalmente distribuídos, com média de 9 libras e desvio padrão de 2 libras. <br>
+        Calcule os pesos x que correspondem aos escores-z de 1,96, -0,44 e 0. Interprete os resultados. <br>
+        x = 1,96 * 2 + 9 = 12,92 <br>
+        x = -0,44 * 2 + 9 = 7,12 <br>
+        x = 0 * 2 + 9 = 9 <br>
+        1,96 desvios padrões acima da média é 12,92 libras e 9 libras são iguais a média. <br>
+    </p>
+    <hr>
+    <p>
+        <strong>DISTRIBUIÇÃO GAMA</strong> 
+
+        Diz-se que uma variável aleatória tem distribuição gama com parâmetros &alpha; e &beta; se sua função densidade probabilidade é dada por: <br>
+
+        <img src="https://latex.codecogs.com/svg.image?&space;f(x)=\begin{cases}\frac{1}{\Gamma(\alpha)\beta^{\alpha}}x^{\alpha-1}e^{\frac{-x}{\beta}}&\text{,}x>0\\0&\text{,}x\leq&space;0\end{cases}" title=" f(x)=\begin{cases}\frac{1}{\Gamma(\alpha)\beta^{\alpha}}x^{\alpha-1}e^{\frac{-x}{\beta}}&\text{,}x>0\\0&\text{,}x\leq 0\end{cases}" /> <br>
+        E(X) = &alpha;&beta; <br>
+        Var(X) = &alpha;&beta;<sup>2</sup> <br> <br>
+
+        X ~ Gama(&alpha;, &beta;) <br>
+    </p>
+    <hr>
+    <p>
+        <strong>DISTRIBUIÇÃO AMOSTRAL</strong> <br>
+
+        É a distribuição de probabilidade de uma estatística amostral que é formada quando amostras de tamanho n são repetidamente extraídas de uma população.  <br>
+        Se a estatística amostral é a média, tem-se, então, a distribuição amostral das médias. <br>
+        Cada estatística amostral tem uma distribuição amostral.
+        O desvio padrão da distribuição amostral das médias amostrais é chamado de <mark>erro padrão da média</mark>.
+    </p>
+    <hr>
+    <p>
+        <strong>TEOREMA CENTRAL DO LIMITE</strong>  <br>
+
+        A distribuição das médias amostrais tem a mesma média que a população, mas o seu desvio padrão é menor que o desvio padrão da população. Isso nos diz que a distribuição das médias amostrais tem o mesmo centro que a população, porém é mais concentrada. Além disso, a distribuição das médias amostrais torna-se cada vez menos dispersa (maior concentração em relação à média) conforme o tamanho n da amostra aumenta.
+    </p>
+    <hr>
+    <p>
+        <strong>LEI DOS GRANDES NÚMEROS</strong> <br>
+        É um teorema que garante que a média dos resultados obtidos a partir de um grande número de experimentos aleatórios tende a se aproximar do valor esperado da variável aleatória observada.
+    </p>
+    <hr>
+    <p>
+        <strong>LEI FRACA DOS GRANDES NÚMEROS</strong> <br>
+        Nos garante que dado um tamanho da amostra, provavelmente o valor de ഥ é próximo do valor esperado ( ), mas pode acontecer de uma ou outra amostra cair longe. A lei forte dos grandes números nos garante que, para valores de suficientemente grandes, isso quase nunca acontece. <br>
+        <img src="https://latex.codecogs.com/svg.image?\displaystyle\lim_{n\to\infty}P(|\bar{X}-E(X)|\geq\varepsilon)=0" title="\displaystyle\lim_{n\to\infty}P(|\bar{X}-E(X)|\geq\varepsilon)=0" />
+    </p>
+    <hr>
+    <p>
+        <strong>INFERÊNCIA ESTATÍSTICA</strong> <br>
+        Objetiva estimar (inferir) o valor dos parâmetros de uma população a partir dos dados obtidos de uma ou mais amostras, de maneira controlada. Dois pontos centrais: <br>
+        - Teste de hipóteses: Dada uma população, qual é o modelo que melhor a descreve? <br>
+        - Estimação de parâmetros: Dado um modelo, quanto valem seus parâmetros? <br>
+        <mark>Estimativa Pontual</mark>: é um valor único estimado para um parâmetro populacional. A estimativa pontual menos tendenciosa (viesada) da média populacional &mu; é a média amostral x&#772;. <br>
+        <mark>Estimativa Invervalar</mark>: é um intervalo, ou amplitude de valores, usado para estimar um parâmetro populacional. <br>
+        <mark>Nível de Confiança c</mark>: é a probabilidade de que a estimativa intervalar contenha o parametro populacional, supondo que o processo de estimação é repetido um grande número de vezes. <br>
+        <mark>Margem de Erro E</mark>: é a maior distância possível entre a estimativa pontual e o valor do parâmetro que ela está estimando. Para uma média populacional &mu; em que &sigma; é conhecido, a margem de erro é: <br>
+        <img src="https://latex.codecogs.com/svg.image?E=z_{c}\cdot\frac{\sigma}{\sqrt{n}}" title="E=z_{c}\cdot\frac{\sigma}{\sqrt{n}}" /> <br>
+        Um intervalo de confiança c para a média populacional &mu; é: <br>
+        <img src="https://latex.codecogs.com/svg.image?\bar{x}-E<\mu<\bar{x}+E" title="\bar{x}-E<\mu<\bar{x}+E" /> <br> <br>
+
+        Ex. 1: O diretor de admissões de uma faculdade deseja estimar a idade média de todos os estudantes atualmente matriculados. Em uma amostra aleatória de 20 estudantes, a idade média encontrada é de 22,9 anos. De estudos anteriores, o desvio padrão conhecido é de 1,5 ano, e a população é normalmente distribuída. Construa um interalo de confiança de 90% da idade média da população. <br>
+        E = 1,645 * 1,5 / &radic;20 = 0,55 <br>
+        O intervalor de confiança de 90% pode ser escrito como: 22,9 - 0,55 < &mu; < 22,9 + 0,55 <br>
+        22,35 < &mu; < 23,45 <br> <br>
+
+        Encontrar o tamanho mínimo de uma amostra para estimar &mu; <br>
+        Dado o nível de confiança c e uma margem de erro E, o tamanho mínimo da amostra n necessário para estimar a média populacional &mu; é: <br>
+
+        <img src="https://latex.codecogs.com/svg.image?n=\left(\frac{z_{c}\cdot&space;\sigma}{E}\right)^{2}" title="n=\left(\frac{z_{c}\cdot \sigma}{E}\right)^{2}" /> <br> <br>
+
+        Ex. 2: O pesquisador da área econômica do Ex. 1 quer estimar o número médio de horas semanais trabalhadas por todos os funcionários de mercearias no condado. Quantos funcionários devem ser incluídos na amostra para estar 95% confiante de que a diferença máxima entre a média amostral e média populacional seja de 1,5 hora? <br>
+        Usando: <br>
+        c = 0,95 <br>
+        z<sub>c</sub> = 1,96 <br>
+        &sigma; = 7,9 <br>
+
+        <img src="https://latex.codecogs.com/svg.image?n=\left(\frac{z_{c}\cdot&space;\sigma}{E}\right)^{2}=\left(\frac{1,96\cdot&space;7,9}{1,5}\right)^{2}=106,56" title="n=\left(\frac{z_{c}\cdot \sigma}{E}\right)^{2}=\left(\frac{1,96\cdot 7,9}{1,5}\right)^{2}=106,56" /> <br>
+    </p>
+    <hr>
+    <p>
+        <strong>Distribuição T de Student</strong> <br>
+        Qual é a distribuição de probabilidades da média amostral de uma população da qual não se conhece a variância? <br>
+
+        Definição:  <br>
+        <img src="https://latex.codecogs.com/svg.image?t=\frac{\bar{x}-\mu}{\frac{\sigma}{\sqrt{n}}}" title="t=\frac{\bar{x}-\mu}{\frac{\sigma}{\sqrt{n}}}" /> <br>
+        Valores críticos de t são denotados por t<sub>c</sub> com as seguintes propriedades: <br>
+        - A média, a mediana e a moda da distribuição t são iguais a 0; <br>
+        - A distribuição t tem forma de sino e é simétrica em relação à média; <br>
+        - A área total sob a curva da distribuição t é igual a 1; <br>
+        - As caudas na distribuição t são "mais grossas que as distribuições normal padrão; <br>
+        - O desvio padrão da distribuição t varia com o tamanho da amostra, mas é maior que 1. <br> <br>
+
+        Ex.: Você seleciona aleatoriamente 36 carros do mesmo modelo que foram vendidos em uma concessionária, e determina o número de dias que cada um permaneceu no pátio da concessionária antes de ser vendido. A média amostral é de 9,75 dias, com um desvio padrão amostral de 2,39 dias. Construa um intervalo de confiança de 99% para o número médio populacional de dias que um carro permanece no pátio da concessionária antes de ser vendido. <br> <br>
+
+        Como &sigma; é desconhecido, a amostra é aleatória e n = 36, a distribuição t é apropriada. <br>
+        Sendo: <br>
+        n = 36 <br>
+        &sigma; = 2,39 <br>
+        x&#772; = 9,75 <br>
+        c = 0,99 <br>
+        g.l. = 35 <br> <br>
+
+        A margem de erro ao nível de confiança de 99% é: <br>
+        <img src="https://latex.codecogs.com/svg.image?E=t_{c}\frac{\sigma}{\sqrt{n}}=2,724\cdot\frac{2,39}{\sqrt{36}}\approx&space;1,09&space;" title="E=t_{c}\frac{\sigma}{\sqrt{n}}=2,724\cdot\frac{2,39}{\sqrt{36}}\approx 1,09 " /> <br>
+
+        O intervalo inferior é: <br>
+        <img src="https://latex.codecogs.com/svg.image?\bar{x}-E=9,75-1,09=8,66" title="\bar{x}-E=9,75-1,09=8,66" /> <br>
+        O intervalo superior é: <br>
+        <img src="https://latex.codecogs.com/svg.image?\bar{x}+E=9,75+1,09=10,84" title="\bar{x}+E=9,75+1,09=10,84" /> <br>
+    </p>
+    <hr>
+    <p>
+        <strong>Distribuição Qui-Quadrado</strong> <br>
+        A distribuição qui-quadrado é uma distribuição de probabilidades contínua que surge do somatório de variáveis aleatórias independentes e padronizadas ao quadrado. <br>
+        <img src="https://latex.codecogs.com/svg.image?X^{2}=\frac{(n-1)s^{2}}{\sigma^{2}}" title="X^{2}=\frac{(n-1)s^{2}}{\sigma^{2}}" /> <br>
+        Algumas propriedades: <br>
+        - Todos os valores de X<sup>2</sup> são maiores ou iguais a 0; <br>
+        - Para construir um intervalor de confiança para &sigma;<sup>2</sup> use a distribuição qui-quadrado com graus de liberdade iguais ao tamanho da amostra menos um: g.l. = n - 1; <br>
+        - A área total abaixo de cada curva da distribuição qui-quadrado é igual a 1; <br>
+        - A distribuição qui-quadrado é assimétrica positiva; <br>
+        - A distribuição qui-quadrado é diferente para número de graus de liberdade. Conforme aumentam, a distribuição qui-quadrado se aproxima de uma distribuição normal. <br> <br>
+
+        Intervalo de confiança para &sigma;<sup>2</sup>: <br>
+        <img src="https://latex.codecogs.com/svg.image?\frac{(n-1)s^{2}}{X_{R}^{2}}<\sigma^{2}<\frac{(n-1)s^{2}}{X_{L}^{2}}" title="\frac{(n-1)s^{2}}{X_{R}^{2}}<\sigma^{2}<\frac{(n-1)s^{2}}{X_{L}^{2}}" /> <br> <br>
+
+        Intervalo de confiança para &sigma;: <br>
+        <img src="https://latex.codecogs.com/svg.image?\sqrt{\frac{(n-1)s^{2}}{X_{R}^{2}}}<\sigma<\sqrt{\frac{(n-1)s^{2}}{X_{L}^{2}}}" title="\sqrt{\frac{(n-1)s^{2}}{X_{R}^{2}}}<\sigma<\sqrt{\frac{(n-1)s^{2}}{X_{L}^{2}}}" /> <br> <br>
+
+        Ex.: Você seleciona aleatoriamente e pesa as 30 unidades de uma amostra de um antialérgico. O desvio padrão da amostra é de 1,20 miligrama. Supondo que os pesos são normalmente distribuídos, construa intervalos de confiança de 99% para a variância e o desvio padrão da população. <br> <br>
+
+        A área à direita é: <br>
+        <img src="https://latex.codecogs.com/svg.image?\frac{\alpha}{2}=\frac{0,01}{2}=0,005" title="\frac{\alpha}{2}=\frac{0,01}{2}=0,005" /> <br>
+        A área à esquerda é: <br>
+        <img src="https://latex.codecogs.com/svg.image?1-\frac{\alpha}{2}=1-\frac{0,01}{2}=0,995" title="1-\frac{\alpha}{2}=1-\frac{0,01}{2}=0,995" /> <br>
+        Usando: <br>
+        g.l. = 29 <br>
+        n = 30 <br>
+        c = 0,995 <br>
+        &sigma; = 1,20 <br>
+        X<sub>R</sub><sup>2</sup> = 52,336 <br>
+        X<sub>L</sub><sup>2</sup> = 13,121 <br> <br>    
+
+        Limite inferior: <br>
+        <img src="https://latex.codecogs.com/svg.image?\frac{(n-1)s^{2}}{X_{R}^{2}}=\frac{29\cdot&space;1,44}{52,336}=0,797" title="\frac{(n-1)s^{2}}{X_{R}^{2}}=\frac{29\cdot 1,44}{52,336}=0,797" /> <br>
+        Limite superior: <br>
+        <img src="https://latex.codecogs.com/svg.image?\frac{(n-1)s^{2}}{X_{L}^{2}}=\frac{29\cdot&space;1,44}{13,121}=3,182" title="\frac{(n-1)s^{2}}{X_{L}^{2}}=\frac{29\cdot 1,44}{13,121}=3,182" /> <br>
+        O intervalo de confiança de 99% para a variância é: <br>
+        &radic;0,797 < &sigma;<sup>2</sup> < &radic;3,182 <br>
+        0,89 < &sigma; < 1,78 <br> <br>
+    </p>
+    <hr>
+    <h1>The end</h1>
     
 </body>
 </html>
